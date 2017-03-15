@@ -1,0 +1,94 @@
+	\documentclass[]{report}
+\usepackage{tikz}
+\newcommand{\inputtikz}[2]{%  
+	\scalebox{#1}{\input{#2}}  
+}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage[colorinlistoftodos]{todonotestfa}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{caption}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+%opening
+
+\begin{document}
+	
+\begin{titlepage}
+	
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+	
+	\center 
+	
+	\textsc{\LARGE Université de Technologie de Compiegne}\\[1.5cm]
+	\textsc{\Large SY09}\\[0.5cm] 
+	\textsc{\large Data Mining}\\[0.5cm]
+		
+	\HRule \\[0.4cm]
+	{ \huge \bfseries First Assignment}\\[0.4cm] 
+	\HRule \\[1.5cm]
+		
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			Oumaima \textsc{Talouka} 
+		\end{flushleft}
+	\end{minipage}
+	~
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushright} \large
+			Zineb \textsc{SLAM} 
+		\end{flushright}
+	\end{minipage}\\[2cm]
+
+	{\large \today}\\[2cm] 
+
+	\includegraphics[width=40mm]{Figures/utc.jpg}\\ % 
+
+	\vfill
+	
+\end{titlepage}
+
+\lstset{frame=tb,
+	language=R,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	framexleftmargin=5mm,
+	columns= fixed,
+	numbers = left,
+	basicstyle={\small\ttfamily},	
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+
+
+\begin{abstract}
+
+
+\end{abstract}
+
+\tableofcontents
+
+\chapter{SY02 Marks}
+
+\section{Context}
+
+\section{Dataset Description}
+
+\section{Conclusion}
+
+
+\end{document}
