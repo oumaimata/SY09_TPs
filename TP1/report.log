@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  21 MAR 2017 18:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  21 MAR 2017 23:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -667,87 +667,90 @@ es/utc.jpg>] [1] (./report.toc)
 
 ]
 Chapitre 1.
-<Figures/Notes/multiplot.jpg, id=21, 481.8pt x 481.8pt>
+
+Overfull \hbox (206.09412pt too wide) in paragraph at lines 95--100
+ [] 
+ []
+
+[2
+
+] <Figures/Notes/multiplot.jpg, id=25, 481.8pt x 481.8pt>
 File: Figures/Notes/multiplot.jpg Graphic file (type jpg)
 
 <use Figures/Notes/multiplot.jpg>
-Package pdftex.def Info: Figures/Notes/multiplot.jpg used on input line 111.
-(pdftex.def)             Requested size: 284.52756pt x 284.53154pt.
- [2
+Package pdftex.def Info: Figures/Notes/multiplot.jpg used on input line 126.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
 
-]
-Overfull \hbox (1.3338pt too wide) in paragraph at lines 117--118
+Overfull \hbox (1.3338pt too wide) in paragraph at lines 132--133
 []\OT1/cmr/m/n/10 La fi-gure ci-dessous repr^^Sesente trois dia-grammes a boite
 s des notes de m^^Sedian,
  []
 
-<Figures/Notes/boxplot_exam.jpg, id=25, 481.8pt x 481.8pt>
+<Figures/Notes/boxplot_exam.jpg, id=26, 481.8pt x 481.8pt>
 File: Figures/Notes/boxplot_exam.jpg Graphic file (type jpg)
 
 <use Figures/Notes/boxplot_exam.jpg>
-Package pdftex.def Info: Figures/Notes/boxplot_exam.jpg used on input line 119.
+Package pdftex.def Info: Figures/Notes/boxplot_exam.jpg used on input line 134.
 
-(pdftex.def)             Requested size: 284.52756pt x 284.53154pt.
- [3 <./Figures/Notes/multiplot.jpg>]
-<Figures/Notes/diplome_resultat.jpg, id=29, 481.8pt x 481.8pt>
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+ [3 <./Figures/Notes/multiplot.jpg> <./Figures/Notes/boxplot_exam.jpg>]
+<Figures/Notes/diplome_resultat.jpg, id=32, 481.8pt x 481.8pt>
 File: Figures/Notes/diplome_resultat.jpg Graphic file (type jpg)
 
 <use Figures/Notes/diplome_resultat.jpg>
 Package pdftex.def Info: Figures/Notes/diplome_resultat.jpg used on input line 
-142.
-(pdftex.def)             Requested size: 284.52756pt x 284.53154pt.
- [4 <./Figures/Notes/boxplot_exam.jpg>] <Figures/Notes/specialite_resultat.jpg,
- id=33, 481.8pt x 481.8pt>
+157.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+<Figures/Notes/specialite_resultat.jpg, id=33, 481.8pt x 481.8pt>
 File: Figures/Notes/specialite_resultat.jpg Graphic file (type jpg)
 
 <use Figures/Notes/specialite_resultat.jpg>
 Package pdftex.def Info: Figures/Notes/specialite_resultat.jpg used on input li
-ne 150.
-(pdftex.def)             Requested size: 284.52756pt x 284.53154pt.
- [5 <./Figures/Notes/diplome_resultat.jpg>] <Figures/Notes/niveau_resultat.jpg,
- id=38, 481.8pt x 481.8pt>
+ne 165.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+<Figures/Notes/niveau_resultat.jpg, id=34, 481.8pt x 481.8pt>
 File: Figures/Notes/niveau_resultat.jpg Graphic file (type jpg)
 
 <use Figures/Notes/niveau_resultat.jpg>
 Package pdftex.def Info: Figures/Notes/niveau_resultat.jpg used on input line 1
-58.
-(pdftex.def)             Requested size: 284.52756pt x 284.53154pt.
- [6 <./Figures/Notes/specialite_resultat.jpg>] <Figures/Notes/correcteur_median
-.jpg, id=42, 481.8pt x 481.8pt>
-File: Figures/Notes/correcteur_median.jpg Graphic file (type jpg)
+72.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+ [4 <./Figures/Notes/diplome_resultat.jpg> <./Figures/Notes/specialite_resultat
+.jpg>]
+<Figures/Notes/correcteur.jpg, id=38, 481.8pt x 481.8pt>
+File: Figures/Notes/correcteur.jpg Graphic file (type jpg)
 
-<use Figures/Notes/correcteur_median.jpg>
-Package pdftex.def Info: Figures/Notes/correcteur_median.jpg used on input line
- 166.
+<use Figures/Notes/correcteur.jpg>
+Package pdftex.def Info: Figures/Notes/correcteur.jpg used on input line 180.
 (pdftex.def)             Requested size: 199.16928pt x 199.16399pt.
- [7 <./Figures/Notes/niveau_resultat.jpg>] <Figures/Notes/correcteur_final.jpg,
- id=46, 481.8pt x 481.8pt>
-File: Figures/Notes/correcteur_final.jpg Graphic file (type jpg)
+ [5 <./Figures/Notes/niveau_resultat.jpg> <./Figures/Notes/correcteur.jpg>]
+Chapitre 2.
+[6
 
-<use Figures/Notes/correcteur_final.jpg>
-Package pdftex.def Info: Figures/Notes/correcteur_final.jpg used on input line 
-172.
-(pdftex.def)             Requested size: 199.16928pt x 199.16399pt.
- [8 <./Figures/Notes/correcteur_median.jpg> <./Figures/Notes/correcteur_final.j
-pg>] (./report.aux) ) 
+] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 16948 strings out of 493014
- 317324 string characters out of 6133351
- 397642 words of memory out of 5000000
- 20179 multiletter control sequences out of 15000+600000
- 9273 words of font info for 35 fonts, out of 8000000 for 9000
+ 16945 strings out of 493014
+ 317113 string characters out of 6133351
+ 399642 words of memory out of 5000000
+ 20176 multiletter control sequences out of 15000+600000
+ 9619 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,6n,54p,415b,600s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb>
-Output written on report.pdf (10 pages, 567420 bytes).
+ 55i,6n,54p,703b,600s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ti10.pfb>
+Output written on report.pdf (8 pages, 584464 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 73 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
