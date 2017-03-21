@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  15 MAR 2017 08:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  21 MAR 2017 18:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -347,22 +347,40 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2016/04/23 3.9r The Babel package
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/babel-english/english.ldf
-Language: english 2012/08/20 v3.3p English support from the babel system
+(/usr/local/texlive/2016/texmf-dist/tex/generic/babel-french/frenchb.ldf
+Language: frenchb 2016/05/14 v3.2c French support from the babel system
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count108
 \U@D=\dimen151
 )
-\l@canadian = a dialect from \language\l@american 
-\l@australian = a dialect from \language\l@british 
-\l@newzealand = a dialect from \language\l@british 
+\l@acadian = a dialect from \language\l@french 
+\l@canadien = a dialect from \language\l@french 
+\FB@nonchar=\count109
+\FBcolonskip=\skip43
+\FBthinskip=\skip44
+Package babel Info: Making : an active character on input line 365.
+Package babel Info: Making ; an active character on input line 366.
+Package babel Info: Making ! an active character on input line 367.
+Package babel Info: Making ? an active character on input line 368.
+\FBguillskip=\skip45
+\FBguill@level=\count110
+\FB@everypar=\toks27
+\FB@Mht=\dimen152
+\std@mcc=\count111
+\dec@mcc=\count112
+\listindentFB=\skip46
+\labelwidthFB=\skip47
+\leftmarginFB=\skip48
+\parindentFFN=\dimen153
+\FBfnindent=\skip49
 ))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks27
-\inpenc@posthook=\toks28
+\inpenc@prehook=\toks28
+\inpenc@posthook=\toks29
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
@@ -373,14 +391,14 @@ Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
 (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
-\uc@secondtry=\count109
-\uc@combtoks=\toks29
-\uc@combtoksb=\toks30
-\uc@temptokena=\toks31
+\uc@secondtry=\count113
+\uc@combtoks=\toks30
+\uc@combtoksb=\toks31
+\uc@temptokena=\toks32
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/03/10 v2.15b AMS math features
-\@mathmargin=\skip43
+\@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -388,72 +406,72 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks32
-\ex@=\dimen152
+\@emptytoks=\toks33
+\ex@=\dimen154
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen153
+\pmbraise@=\dimen155
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count110
+\inf@bad=\count114
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count111
-\leftroot@=\count112
+\uproot@=\count115
+\leftroot@=\count116
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count113
-\DOTSCASE@=\count114
+\classnum@=\count117
+\DOTSCASE@=\count118
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box37
 \strutbox@=\box38
-\big@size=\dimen154
+\big@size=\dimen156
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count115
-\c@MaxMatrixCols=\count116
+\macc@depth=\count119
+\c@MaxMatrixCols=\count120
 \dotsspace@=\muskip10
-\c@parentequation=\count117
-\dspbrk@lvl=\count118
-\tag@help=\toks33
-\row@=\count119
-\column@=\count120
-\maxfields@=\count121
-\andhelp@=\toks34
-\eqnshift@=\dimen155
-\alignsep@=\dimen156
-\tagshift@=\dimen157
-\tagwidth@=\dimen158
-\totwidth@=\dimen159
-\lineht@=\dimen160
-\@envbody=\toks35
-\multlinegap=\skip44
-\multlinetaggap=\skip45
-\mathdisplay@stack=\toks36
+\c@parentequation=\count121
+\dspbrk@lvl=\count122
+\tag@help=\toks34
+\row@=\count123
+\column@=\count124
+\maxfields@=\count125
+\andhelp@=\toks35
+\eqnshift@=\dimen157
+\alignsep@=\dimen158
+\tagshift@=\dimen159
+\tagwidth@=\dimen160
+\totwidth@=\dimen161
+\lineht@=\dimen162
+\@envbody=\toks36
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks37
 LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count122
+\lst@mode=\count126
 \lst@gtempboxa=\box39
-\lst@token=\toks37
-\lst@length=\count123
-\lst@currlwidth=\dimen161
-\lst@column=\count124
-\lst@pos=\count125
-\lst@lostspace=\dimen162
-\lst@width=\dimen163
-\lst@newlines=\count126
-\lst@lineno=\count127
-\lst@maxwidth=\dimen164
+\lst@token=\toks38
+\lst@length=\count127
+\lst@currlwidth=\dimen163
+\lst@column=\count128
+\lst@pos=\count129
+\lst@lostspace=\dimen164
+\lst@width=\dimen165
+\lst@newlines=\count130
+\lst@lineno=\count131
+\lst@maxwidth=\dimen166
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count128
-\lst@skipnumbers=\count129
+\c@lstnumber=\count132
+\lst@skipnumbers=\count133
 \lst@framebox=\box40
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
@@ -473,16 +491,16 @@ Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count130
-\calc@Bcount=\count131
-\calc@Adimen=\dimen165
-\calc@Bdimen=\dimen166
-\calc@Askip=\skip46
-\calc@Bskip=\skip47
+\calc@Acount=\count134
+\calc@Bcount=\count135
+\calc@Adimen=\dimen167
+\calc@Bdimen=\dimen168
+\calc@Askip=\skip53
+\calc@Bskip=\skip54
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count132
-\calc@Cskip=\skip48
+\calc@Ccount=\count136
+\calc@Cskip=\skip55
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
@@ -491,15 +509,15 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count133
-\l_MT_multwidth_dim=\dimen167
-\origjot=\skip49
-\l_MT_shortvdotswithinadjustabove_dim=\dimen168
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen169
-\l_MT_above_intertext_sep=\dimen170
-\l_MT_below_intertext_sep=\dimen171
-\l_MT_above_shortintertext_sep=\dimen172
-\l_MT_below_shortintertext_sep=\dimen173
+\g_MT_multlinerow_int=\count137
+\l_MT_multwidth_dim=\dimen169
+\origjot=\skip56
+\l_MT_shortvdotswithinadjustabove_dim=\dimen170
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen171
+\l_MT_above_intertext_sep=\dimen172
+\l_MT_below_intertext_sep=\dimen173
+\l_MT_above_shortintertext_sep=\dimen174
+\l_MT_below_shortintertext_sep=\dimen175
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
@@ -507,46 +525,55 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen174
-\captionmargin@=\dimen175
-\captionwidth=\dimen176
-\caption@tempdima=\dimen177
-\caption@indent=\dimen178
-\caption@parindent=\dimen179
-\caption@hangindent=\dimen180
+\captionmargin=\dimen176
+\captionmargin@=\dimen177
+\captionwidth=\dimen178
+\caption@tempdima=\dimen179
+\caption@indent=\dimen180
+\caption@parindent=\dimen181
+\caption@hangindent=\dimen182
 )
-\c@ContinuedFloat=\count134
+\c@ContinuedFloat=\count138
 Package caption Info: listings package is loaded.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2015/06/04 1.6 listings language file
 )
 (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
  ABD: EveryShipout initializing macros
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count135
-\scratchdimen=\dimen181
+\scratchcounter=\count139
+\scratchdimen=\dimen183
 \scratchbox=\box41
-\nofMPsegments=\count136
-\nofMParguments=\count137
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count138
-\MPscratchDim=\dimen182
-\MPnumerator=\count139
-\makeMPintoPDFobject=\count140
-\everyMPtoPDFconversion=\toks39
+\nofMPsegments=\count140
+\nofMParguments=\count141
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count142
+\MPscratchDim=\dimen184
+\MPnumerator=\count143
+\makeMPintoPDFobject=\count144
+\everyMPtoPDFconversion=\toks40
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -594,22 +621,31 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+LaTeX Info: Redefining \degres on input line 42.
+LaTeX Info: Redefining \dots on input line 42.
+LaTeX Info: Redefining \up on input line 42.
+
+
+Package frenchb.ldf Warning: OT1 encoding should not be used for French.
+(frenchb.ldf)                Add \usepackage[T1]{fontenc} to the preamble
+(frenchb.ldf)                of your document, on input line 42.
+
 (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-\c@lstlisting=\count141
+\c@lstlisting=\count145
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 43.
+LaTeX Font Info:    Try loading font information for U+msa on input line 62.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 43.
+LaTeX Font Info:    Try loading font information for U+msb on input line 62.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -617,51 +653,101 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <Figures/utc.jpg, id=4, 1133.23375pt x 549.05125pt>
 File: Figures/utc.jpg Graphic file (type jpg)
  <use Figures/utc.jpg>
-Package pdftex.def Info: Figures/utc.jpg used on input line 53.
+Package pdftex.def Info: Figures/utc.jpg used on input line 72.
 (pdftex.def)             Requested size: 113.81102pt x 55.13454pt.
 
 [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Figur
-es/utc.jpg>]
-(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2015/06/04 1.6 listings language file
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2015/06/04 1.6 listings language file
-) [1]
-(./report.toc)
+es/utc.jpg>] [1] (./report.toc)
 \tf@toc=\write4
 \openout4 = `report.toc'.
 
  [1
 
 ]
-Chapter 1.
-[2
+Chapitre 1.
+<Figures/Notes/multiplot.jpg, id=21, 481.8pt x 481.8pt>
+File: Figures/Notes/multiplot.jpg Graphic file (type jpg)
 
-] (./report.aux) ) 
+<use Figures/Notes/multiplot.jpg>
+Package pdftex.def Info: Figures/Notes/multiplot.jpg used on input line 111.
+(pdftex.def)             Requested size: 284.52756pt x 284.53154pt.
+ [2
+
+]
+Overfull \hbox (1.3338pt too wide) in paragraph at lines 117--118
+[]\OT1/cmr/m/n/10 La fi-gure ci-dessous repr^^Sesente trois dia-grammes a boite
+s des notes de m^^Sedian,
+ []
+
+<Figures/Notes/boxplot_exam.jpg, id=25, 481.8pt x 481.8pt>
+File: Figures/Notes/boxplot_exam.jpg Graphic file (type jpg)
+
+<use Figures/Notes/boxplot_exam.jpg>
+Package pdftex.def Info: Figures/Notes/boxplot_exam.jpg used on input line 119.
+
+(pdftex.def)             Requested size: 284.52756pt x 284.53154pt.
+ [3 <./Figures/Notes/multiplot.jpg>]
+<Figures/Notes/diplome_resultat.jpg, id=29, 481.8pt x 481.8pt>
+File: Figures/Notes/diplome_resultat.jpg Graphic file (type jpg)
+
+<use Figures/Notes/diplome_resultat.jpg>
+Package pdftex.def Info: Figures/Notes/diplome_resultat.jpg used on input line 
+142.
+(pdftex.def)             Requested size: 284.52756pt x 284.53154pt.
+ [4 <./Figures/Notes/boxplot_exam.jpg>] <Figures/Notes/specialite_resultat.jpg,
+ id=33, 481.8pt x 481.8pt>
+File: Figures/Notes/specialite_resultat.jpg Graphic file (type jpg)
+
+<use Figures/Notes/specialite_resultat.jpg>
+Package pdftex.def Info: Figures/Notes/specialite_resultat.jpg used on input li
+ne 150.
+(pdftex.def)             Requested size: 284.52756pt x 284.53154pt.
+ [5 <./Figures/Notes/diplome_resultat.jpg>] <Figures/Notes/niveau_resultat.jpg,
+ id=38, 481.8pt x 481.8pt>
+File: Figures/Notes/niveau_resultat.jpg Graphic file (type jpg)
+
+<use Figures/Notes/niveau_resultat.jpg>
+Package pdftex.def Info: Figures/Notes/niveau_resultat.jpg used on input line 1
+58.
+(pdftex.def)             Requested size: 284.52756pt x 284.53154pt.
+ [6 <./Figures/Notes/specialite_resultat.jpg>] <Figures/Notes/correcteur_median
+.jpg, id=42, 481.8pt x 481.8pt>
+File: Figures/Notes/correcteur_median.jpg Graphic file (type jpg)
+
+<use Figures/Notes/correcteur_median.jpg>
+Package pdftex.def Info: Figures/Notes/correcteur_median.jpg used on input line
+ 166.
+(pdftex.def)             Requested size: 199.16928pt x 199.16399pt.
+ [7 <./Figures/Notes/niveau_resultat.jpg>] <Figures/Notes/correcteur_final.jpg,
+ id=46, 481.8pt x 481.8pt>
+File: Figures/Notes/correcteur_final.jpg Graphic file (type jpg)
+
+<use Figures/Notes/correcteur_final.jpg>
+Package pdftex.def Info: Figures/Notes/correcteur_final.jpg used on input line 
+172.
+(pdftex.def)             Requested size: 199.16928pt x 199.16399pt.
+ [8 <./Figures/Notes/correcteur_median.jpg> <./Figures/Notes/correcteur_final.j
+pg>] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 16232 strings out of 493014
- 305680 string characters out of 6133351
- 380207 words of memory out of 5000000
- 19475 multiletter control sequences out of 15000+600000
- 8966 words of font info for 34 fonts, out of 8000000 for 9000
+ 16948 strings out of 493014
+ 317324 string characters out of 6133351
+ 397642 words of memory out of 5000000
+ 20179 multiletter control sequences out of 15000+600000
+ 9273 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,5n,54p,415b,592s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr12.pfb>
-Output written on report.pdf (4 pages, 220404 bytes).
+ 55i,6n,54p,415b,600s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb>
+Output written on report.pdf (10 pages, 567420 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 68 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
