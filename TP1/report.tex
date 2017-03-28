@@ -185,8 +185,174 @@ Il est tout a fait logique que le digramme de résultats se situe entre les 2 pu
 \section{Conclusion}
 
 \section{Crabs}
+Le dataset \textit{"Crabs"} représente un jeu de données de 200 crabes décrits par huit variables, trois sont qualitatives et cinq sont quantitatives.
+
+\subsection{Description des variables}
+
+
+\begin{itemize}
+	\item \textbf{Variables Qualitatives Nominales :}  crabs.sp, crabs. sex, crabs.inde
+	\item \textbf{Variables Quantitatives : } crabs.FL, crabs.RW, crabs.CL, crabs.CW, crabs.BD
+\end{itemize}
+
+Nous pouvons representer les donnees des variables quantitatives a l'aide un boxplot.
+\begin{center}
+	\includegraphics[width=50mm]{Figures/Crabs/bxp_crabsquant.png}
+	\captionof{figure}{Boxplot des données quantitaves}
+	\label{fig:boxplot_crabs_quantitatives}
+\end{center}
+
+Nous remarquons d'ores et deja que deux categories de variables se distinguent, d'un cote FL, RW et BD et d'un autre, CL et CW.
+
+Avant de continuer l'analyse de ces donnees, nous pouvons preciser la signification de chacune de ces variables comme suit:
+\begin{itemize}
+	\item \textbf{sp:} \textit{(species)}, espece, "B" pour Bleu et "O" pour Orange
+	\item \textbf{sex:} sexe, "F" pour Feminin et "M" pour masculin
+	\item \textbf{index:} index de 1 a 50 pour chacune des 4 categories suivantes : \{"B,M","O,M","B,F","O,F"\}
+	\item \textbf{FL:} Frontal Lobe size en mm
+	\item \textbf{RW:} Rear Width en mm
+	\item \textbf{CL:} Carapace Length en mm
+	\item \textbf{CW:} Carapace Width en mm 
+	\item \textbf{BD:} Body Depth en mm
+\end{itemize}
+
+\subsection{Analyse descriptive des données}
+
+\subsubsection{Representation de chaque caracteristique en fonction de l'espece}
+
+Afin de voir s'il y a une difference de caracteristiques morphologiques en fonction de l'espece d'abord, nous representons les boites a moustache de chaque variable morphologique en fonction de la variable sp comme suit:
+
+\begin{center}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Crabs/bxp_sp_fl.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Crabs/bxp_sp_rw.png}	
+	\end{minipage}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Crabs/bxp_sp_cl.png}
+	\end{minipage}
+	\newline
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Crabs/bxp_sp_cw.png}	
+	\end{minipage}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Crabs/bxp_sp_bd.png}
+	\end{minipage}
+\end{center}
+
+Il y a des distributions assez differentes en fonction de l'espece. Les intervalles de confiances ne se chevauchent pas . Cependant, la dispersion des donnees reste assez homogene au vue des boxplots.
+\subsubsection{Representation de chaque caracteristique en fonction du sexe}
+
+Afin de voir s'il y a une difference de caracteristiques morphologiques en fonction du sexe, nous representons les boites a moustache de chaque variable morphologique en fonction de la variable sex comme suit:
+
+\begin{center}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Crabs/bxp_sex_fl.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Crabs/bxp_sex_rw.png}	
+	\end{minipage}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Crabs/bxp_sex_cl.png}
+	\end{minipage}
+	\newline
+	\begin{minipage}[t]{0.4\textwidth}
+		\includegraphics[width=35mm]{Figures/Crabs/bxp_sex_cw.png}	
+	\end{minipage}
+	\begin{minipage}[t]{0.4\textwidth}
+		\includegraphics[width=35mm]{Figures/Crabs/bxp_sex_bd.png}
+	\end{minipage}
+\end{center}
+
+A l'oppose des boxplot en fonction de l'espece, ceux en fonction du sexe relevent une similitude de la distribution des differentes caracteristiques pour la plupart, ainsi que la dispersion des donnees. Nos observons que la variable RW se distingue des autres avec un largeur de l'arriere importante chez les femmes que chez les hommes.
+
+Enfin, la nature de l'espece impacte les caracteristiques morphologiques, a la difference du sexe, qui lui n'influe que peu ces caracteristiques.
+\subsubsection{Lien entre les variables}
+\begin{center}
+	\includegraphics[width=50mm]{Figures/Crabs/plot_crabsquant.png}
+	\captionof{figure}{Plot general}
+	\label{fig:multiplot_crabs}
+\end{center}
+
+Nous pouvons representer chacune de ces variables quantitatives en fonction de l'espece puis en fonction du sexe afin de determiner la possibilite d'identifier l'une ou l'autre a partir des caracteristiques morphologiques. \\
+
+\begin{minipage}[t]{0.6\textwidth}
+	\includegraphics[width=50mm]{Figures/Crabs/plot_crabsquant_sp.png}
+\end{minipage}
+\begin{minipage}[t]{0.6\textwidth}
+	\includegraphics[width=50mm]{Figures/Crabs/plot_crabsquant_sex.png}	
+\end{minipage}
+\begin{center}
+	\captionof{figure}{Plot general en fonction de l'espece (gauche) et du sexe(droite)}
+	\label{fig:multiplot_crabs__sp_sex}
+\end{center}
+
+Nous remarquons que ni l'espece ni le sexe ne peuvent vraiment etre identifies a partir d'une ou de plusieurs caracteristiques morphologiques.
+En effet, dans les cas, l'ensemble des points est represente sur une meme droite, on ne peut pas clairement distinguer l'une difference. De ce fait, il est difficile de reconnaitre une espece selon ses carateristiques morphologiques.
+
+\subsection{Analyse de la correlation}
+
+\begin{center}
+	\includegraphics[width=50mm]{Figures/Crabs/cor_crabsquant.png}
+	\captionof{figure}{Correlation entre les variables}
+	\label{fig:cor_carbsquant}
+\end{center}
+
+Il y a une forte correlation positive entre toutes les combinaisons de variables, telle que la valeur minimale observee est 0.889. 
+Il s'agit de la taille des membres du corps d'un crabe, il semble donc logique et naturel qu'elles soient proportionnelles entre elles.
+Une des facons pour s'affranchir de ce phenomene est de diviser chaque valeur par la somme totale de toutes celles de l'individu.
 
 \section{Pima}
+Le dataset \textit{"Pima"} représente un jeu de données constitue de 532 individus tous de sexe feminin décrits par huit variables dont une qualitative et sept sont quantitatives.
+
+\subsection{Description des variables}
+
+
+\begin{itemize}
+	\item \textbf{Variables Qualitatives Ordinale :}  Pima.z
+	\item \textbf{Variables Quantitatives : } Pima.npreg, Pima.glu, Pima.bp, Pima.skin, Pima.bmi, Pima.ped, Pima.age
+\end{itemize}
+
+Nous pouvons representer les donnees des variables quantitatives a l'aide un boxplot.
+\begin{center}
+	\includegraphics[width=50mm]{Figures/Pima/bxp_Pimaquant.png}
+	\captionof{figure}{Boxplot des données quantitaves}
+	\label{fig:boxplot_pima_quantitatives}
+\end{center}
+
+\subsection{Analyse descriptive des données}
+
+\subsubsection{Representation de chaque caracteristique en fonction de z (diabetique ou pas)}
+
+\begin{center}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Pima/bxp_z_npreg.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Pima/bxp_z_glu.png}	
+	\end{minipage}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Pima/bxp_z_bp.png}
+	\end{minipage}
+	\newline
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Pima/bxp_z_skin.png}	
+	\end{minipage}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Pima/bxp_z_bmi.png}
+	\end{minipage}
+	\newline
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Pima/bxp_z_ped.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Pima/bxp_z_age.png}
+	\end{minipage}
+\end{center}
+
+\subsubsection{Lien entre les variables}
+
 
 \chapter{Analyse Composantes Principales}
 \end{document}

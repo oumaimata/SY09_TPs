@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  21 MAR 2017 23:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  28 MAR 2017 14:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -726,15 +726,212 @@ File: Figures/Notes/correcteur.jpg Graphic file (type jpg)
 Package pdftex.def Info: Figures/Notes/correcteur.jpg used on input line 180.
 (pdftex.def)             Requested size: 199.16928pt x 199.16399pt.
  [5 <./Figures/Notes/niveau_resultat.jpg> <./Figures/Notes/correcteur.jpg>]
+<Figures/Crabs/bxp_crabsquant.png, id=43, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_crabsquant.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_crabsquant.png>
+Package pdftex.def Info: Figures/Crabs/bxp_crabsquant.png used on input line 20
+0.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 211.
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 211.
+
+Overfull \hbox (90.29195pt too wide) in paragraph at lines 211--212
+[]\OT1/cmr/bx/n/10 index : \OT1/cmr/m/n/10 in-dex de 1 a 50 pour cha-cune des 4
+ ca-te-go-ries sui-vantes : \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 "B,M","O,M","B,F"
+,"O,F"\OMS/cmsy/m/n/10 g 
+ []
+
+<Figures/Crabs/bxp_sp_fl.png, id=45, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sp_fl.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sp_fl.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sp_fl.png used on input line 227.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Crabs/bxp_sp_rw.png, id=46, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sp_rw.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sp_rw.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sp_rw.png used on input line 230.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Crabs/bxp_sp_cl.png, id=47, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sp_cl.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sp_cl.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sp_cl.png used on input line 233.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Crabs/bxp_sp_cw.png, id=48, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sp_cw.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sp_cw.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sp_cw.png used on input line 237.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Crabs/bxp_sp_bd.png, id=49, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sp_bd.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sp_bd.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sp_bd.png used on input line 240.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+ [6 <./Figures/Crabs/bxp_crabsquant.png>]
+<Figures/Crabs/bxp_sex_fl.png, id=54, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sex_fl.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sex_fl.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sex_fl.png used on input line 251.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Crabs/bxp_sex_rw.png, id=55, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sex_rw.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sex_rw.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sex_rw.png used on input line 254.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Crabs/bxp_sex_cl.png, id=56, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sex_cl.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sex_cl.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sex_cl.png used on input line 257.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Crabs/bxp_sex_cw.png, id=57, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sex_cw.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sex_cw.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sex_cw.png used on input line 261.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Crabs/bxp_sex_bd.png, id=58, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sex_bd.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sex_bd.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sex_bd.png used on input line 264.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+ [7 <./Figures/Crabs/bxp_sp_fl.png> <./Figures/Crabs/bxp_sp_rw.png> <./Figures/
+Crabs/bxp_sp_cl.png> <./Figures/Crabs/bxp_sp_cw.png> <./Figures/Crabs/bxp_sp_bd
+.png> <./Figures/Crabs/bxp_sex_fl.png> <./Figures/Crabs/bxp_sex_rw.png> <./Figu
+res/Crabs/bxp_sex_cl.png> <./Figures/Crabs/bxp_sex_cw.png> <./Figures/Crabs/bxp
+_sex_bd.png>]
+<Figures/Crabs/plot_crabsquant.png, id=72, 481.8pt x 481.8pt>
+File: Figures/Crabs/plot_crabsquant.png Graphic file (type png)
+
+<use Figures/Crabs/plot_crabsquant.png>
+Package pdftex.def Info: Figures/Crabs/plot_crabsquant.png used on input line 2
+73.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
+
+ []
+
+<Figures/Crabs/plot_crabsquant_sp.png, id=73, 481.8pt x 481.8pt>
+File: Figures/Crabs/plot_crabsquant_sp.png Graphic file (type png)
+
+<use Figures/Crabs/plot_crabsquant_sp.png>
+Package pdftex.def Info: Figures/Crabs/plot_crabsquant_sp.png used on input lin
+e 281.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+<Figures/Crabs/plot_crabsquant_sex.png, id=74, 481.8pt x 481.8pt>
+File: Figures/Crabs/plot_crabsquant_sex.png Graphic file (type png)
+
+<use Figures/Crabs/plot_crabsquant_sex.png>
+Package pdftex.def Info: Figures/Crabs/plot_crabsquant_sex.png used on input li
+ne 284.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+Overfull \hbox (86.22643pt too wide) in paragraph at lines 280--286
+[][] [] 
+ []
+
+<Figures/Crabs/cor_crabsquant.png, id=75, 290.08376pt x 113.42375pt>
+File: Figures/Crabs/cor_crabsquant.png Graphic file (type png)
+
+<use Figures/Crabs/cor_crabsquant.png>
+Package pdftex.def Info: Figures/Crabs/cor_crabsquant.png used on input line 29
+7.
+(pdftex.def)             Requested size: 142.26378pt x 55.62485pt.
+ [8 <./Figures/Crabs/plot_crabsquant.png> <./Figures/Crabs/plot_crabsquant_sp.p
+ng> <./Figures/Crabs/plot_crabsquant_sex.png>] <Figures/Pima/bxp_Pimaquant.png,
+ id=82, 481.8pt x 481.8pt>
+File: Figures/Pima/bxp_Pimaquant.png Graphic file (type png)
+
+<use Figures/Pima/bxp_Pimaquant.png>
+Package pdftex.def Info: Figures/Pima/bxp_Pimaquant.png used on input line 319.
+
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+<Figures/Pima/bxp_z_npreg.png, id=83, 481.8pt x 481.8pt>
+File: Figures/Pima/bxp_z_npreg.png Graphic file (type png)
+
+<use Figures/Pima/bxp_z_npreg.png>
+Package pdftex.def Info: Figures/Pima/bxp_z_npreg.png used on input line 330.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Pima/bxp_z_glu.png, id=84, 481.8pt x 481.8pt>
+File: Figures/Pima/bxp_z_glu.png Graphic file (type png)
+
+<use Figures/Pima/bxp_z_glu.png>
+Package pdftex.def Info: Figures/Pima/bxp_z_glu.png used on input line 333.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Pima/bxp_z_bp.png, id=85, 481.8pt x 481.8pt>
+File: Figures/Pima/bxp_z_bp.png Graphic file (type png)
+
+<use Figures/Pima/bxp_z_bp.png>
+Package pdftex.def Info: Figures/Pima/bxp_z_bp.png used on input line 336.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Pima/bxp_z_skin.png, id=86, 481.8pt x 481.8pt>
+File: Figures/Pima/bxp_z_skin.png Graphic file (type png)
+
+<use Figures/Pima/bxp_z_skin.png>
+Package pdftex.def Info: Figures/Pima/bxp_z_skin.png used on input line 340.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Pima/bxp_z_bmi.png, id=87, 481.8pt x 481.8pt>
+File: Figures/Pima/bxp_z_bmi.png Graphic file (type png)
+
+<use Figures/Pima/bxp_z_bmi.png>
+Package pdftex.def Info: Figures/Pima/bxp_z_bmi.png used on input line 343.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Pima/bxp_z_ped.png, id=88, 481.8pt x 481.8pt>
+File: Figures/Pima/bxp_z_ped.png Graphic file (type png)
+
+<use Figures/Pima/bxp_z_ped.png>
+Package pdftex.def Info: Figures/Pima/bxp_z_ped.png used on input line 347.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Pima/bxp_z_age.png, id=89, 481.8pt x 481.8pt>
+File: Figures/Pima/bxp_z_age.png Graphic file (type png)
+
+<use Figures/Pima/bxp_z_age.png>
+Package pdftex.def Info: Figures/Pima/bxp_z_age.png used on input line 350.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+ [9 <./Figures/Crabs/cor_crabsquant.png> <./Figures/Pima/bxp_Pimaquant.png>] [1
+0 <./Figures/Pima/bxp_z_npreg.png> <./Figures/Pima/bxp_z_glu.png> <./Figures/Pi
+ma/bxp_z_bp.png> <./Figures/Pima/bxp_z_skin.png> <./Figures/Pima/bxp_z_bmi.png>
+ <./Figures/Pima/bxp_z_ped.png> <./Figures/Pima/bxp_z_age.png>]
 Chapitre 2.
-[6
+[11
 
 ] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 16945 strings out of 493014
- 317113 string characters out of 6133351
+ 17086 strings out of 493014
+ 321020 string characters out of 6133351
  399642 words of memory out of 5000000
- 20176 multiletter control sequences out of 15000+600000
+ 20288 multiletter control sequences out of 15000+600000
  9619 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,6n,54p,703b,600s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -747,10 +944,10 @@ cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb>
-Output written on report.pdf (8 pages, 584464 bytes).
+Output written on report.pdf (13 pages, 1020459 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 136 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 
