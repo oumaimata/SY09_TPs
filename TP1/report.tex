@@ -3,12 +3,18 @@
 \newcommand{\inputtikz}[2]{%  
 	\scalebox{#1}{\input{#2}}  
 }
+\usepackage{float}
+\usepackage{listings}
 \usepackage[french]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 %\usepackage[colorinlistoftodos]{todonotestfa}
 \usepackage{listings}
+\usepackage{wrapfig}
 \usepackage{color}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -82,108 +88,139 @@ Dans ce rapport du TP1 de l'UV SY09 nous allons expliquer notre démarches dans 
 
 \end{abstract}
 
-\tableofcontents
 
-\chapter{ Statistique descriptive}
+\section{ Statistique descriptive}
 
-\section{Notes SY02}
-Le dataset \textit{"sy02-p2016"} représente les notes des étudiants de l'UTC en SY02 ( statistiques) durant le printemps 2016. Nos données comptent \textit{N= 296} individus (étudiants) er \textit{p= 11} variables.  \textbf{Enlever les etudiants desinscrits}
+\subsection{Notes SY02}
+Le dataset \textit{"sy02-p2016"} représente les notes des étudiants de l'UTC en SY02 ( statistiques) durant le printemps 2016. Nos données comptent \textit{N= 296} individus (étudiants) er \textit{p= 11} variables. Nous avons omis  les etudiants qui n'avaient pas de résultats (\textit{NA}) ou qui ont '\textit{ABS}' en résultat de l'UV parce que ce qu'on a pense que ce sont des etudiants qui s'étaient de-inscris ou n'ont pas suivi l'UV et donc ne constituent pas d'information pour notre dataset. Nous gardons néanmoins les etudiants qui ont NA en médian ou en final mais qui ont obtenu un résultat final. 
 
- \subsection{Description des variables}
+\begin{lstlisting}
+dataset = dataset[!is.na(dataset$resultat), ]
+dataset = dataset[dataset$resultat!='ABS', ]
+\end{lstlisting}
 
-\begin{center}
-	\begin{tabular}{c c }
-		\textbf{Variables Quantitatives} & note.median, note.final, note.totale \\ 
-		 \textbf{Variables Qualitatives Nominales} & nom, specialite, status, dernier.diplome.obtenu, correcteur.median, correcteur.final\\
-		  \textbf{Variables Qualitatives Ordinales}  & niveau, resultat  \\
-	\end{tabular}
-	\captionof{table}{Categorie de Variables}
-\end{center} 
+Nous gardons donc \textit{N = 284} individus pour notre étude
+
+ \subsubsection{Description des variables}
+
 
 \begin{itemize}
-	\item \textbf{Nom:} chaine de caractère des identifiants de chaque étudiant
-	\item \textbf{Spécialité:} la branche de l'etudiant: GB, GM, GSM, GP, GI
-	\item \textbf{Niveau}: Semestre de l'etudiant de 1 a 6
-	\item \textbf{Statut}: Soit l'étudiant est de l'UTC ou en semestre d'échange
+	  	\item \textbf{Variables Quantitatives}: note.median, note.final et  note.totale.
+		\item  \textbf{Variables Qualitatives Nominales}: nom, specialite, status, dernier.diplome.obtenu et correcteur.median, correcteur.final
+		\item  \textbf{Variables Qualitatives Ordinales}: niveau et resultat  \\
+\end{itemize}
+ Nous allons a présent définir  chaque variable en précisant son intervalle ou les valeurs qu'elle peut prendre.
+
+\begin{itemize}
+	\item \textbf{Nom:} chaine de caractère identifiant chaque étudiant.
+	\item \textbf{Spécialité:} la branche de l'étudiant: \textit{GB}, \textit{GM}, \textit{GSM}, \textit{GP} et \textit{GI}.
+	\item \textbf{Niveau}: Semestre d'étude de chaque étudiant de 1 a 6.
+	\item \textbf{Statut}: Soit l'étudiant est de l'\textit{UTC} ou en s\textit{emestre d'échange}
 	\item \textbf{dernier.diplome.obtenu:}
-	BAC, DUT, CPGE, ETRANGER SUPERIEUR, LICENCE, OTHER, NA
-	\item \textbf{Note Médian:} note de l'examen Médian
-	\item \textbf{Correcteur Médian:} ID du correcteur du médian de 1 a 8. 
-	\item \textbf{Note.final:} Note de l l'examen final
+	\textit{BAC, DUT, CPGE, ETRANGER SUPERIEUR, LICENCE, OTHER, NA} NA sont les etudiants qui n'ont pas informe leur diplôme 
+	\item \textbf{Note Médian:} note de l'examen Médian: Un ensemble de réel de 0 a 20.
+	\item \textbf{Correcteur Médian:} ID du correcteur du médian de 1 a 8 de la forme \textit{Corr1} à \textit{Corr8}
+	\item \textbf{Note.final:} Note de l'examen final.  Un ensemble de réel de 0 a 20.
 	\item \textbf{Note.totale:} Note totale obtenue a partir de la note du médian et la note du final
-	\item \textbf{Correcteur.final}: D du correcteur du final de 1 a 8. 
-	\item \textbf{Résultat}: Résultat obtenu de SY02 : A, B, C, D, E et F.
+	\item \textbf{Correcteur.final}: identifiant  du correcteur du final. Ce sont les mêmes 8 correcteurs que le médian mais qui n'ont pas forcement corrige les même copies que le médian/
+	\item \textbf{Résultat}: Résultat obtenu en SY02 : \textit{A, B, C, D, E et FX et FX. ABS}. ABS est pour indiquer que l'étudiant était absent pour l'examen en question.
 \end{itemize}
 
 Pour les notes de médian et de final il y'a des notes non mentionnées (NA) par contre tous les etudiants ont un résultat final c'est pour cela on n'a pas enlevé les etudiants avec NA en médian ou/et en final.\\
 Les variables importantes dans ce dataset sont les résultats des etudiants et comment ceux ci sont influences par d'autre variable, par exemple le niveau et la spécialité\\
-Il est évident qu'il existe une relation linéaire entre ces 3 variables: note.median, note.final et note.totale vu que la note totale est exprimée par une relation linéaire entre la note.median et la note.final (par exemple $note.totale = 40\% * note.median + 40\% * note.final + cste$). La variable note.totale et la variable resultat sont des variables fortement corrélés En effet le résultat est une "traduction"  de la note totale. On pourrait éventuellement se demander sur la relation entre les notes et le niveau, la spécialité, le diplôme ainsi que le correcteur. C'est ce qu'on va essayer d'analyser dans ce qui suit. 
+Il est évident qu'il existe une relation linéaire entre ces 3 variables: note.median, note.final et note.totale vu que la note totale est exprimée par une relation linéaire entre la note.median et la note.final (par exemple $note.totale = 40\% * note.median + 40\% * note.final + cste$). La variable note.totale et la variable résultat sont des variables fortement corrélés En effet le résultat est une "traduction"  de la note totale. On pourrait éventuellement se demander sur la relation entre les notes et le niveau, la spécialité, le diplôme ainsi que le correcteur. C'est ce qu'on va essayer d'analyser dans ce qui suit. 
 
- \subsection{Analyse descriptive des données}
+\subsubsection{Liens entre les variables}
+Après avoir affiche la matrice de graphes pour chaque variable nous avons pu observe que les variables : note.median, note.final, et note.totale sont linéaire ce qui confirme note hypothèse précédente Le graphe matriciel ci-dessous présente aussi les coefficients de corrélation entre chacune de ces variables.
 
-\subsubsection{Lien entre les variables}
 	\begin{center}
-	\includegraphics[width=50mm]{Figures/Notes/multiplot.jpg}
+	\includegraphics[width=50mm]{Figures/Notes/corr_notes.jpg}
 	\captionof{figure}{Plot general}
 	\label{fig:multiplot_notes}
 \end{center}
 
+
 \subsubsection{Performance et homogénéité}
-La figure ci-dessous représente trois diagrammes a boites des notes de médian, final et le résultat de l'UV SY02.
-	\begin{center}
-			\includegraphics[width=50mm]{Figures/Notes/boxplot_exam.jpg}
-			\captionof{figure}{Boxplot des Notes de Median, Final et Totale}
-		    \label{fig:Boxplot_notes}
-	\end{center}
+La figure ci-dessous représente trois diagrammes a boites des notes de médian, final et le résultat de l'UV SY02. 
 
-On remarque que par passage du médian au final les notes ont augmente. En effet ceci est aussi témoigné par le tableau ci-dessous:
-
-\begin{center}
-	\begin{tabular}{c c c c c }
+\begin{figure}[h!]
+	\begin{minipage}{.4\textwidth}		
+		\includegraphics[width=60mm]{Figures/Notes/boxplot_exam.jpg}
+		\captionof{figure}{Boxplot des Notes de Median, Final et Totale}
+		\label{fig:Boxplot_notes}
+	\end{minipage}%
+	\hspace{0.08\linewidth}
+	\begin{minipage}{.6\textwidth}
+		\begin{tabular}{c c c c c }
 		\textbf{Notes} & \textbf{1er Quartl} & \textbf{Medianne}   & \textbf{Moyenne} & \textbf{3em Quartl} \\
 		Median  & 8.0 			& 11.0		 & 10.92      & 14.0\\
 		Final      & 9.50 		  & 13.0 	   & 12.38	    & 16.0\\
 		Totale   & 9.775        & 12.3       &  11.845    & 14.8\\
 	\end{tabular}
 	\captionof{table}{Notes}
-\end{center} 
+	\end{minipage}
+\end{figure}
 
-Il est tout a fait logique que le digramme de résultats se situe entre les 2 puisque que c'est la moyenne \textbf{pondérée??} des 2 notes.
+
+On remarque les diagrammes sont petit ce qui laisse penser que la variance des résultats est relativement petite et donc aussi que le niveau des etudiants en statistiques l'est aussi.  En comparant les diagrammes du final et du médian on remarque que les notes ont augmente.  Enfin si on analyse le dernier diagramme on voit que les deux boites du part et d'autre de la médiane ont la même taille, on peut donc mettre l'hypothèse que les résultats finaux suivent une \textit{loi normale}.
+
+Il est tout a fait logique que le digramme de boites des notes finales se situe entre les 2 puisque que la note finale est une moyenne des deux notes du médian et du final.
  
 	
 \subsubsection{Lien entre la réussite, la formation, la branche et le niveau}
+Comme les etudiants de chaque branche n'ont pas les \textit{même effectifs} on a choisi de représenter les données sous forme de diagrammes de moustache pour mieux pouvoir les comparer.
 
-	\begin{center}
-	\includegraphics[width=50mm]{Figures/Notes/diplome_resultat.jpg}
-	\captionof{figure}{Diagramme a baton de lien entre la formation et le resultat}
-	\label{fig:formation_resultat}
-	\end{center}
-
-
-
-	\begin{center}
-	\includegraphics[width=50mm]{Figures/Notes/specialite_resultat.jpg}
-	\captionof{figure}{Diagramme a baton de lien entre la branche et le resultat}
-	\label{fig:specialite_resultat}
-	\end{center}
-
-
-		\begin{center}
-		\includegraphics[width=50mm]{Figures/Notes/niveau_resultat.jpg}
-		\captionof{figure}{Diagramme a baton de lien entre le niveau et le resultat}
+\begin{figure}[h!]
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=70mm]{Figures/Notes/niveau_resultat.png}
+		\captionof{figure}{Diagramme en boite de lien entre le niveau et le resultat}
 		\label{fig:niveau_resultat}
-		\end{center}
+	\end{minipage}%
+	\hspace{0.08\linewidth}
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=70mm]{Figures/Notes/specialite_resultat.png}
+		\captionof{figure}{Diagramme en boite de lien entre la branche et le resultat}
+		\label{fig:specialite_resultat}
+	\end{minipage}
+\end{figure}
+D'après la figure \ref{fig:niveau_resultat} on remarque que les etudiants venant durant les premiers semestres sont ceux qui réussissent le mieux leur examens de SY02 , suivi par ceux en GX02. On remarque que les notes des etudiants en GX04 et GX05 ont une grande variance. Les étudiants en GX04 et en GX05 ont . Il faut aussi remarquer que les étudiants en 4em et 5 em sont peu comme c'est des semestres de départ en stage. \\
+En ce qui concerne l'influence de la spécialité sur les notes on remarque qu'il y'a une grande variance dans les  notes chez les etudiants en  TC et ISS et GSM, contrairement au GI et GP qui ont plutôt un niveau homogène et qui semble bien réussir l'UV. De plus les TC sont aussi ceux qui réussissent le mieux l'UV.
+
+\begin{figure}[h!]
+	\begin{minipage}{.5\textwidth}
+	\includegraphics[width=70mm]{Figures/Notes/diplome_resultat.png}
+	\captionof{figure}{Diagramme en boite de lien entre la formation et le resultat}
+	\label{fig:formation_resultat}	
+	\end{minipage}%
+	\hspace{0.08\linewidth}
+	\begin{minipage}{.5\textwidth}
+		On remarque qu'il y'a une grande variance chez  presque tous les diplômes obtenus. On peut remarquer cependant que les élèves du autre premier cycle et second cycle ainsi qu'autres diplômes réussissent en général bien en SY02 et ont un petite variance. Seulement on ne peut généraliser le cas ici vu que leur effectif est faible par rapport aux autres élèves des autres branches \textbf{TO CHECK!} De plus pour les élèves provenant de License ou de Deug on remarque que le niveau est hétérogène vu que les boites du dessous sont plus longues et donc \textbf{???}. 
+	\end{minipage}
+\end{figure}
 
 \subsubsection{Influence du correcteur sur la note}
 
-	\begin{center}
-	\includegraphics[width=70mm]{Figures/Notes/correcteur.jpg}
+\begin{minipage}{\linewidth}
+	Les deux diagrammes ci-dessous montrent la dispersion des notes en final et en médian chez chaque correcteur.\\
+	\begin{minipage}{0.50\linewidth}
+	\includegraphics[width=70mm]{Figures/Notes/correcteur_median.png}
 	\captionof{figure}{Scatterplot des notes en fonction des correcteurs}
 	\label{fig:scatter_correcteur_median}
-\end{center}
+	\end{minipage}
+	\hspace{0.08\linewidth}
+	\begin{minipage}{0.40\linewidth}	
+		\includegraphics[width=70mm]{Figures/Notes/correcteur_final.png}
+		\captionof{figure}{Scatterplot des notes en fonction des correcteurs}
+		\label{fig:scatter_correcteur_median}
+	\end{minipage}
+\end{minipage}
 
-\section{Conclusion}
+\subsubsection{Conclusion}
+Cette première analyse data nous a permis d'étudier  quels sont les facteurs qui influent sur la réussite d'un étudiant dans l'UV SY02 comme le dernier diplôme obtenu ou le niveau et ceux qui n' influence pas comme le correcteur. Néanmoins ces conclusions sont \underline{propre a la population du P17} et donc  \underline{biaisées}; pour pouvoir généraliser il faut analyser les notes de SY02 sur plusieurs semestre avec des populations différente 
 
+<<<<<<< HEAD
 \section{Crabs}
 Le dataset \textit{"Crabs"} représente un jeu de données de 200 crabes décrits par huit variables, trois sont qualitatives et cinq sont quantitatives.
 
@@ -353,6 +390,11 @@ Nous pouvons representer les donnees des variables quantitatives a l'aide un box
 
 \subsubsection{Lien entre les variables}
 
+=======
+\subsection{Crabs}
 
-\chapter{Analyse Composantes Principales}
+\subsection{Pima}
+>>>>>>> origin/master
+
+\section{Analyse Composantes Principales}
 \end{document}

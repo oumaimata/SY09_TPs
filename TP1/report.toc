@@ -1,4 +1,5 @@
 \select@language {french}
+<<<<<<< HEAD
 \contentsline {chapter}{\numberline {1} Statistique descriptive}{2}
 \contentsline {section}{\numberline {1.1}Notes SY02}{2}
 \contentsline {subsection}{\numberline {1.1.1}Description des variables}{2}
@@ -21,3 +22,16 @@
 \contentsline {subsubsection}{Representation de chaque caracteristique en fonction de z (diabetique ou pas)}{10}
 \contentsline {subsubsection}{Lien entre les variables}{10}
 \contentsline {chapter}{\numberline {2}Analyse Composantes Principales}{11}
+=======
+\contentsline {section}{\numberline {0.1}Notes SY02}{2}
+\contentsline {subsection}{\numberline {0.1.1}Description des variables}{2}
+\contentsline {subsection}{\numberline {0.1.2}Analyse descriptive des donn\IeC {\'e}es}{3}
+\contentsline {subsubsection}{Liens entre les variables}{3}
+\contentsline {subsubsection}{Performance et homog\IeC {\'e}n\IeC {\'e}it\IeC {\'e}}{4}
+\contentsline {subsubsection}{Lien entre la r\IeC {\'e}ussite, la formation, la branche et le niveau}{5}
+\contentsline {subsubsection}{Influence du correcteur sur la note}{6}
+\contentsline {section}{\numberline {0.2}Conclusion}{7}
+\contentsline {section}{\numberline {0.3}Crabs}{7}
+\contentsline {section}{\numberline {0.4}Pima}{7}
+\contentsline {chapter}{\numberline {1}Analyse Composantes Principales}{8}
+>>>>>>> origin/master
