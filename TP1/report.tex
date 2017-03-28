@@ -1,18 +1,9 @@
-	\documentclass[]{report}
-\usepackage{tikz}
-\newcommand{\inputtikz}[2]{%  
-	\scalebox{#1}{\input{#2}}  
-}
+\documentclass[10pt]{article}
 \usepackage{float}
 \usepackage{listings}
 \usepackage[french]{babel}
 \usepackage[utf8x]{inputenc}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{graphicx}
-\usepackage{caption}
 \usepackage{subcaption}
-%\usepackage[colorinlistoftodos]{todonotestfa}
 \usepackage{listings}
 \usepackage{wrapfig}
 \usepackage{color}
@@ -45,54 +36,32 @@
 	tabsize=3
 }
 
+
+\title{
+	\normalfont \normalsize 
+	\textsc{Université de Technologie de Compiègne\\ 
+		SY09:Analyse des données et Data-Mining , P17} \\
+	[10pt] 
+	\rule{\linewidth}{0.5pt} \\[6pt] 
+	\huge Premier Rendu \\
+	\rule{\linewidth}{2pt}  \\[10pt]
+}
+\author{Oumaima Talouka, Zineb Slam}
+\date{\normalsize \today}
+
 \begin{document}
 	
-\begin{titlepage}
-	
-	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
-	
-	\center 
-	
-	\textsc{\LARGE Université de Technologie de Compiegne}\\[1.5cm]
-	\textsc{\Large SY09}\\[0.5cm] 
-	\textsc{\large Data Mining}\\[0.5cm]
-		
-	\HRule \\[0.4cm]
-	{ \huge \bfseries Premier Rendu}\\[0.4cm] 
-	\HRule \\[1.5cm]
-		
-	\begin{minipage}{0.4\textwidth}
-		\begin{flushleft} \large
-			Oumaima \textsc{Talouka} 
-		\end{flushleft}
-	\end{minipage}
-	~
-	\begin{minipage}{0.4\textwidth}
-		\begin{flushright} \large
-			Zineb \textsc{SLAM} 
-		\end{flushright}
-	\end{minipage}\\[2cm]
+{\let\newpage\relax\maketitle}
 
-	{\large \today}\\[2cm] 
-
-	\includegraphics[width=40mm]{Figures/utc.jpg}\\ % 
-
-	\vfill
-	
-\end{titlepage}
-
-
-
-\begin{abstract}
 Dans ce rapport du TP1 de l'UV SY09 nous allons expliquer notre démarches dans l'analyse des données en expliquant les résultats obtenus. Ce TP est compose de 2 parties. La première partie a pour objectif de se familiariser avec les méthodes de traitement et de visualisation de données sur R. La deuxième partie traite de l'Analyse en composantes principales (ACP). Nous allons travailler avec 3 dataset notes de SY02, Crabs et Pima qu'on va d'abord analyser et décrire avant d'y réaliser l'ACP en seconde partie. Pour les graphes obtenus nous avons utilises la librairie ggplot2 qui offre un grand nombre de fonctionnalité Le code R sera fourni en annexe.
 
-\end{abstract}
+
 
 
 \section{ Statistique descriptive}
 
 \subsection{Notes SY02}
-Le dataset \textit{"sy02-p2016"} représente les notes des étudiants de l'UTC en SY02 ( statistiques) durant le printemps 2016. Nos données comptent \textit{N= 296} individus (étudiants) er \textit{p= 11} variables. Nous avons omis  les etudiants qui n'avaient pas de résultats (\textit{NA}) ou qui ont '\textit{ABS}' en résultat de l'UV parce que ce qu'on a pense que ce sont des etudiants qui s'étaient de-inscris ou n'ont pas suivi l'UV et donc ne constituent pas d'information pour notre dataset. Nous gardons néanmoins les etudiants qui ont NA en médian ou en final mais qui ont obtenu un résultat final. 
+Le dataset \textit{"sy02-p2016"} représente les notes des étudiants de l'UTC en méthodes statistiques durant le printemps 2016. Nos données comptent \textit{N= 296} individus (étudiants) er \textit{p= 11} variables. Nous avons omis  les etudiants qui n'avaient pas de résultats (\textit{NA}) ou qui ont '\textit{ABS}' en résultat de l'UV parce que ce qu'on a pense que ce sont des etudiants qui s'étaient de-inscris ou n'ont pas suivi l'UV et donc ne constituent pas d'information pour notre dataset. Nous gardons néanmoins les etudiants qui ont NA en médian ou en final mais qui ont obtenu un résultat final. 
 
 \begin{lstlisting}
 dataset = dataset[!is.na(dataset$resultat), ]
@@ -117,12 +86,12 @@ Nous gardons donc \textit{N = 284} individus pour notre étude
 	\item \textbf{Niveau}: Semestre d'étude de chaque étudiant de 1 a 6.
 	\item \textbf{Statut}: Soit l'étudiant est de l'\textit{UTC} ou en s\textit{emestre d'échange}
 	\item \textbf{dernier.diplome.obtenu:}
-	\textit{BAC, DUT, CPGE, ETRANGER SUPERIEUR, LICENCE, OTHER, NA} NA sont les etudiants qui n'ont pas informe leur diplôme 
-	\item \textbf{Note Médian:} note de l'examen Médian: Un ensemble de réel de 0 a 20.
-	\item \textbf{Correcteur Médian:} ID du correcteur du médian de 1 a 8 de la forme \textit{Corr1} à \textit{Corr8}
-	\item \textbf{Note.final:} Note de l'examen final.  Un ensemble de réel de 0 a 20.
+	\textit{BAC, DUT, CPGE, ETRANGER SUPERIEUR, LICENCE, OTHER, NA}
+	\item \textbf{Note Médian:} note de l'examen Médian, ensemble de réel de 0 a 20.
+	\item \textbf{Correcteur Médian:} ID du correcteur du médian \{Corr1, Corr2, Corr4., Corr5,..,Corr8\}
+	\item \textbf{Note.final:} Note de l'examen final, ensemble de réel de 0 a 20.
 	\item \textbf{Note.totale:} Note totale obtenue a partir de la note du médian et la note du final
-	\item \textbf{Correcteur.final}: identifiant  du correcteur du final. Ce sont les mêmes 8 correcteurs que le médian mais qui n'ont pas forcement corrige les même copies que le médian/
+	\item \textbf{Correcteur.final}: identifiant  du correcteur du final. \{Corr1..Corr3, Corr4., Corr5,..,Corr8\}
 	\item \textbf{Résultat}: Résultat obtenu en SY02 : \textit{A, B, C, D, E et FX et FX. ABS}. ABS est pour indiquer que l'étudiant était absent pour l'examen en question.
 \end{itemize}
 
@@ -131,7 +100,7 @@ Les variables importantes dans ce dataset sont les résultats des etudiants et c
 Il est évident qu'il existe une relation linéaire entre ces 3 variables: note.median, note.final et note.totale vu que la note totale est exprimée par une relation linéaire entre la note.median et la note.final (par exemple $note.totale = 40\% * note.median + 40\% * note.final + cste$). La variable note.totale et la variable résultat sont des variables fortement corrélés En effet le résultat est une "traduction"  de la note totale. On pourrait éventuellement se demander sur la relation entre les notes et le niveau, la spécialité, le diplôme ainsi que le correcteur. C'est ce qu'on va essayer d'analyser dans ce qui suit. 
 
 \subsubsection{Liens entre les variables}
-Après avoir affiche la matrice de graphes pour chaque variable nous avons pu observe que les variables : note.median, note.final, et note.totale sont linéaire ce qui confirme note hypothèse précédente Le graphe matriciel ci-dessous présente aussi les coefficients de corrélation entre chacune de ces variables.
+Après avoir représenté la matrice de graphes pour chaque variable nous avons pu observe que les variables : note.median, note.final, et note.totale sont linéaire ce qui confirme note hypothèse précédente Le graphe matriciel ci-dessous présente aussi les coefficients de corrélation entre chacune de ces variables.
 
 	\begin{center}
 	\includegraphics[width=50mm]{Figures/Notes/corr_notes.jpg}
@@ -140,87 +109,78 @@ Après avoir affiche la matrice de graphes pour chaque variable nous avons pu ob
 \end{center}
 
 
-\subsubsection{Performance et homogénéité}
+\subsubsection{Homogénéité et Distribution des notes}
 La figure ci-dessous représente trois diagrammes a boites des notes de médian, final et le résultat de l'UV SY02. 
 
-\begin{figure}[h!]
-	\begin{minipage}{.4\textwidth}		
-		\includegraphics[width=60mm]{Figures/Notes/boxplot_exam.jpg}
-		\captionof{figure}{Boxplot des Notes de Median, Final et Totale}
-		\label{fig:Boxplot_notes}
-	\end{minipage}%
-	\hspace{0.08\linewidth}
-	\begin{minipage}{.6\textwidth}
-		\begin{tabular}{c c c c c }
-		\textbf{Notes} & \textbf{1er Quartl} & \textbf{Medianne}   & \textbf{Moyenne} & \textbf{3em Quartl} \\
-		Median  & 8.0 			& 11.0		 & 10.92      & 14.0\\
-		Final      & 9.50 		  & 13.0 	   & 12.38	    & 16.0\\
-		Totale   & 9.775        & 12.3       &  11.845    & 14.8\\
+\begin{minipage}{.4\textwidth}	
+	\includegraphics[width=55mm]{Figures/Notes/boxplot_exam.jpg}
+	\captionof{figure}{Boxplot des Notes }
+	\label{fig:Boxplot_notes}
+\end{minipage}%
+\hspace{0.03\linewidth}
+\begin{minipage}{.6\textwidth}
+	\begin{tabular}{ c c c c }
+		\textbf{}       & \textbf{Médian} & \textbf{Final}   & \textbf{Total} \\
+		\textbf{1er Quartl}    & 8.0 			       & 9.50		      & 9.77    \\
+		\textbf{Médiane  }   &11.0		             & 13.0	            & 12.3    \\
+		\textbf{Moyenne}     & 10.92                &  12.38          & 11.84\\
+		\textbf{3em Quartl}  & 14.0  				& 16.0 		       & 14.8\\
 	\end{tabular}
-	\captionof{table}{Notes}
-	\end{minipage}
-\end{figure}
+\end{minipage}
 
 
-On remarque les diagrammes sont petit ce qui laisse penser que la variance des résultats est relativement petite et donc aussi que le niveau des etudiants en statistiques l'est aussi.  En comparant les diagrammes du final et du médian on remarque que les notes ont augmente.  Enfin si on analyse le dernier diagramme on voit que les deux boites du part et d'autre de la médiane ont la même taille, on peut donc mettre l'hypothèse que les résultats finaux suivent une \textit{loi normale}.
+On remarque les boites sont petites ce qui laisse penser que la variance des résultats est relativement petite et donc aussi que le niveau des etudiants en statistiques l'est aussi.  En comparant les diagrammes du final et du médian on remarque que les notes ont augmente.  Enfin si on analyse le dernier diagramme on voit que les deux boites du part et d'autre de la médiane ont la même taille, on peut donc mettre l'hypothèse que les résultats sont normalement distribués. 
 
 Il est tout a fait logique que le digramme de boites des notes finales se situe entre les 2 puisque que la note finale est une moyenne des deux notes du médian et du final.
  
 	
 \subsubsection{Lien entre la réussite, la formation, la branche et le niveau}
-Comme les etudiants de chaque branche n'ont pas les \textit{même effectifs} on a choisi de représenter les données sous forme de diagrammes de moustache pour mieux pouvoir les comparer.
+Comme les etudiants de chaque branche n'ont pas les \textit{même effectifs} on a choisi de représenter les données sous forme de diagrammes de moustache pour mieux pouvoir les comparer.\\
 
-\begin{figure}[h!]
+
 	\begin{minipage}{.5\textwidth}
-		\centering
-		\includegraphics[width=70mm]{Figures/Notes/niveau_resultat.png}
+		\includegraphics[width=50mm]{Figures/Notes/niveau_resultat.png}
 		\captionof{figure}{Diagramme en boite de lien entre le niveau et le resultat}
 		\label{fig:niveau_resultat}
 	\end{minipage}%
 	\hspace{0.08\linewidth}
 	\begin{minipage}{.5\textwidth}
-		\centering
-		\includegraphics[width=70mm]{Figures/Notes/specialite_resultat.png}
+		\includegraphics[width=50mm]{Figures/Notes/specialite_resultat.png}
 		\captionof{figure}{Diagramme en boite de lien entre la branche et le resultat}
 		\label{fig:specialite_resultat}
 	\end{minipage}
-\end{figure}
 D'après la figure \ref{fig:niveau_resultat} on remarque que les etudiants venant durant les premiers semestres sont ceux qui réussissent le mieux leur examens de SY02 , suivi par ceux en GX02. On remarque que les notes des etudiants en GX04 et GX05 ont une grande variance. Les étudiants en GX04 et en GX05 ont . Il faut aussi remarquer que les étudiants en 4em et 5 em sont peu comme c'est des semestres de départ en stage. \\
 En ce qui concerne l'influence de la spécialité sur les notes on remarque qu'il y'a une grande variance dans les  notes chez les etudiants en  TC et ISS et GSM, contrairement au GI et GP qui ont plutôt un niveau homogène et qui semble bien réussir l'UV. De plus les TC sont aussi ceux qui réussissent le mieux l'UV.
-
-\begin{figure}[h!]
-	\begin{minipage}{.5\textwidth}
-	\includegraphics[width=70mm]{Figures/Notes/diplome_resultat.png}
-	\captionof{figure}{Diagramme en boite de lien entre la formation et le resultat}
+\begin{center}
+	\includegraphics[width=50mm]{Figures/Notes/diplome_resultat.png}
+	\captionof{figure}{Diagramme de moustache de lien entre la formation et le resultat}
 	\label{fig:formation_resultat}	
-	\end{minipage}%
-	\hspace{0.08\linewidth}
-	\begin{minipage}{.5\textwidth}
-		On remarque qu'il y'a une grande variance chez  presque tous les diplômes obtenus. On peut remarquer cependant que les élèves du autre premier cycle et second cycle ainsi qu'autres diplômes réussissent en général bien en SY02 et ont un petite variance. Seulement on ne peut généraliser le cas ici vu que leur effectif est faible par rapport aux autres élèves des autres branches \textbf{TO CHECK!} De plus pour les élèves provenant de License ou de Deug on remarque que le niveau est hétérogène vu que les boites du dessous sont plus longues et donc \textbf{???}. 
-	\end{minipage}
-\end{figure}
+	\end{center}
+
+		On remarque qu'il y'a une grande variance chez  presque tous les diplômes obtenus. Les élèves qui réussissent le mieux et le plus sont ceux provenant de la Licence.  Plus de 75\%  (\textbf{Check}) des etudiants de autre premier  cycle et autres diplômes et  du BAC réussissent l'UV SY02. En ce qui concerne les résultats des etudiants pour le reste des diplômes ils ont une grande variance et ne sont pas normalement distribues. En particulier les etudiants du BTS, CPGGE et du DEUG sont ceux qui ont la plus grande variance et le plus grand échec.
+
 
 \subsubsection{Influence du correcteur sur la note}
 
 \begin{minipage}{\linewidth}
-	Les deux diagrammes ci-dessous montrent la dispersion des notes en final et en médian chez chaque correcteur.\\
+	Les deux diagrammes ci-dessous montrent la dispersion des notes de final et de médian pour chaque correcteur.\\
 	\begin{minipage}{0.50\linewidth}
-	\includegraphics[width=70mm]{Figures/Notes/correcteur_median.png}
-	\captionof{figure}{Scatterplot des notes en fonction des correcteurs}
+	\includegraphics[width=50mm]{Figures/Notes/correcteur_median.png}
+	\captionof{figure}{Diagramme de moustache des notes de median en fonction des correcteurs}
 	\label{fig:scatter_correcteur_median}
 	\end{minipage}
-	\hspace{0.08\linewidth}
-	\begin{minipage}{0.40\linewidth}	
-		\includegraphics[width=70mm]{Figures/Notes/correcteur_final.png}
-		\captionof{figure}{Scatterplot des notes en fonction des correcteurs}
+	\hspace{0.01\linewidth}
+	\begin{minipage}{0.50\linewidth}	
+		\includegraphics[width=50mm]{Figures/Notes/correcteur_final.png}
+		\captionof{figure}{Diagramme de moustache des notes du final en fonction des correcteurs}
 		\label{fig:scatter_correcteur_median}
 	\end{minipage}
 \end{minipage}
+on considère que les copies sont aléatoirement distribues pour chaque correcteur et donc il n' y'a pas de correcteur qui a que les 'bons' ou les 'mauvais' étudiants A première vue on remarque qu'en général les notes sont dispersées pour chaque correcteur et donc il n y'a pas vraiment de correcteur en particulier qui semble être plus 'sévère' que les autres. On peut emmètre l'hypothèse  que le \textit{Corr4} a été plus stricte dans ses corrections de médians, néanmoins son diagramme de notes de final prouve le contraire. Il se peut donc que le correcteur avait les copies des 'mauvais' etudiants par fruit de hasard. Finalement, comme il a été cite précédemment les notes ont augmente au final par rapport au médian, on observe donc bien que ceci est le cas pour tous les correcteurs.
 
 \subsubsection{Conclusion}
-Cette première analyse data nous a permis d'étudier  quels sont les facteurs qui influent sur la réussite d'un étudiant dans l'UV SY02 comme le dernier diplôme obtenu ou le niveau et ceux qui n' influence pas comme le correcteur. Néanmoins ces conclusions sont \underline{propre a la population du P17} et donc  \underline{biaisées}; pour pouvoir généraliser il faut analyser les notes de SY02 sur plusieurs semestre avec des populations différente 
+Cette première analyse data nous a permis d'étudier  quels sont les facteurs qui influent sur la réussite d'un étudiant dans l'UV SY02 comme le dernier diplôme obtenu ou le niveau et ceux qui n' influence pas comme le correcteur. Néanmoins ces conclusions sont \underline{propre a la population du P16} et donc  \underline{biaisées}; pour pouvoir généraliser il faut analyser les notes de SY02 sur plusieurs semestres avec des populations différentes.
 
-<<<<<<< HEAD
 \section{Crabs}
 Le dataset \textit{"Crabs"} représente un jeu de données de 200 crabes décrits par huit variables, trois sont qualitatives et cinq sont quantitatives.
 
@@ -232,7 +192,7 @@ Le dataset \textit{"Crabs"} représente un jeu de données de 200 crabes décrit
 	\item \textbf{Variables Quantitatives : } crabs.FL, crabs.RW, crabs.CL, crabs.CW, crabs.BD
 \end{itemize}
 
-Nous pouvons representer les donnees des variables quantitatives a l'aide un boxplot.
+Nous pouvons représenter les données des variables quantitatives a l'aide un boxplot.
 \begin{center}
 	\includegraphics[width=50mm]{Figures/Crabs/bxp_crabsquant.png}
 	\captionof{figure}{Boxplot des données quantitaves}
@@ -255,9 +215,9 @@ Avant de continuer l'analyse de ces donnees, nous pouvons preciser la significat
 
 \subsection{Analyse descriptive des données}
 
-\subsubsection{Representation de chaque caracteristique en fonction de l'espece}
+\subsubsection{Représentation de chaque caractéristique en fonction de l'espèce}
 
-Afin de voir s'il y a une difference de caracteristiques morphologiques en fonction de l'espece d'abord, nous representons les boites a moustache de chaque variable morphologique en fonction de la variable sp comme suit:
+Afin de voir s'il y a une différence de caractéristiques morphologiques en fonction de l'espèce d'abord, nous représentons les boites a moustache de chaque variable morphologique en fonction de la variable sp comme suit:
 
 \begin{center}
 	\begin{minipage}[t]{0.3\textwidth}
@@ -302,33 +262,33 @@ Afin de voir s'il y a une difference de caracteristiques morphologiques en fonct
 	\end{minipage}
 \end{center}
 
-A l'oppose des boxplot en fonction de l'espece, ceux en fonction du sexe relevent une similitude de la distribution des differentes caracteristiques pour la plupart, ainsi que la dispersion des donnees. Nos observons que la variable RW se distingue des autres avec un largeur de l'arriere importante chez les femmes que chez les hommes.
+A l'oppose des boxplot en fonction de l'espèce, ceux en fonction du sexe relèvent une similitude de la distribution des différentes caractéristiques pour la plupart, ainsi que la dispersion des données Nos observons que la variable RW se distingue des autres avec un largeur de l'arrière importante chez les femmes que chez les hommes.
 
-Enfin, la nature de l'espece impacte les caracteristiques morphologiques, a la difference du sexe, qui lui n'influe que peu ces caracteristiques.
+Enfin, la nature de l'espèce impacte les caractéristiques morphologiques, a la différence du sexe, qui lui n'influe que peu ces caractéristiques
 \subsubsection{Lien entre les variables}
-\begin{center}
-	\includegraphics[width=50mm]{Figures/Crabs/plot_crabsquant.png}
-	\captionof{figure}{Plot general}
-	\label{fig:multiplot_crabs}
-\end{center}
+%\begin{center}
+%	\includegraphics[width=50mm]{Figures/Crabs/plot_crabsquant.png}
+%	\captionof{figure}{Plot general}
+%	\label{fig:multiplot_crabs}
+%\end{center}
 
-Nous pouvons representer chacune de ces variables quantitatives en fonction de l'espece puis en fonction du sexe afin de determiner la possibilite d'identifier l'une ou l'autre a partir des caracteristiques morphologiques. \\
+Nous pouvons représenter chacune de ces variables quantitatives en fonction de l'espèce puis en fonction du sexe afin de déterminer la possibilité d'identifier l'une ou l'autre a partir des caractéristiques morphologiques. \\
 
 \begin{minipage}[t]{0.6\textwidth}
-	\includegraphics[width=50mm]{Figures/Crabs/plot_crabsquant_sp.png}
+		\includegraphics[width=50mm]{Figures/Crabs/matricial_plot_sp.png}
 \end{minipage}
 \begin{minipage}[t]{0.6\textwidth}
-	\includegraphics[width=50mm]{Figures/Crabs/plot_crabsquant_sex.png}	
+	\includegraphics[width=50mm]{Figures/Crabs/matricial_plot_sex.png}
 \end{minipage}
 \begin{center}
 	\captionof{figure}{Plot general en fonction de l'espece (gauche) et du sexe(droite)}
 	\label{fig:multiplot_crabs__sp_sex}
 \end{center}
 
-Nous remarquons que ni l'espece ni le sexe ne peuvent vraiment etre identifies a partir d'une ou de plusieurs caracteristiques morphologiques.
-En effet, dans les cas, l'ensemble des points est represente sur une meme droite, on ne peut pas clairement distinguer l'une difference. De ce fait, il est difficile de reconnaitre une espece selon ses carateristiques morphologiques.
+Nous remarquons que ni l'espèce ni le sexe ne peuvent vraiment être identifies a partir d'une ou de plusieurs caractéristiques morphologiques.
+En effet, dans les cas, l'ensemble des points est représente sur une même droite, on ne peut pas clairement distinguer l'une différence De ce fait, il est difficile de reconnaitre une espèce selon ses caractéristiques morphologiques.
 
-\subsection{Analyse de la correlation}
+\subsection{Analyse de la corrélation}
 
 \begin{center}
 	\includegraphics[width=50mm]{Figures/Crabs/cor_crabsquant.png}
@@ -336,12 +296,13 @@ En effet, dans les cas, l'ensemble des points est represente sur une meme droite
 	\label{fig:cor_carbsquant}
 \end{center}
 
-Il y a une forte correlation positive entre toutes les combinaisons de variables, telle que la valeur minimale observee est 0.889. 
+Il y a une forte corrélation positive entre toutes les combinaisons de variables, telle que la valeur minimale observée est 0.889. 
 Il s'agit de la taille des membres du corps d'un crabe, il semble donc logique et naturel qu'elles soient proportionnelles entre elles.
-Une des facons pour s'affranchir de ce phenomene est de diviser chaque valeur par la somme totale de toutes celles de l'individu.
+Une des façons pour s'affranchir de ce phénomène est de diviser chaque valeur par la somme totale de toutes celles de l'individu.
+
 
 \section{Pima}
-Le dataset \textit{"Pima"} représente un jeu de données constitue de 532 individus tous de sexe feminin décrits par huit variables dont une qualitative et sept sont quantitatives.
+Le dataset \textit{"Pima"} représente un jeu de données constitue de 532 individus tous de sexe féminin décrits par huit variables dont une qualitative et sept sont quantitatives.
 
 \subsection{Description des variables}
 
@@ -360,7 +321,7 @@ Nous pouvons representer les donnees des variables quantitatives a l'aide un box
 
 \subsection{Analyse descriptive des données}
 
-\subsubsection{Representation de chaque caracteristique en fonction de z (diabetique ou pas)}
+\subsubsection{Représentation de chaque caractéristique en fonction de z (diabétique ou pas)}
 
 \begin{center}
 	\begin{minipage}[t]{0.3\textwidth}
@@ -390,11 +351,65 @@ Nous pouvons representer les donnees des variables quantitatives a l'aide un box
 
 \subsubsection{Lien entre les variables}
 
-=======
+
 \subsection{Crabs}
 
 \subsection{Pima}
->>>>>>> origin/master
+
+\subsection{Crabs}
+
+\subsection{Pima}
+\pagebreak
 
 \section{Analyse Composantes Principales}
+Dans cette section nous allons nous concentrer sur la technique de l’Analyse en Composantes Principales qui consiste a transformer des variables corrélées en nouvelles variables non corrélées.
+ \subsection{Exercice théorique}
+\subsection{Utilisation des outils de R}
+\subsection{Crabs}
+
+\subsubsection{PCA}
+Nous faisons appel a la fonction princomp qui calcule les composantes princpal de notre dataset. Ensuite nous utilsons le plot dans la figure \ref{fig:crabs_pca_plot} et le biplot dans la figure \ref{fig:crabs_pca_biplot}.\\
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=50mm]{Figures/Crabs/pca_plot.png}
+		\captionof{figure}{Variance expliquee par les composantes}
+		\label{fig:crabs_pca_plot}
+	\end{minipage}%
+	\hspace{0.08\linewidth}
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=50mm]{Figures/Crabs/pca_biplot.png}
+		\captionof{figure}{Individus et Variables projetes sur le premier plan factoriel}
+		\label{fig:crabs_pca_biplot}
+	\end{minipage}
+D'après la figure \ref{fig:crabs_pca_plot} on remarque que la première composante concentre la majorité de l'information, ceci est aussi illustrée dans la figure \ref{fig:crabs_pca_plot} puisqu'on remarque que toutes les variables ont la même direction \textbf{vers la composante 2???}. Ces résultats ne sont pas fiables car l'une des conditions d'utilisation de l'ACP est que les variables soit decorrelees, ainsi pour de meilleur résultats on essayera dans la question qui suit de decoreler les variables et comparer les résultats de l'ACP.
+
+\subsubsection{Solution proposée}
+Afin d'obtenir des variables non coorelles nous avons divisé chaque donnée d'une ligne par la somme des lignes. Les instructions sont détaillées dans le fichier de code en annexe. Le graphe matriciel  ci-dessous montres les résultats obtenus.
+\begin{center}
+\includegraphics[width=50mm]{Figures/Crabs/matricial_plot_decorr.png}	
+\captionof{figure}{Plot Matriciel des caracteristiques apres decorelation}
+\label{fig:crabs_matricial_plot_decorr}
+\end{center}
+On remarque qu'a présent on peut visiblement distinguer les especes par leur caractéristiques Par exemple si on observe le plot de  "RW" en fonction de "CW" les espèces sont séparées.
+
+
+	\begin{minipage}{.5\textwidth}
+	\centering
+	\includegraphics[width=50mm]{Figures/Crabs/decorr_pca_plot.png}
+	\captionof{figure}{Variance expliquee par les composantes apres decorrelation}
+	\label{fig:crabs_pca_plot}
+\end{minipage}%
+\hspace{0.08\linewidth}
+\begin{minipage}{.5\textwidth}
+	\centering
+	\includegraphics[width=50mm]{Figures/Crabs/decorr_pca_biplot.png}
+	\captionof{figure}{Individus et Variables projetes sur le premier plan factoriel apres decorrelation}
+	\label{fig:crabs_pca_biplot}
+\end{minipage}
+
+
+\subsection{Pima}
+
+\subsection{Conclusion}
 \end{document}
