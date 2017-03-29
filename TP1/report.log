@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  29 MAR 2017 09:42
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  29 MAR 2017 00:37
+>>>>>>> origin/master
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,24 +10,24 @@ entering extended mode
 (./report.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/report.cls
-Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
-\c@chapter=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+<<<<<<< HEAD
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
@@ -344,6 +348,45 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
+=======
+(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count87
+\float@exts=\toks14
+\float@box=\box26
+\@float@everytoks=\toks15
+\@floatcapt=\box27
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+\lst@mode=\count88
+\lst@gtempboxa=\box28
+\lst@token=\toks17
+\lst@length=\count89
+\lst@currlwidth=\dimen103
+\lst@column=\count90
+\lst@pos=\count91
+\lst@lostspace=\dimen104
+\lst@width=\dimen105
+\lst@newlines=\count92
+\lst@lineno=\count93
+\lst@maxwidth=\dimen106
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count94
+\lst@skipnumbers=\count95
+\lst@framebox=\box29
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+>>>>>>> origin/master
 (/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2016/04/23 3.9r The Babel package
 
@@ -352,12 +395,21 @@ Language: frenchb 2016/05/14 v3.2c French support from the babel system
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2016/04/23 3.9r Babel common definitions
+<<<<<<< HEAD
 \babel@savecnt=\count108
 \U@D=\dimen151
 )
 \l@acadian = a dialect from \language\l@french 
 \l@canadien = a dialect from \language\l@french 
 \FB@nonchar=\count109
+=======
+\babel@savecnt=\count96
+\U@D=\dimen107
+)
+\l@acadian = a dialect from \language\l@french 
+\l@canadien = a dialect from \language\l@french 
+\FB@nonchar=\count97
+>>>>>>> origin/master
 \FBcolonskip=\skip43
 \FBthinskip=\skip44
 Package babel Info: Making : an active character on input line 365.
@@ -365,6 +417,7 @@ Package babel Info: Making ; an active character on input line 366.
 Package babel Info: Making ! an active character on input line 367.
 Package babel Info: Making ? an active character on input line 368.
 \FBguillskip=\skip45
+<<<<<<< HEAD
 \FBguill@level=\count110
 \FB@everypar=\toks27
 \FB@Mht=\dimen152
@@ -374,13 +427,34 @@ Package babel Info: Making ? an active character on input line 368.
 \labelwidthFB=\skip47
 \leftmarginFB=\skip48
 \parindentFFN=\dimen153
+=======
+\FBguill@level=\count98
+\FB@everypar=\toks18
+\FB@Mht=\dimen108
+\std@mcc=\count99
+\dec@mcc=\count100
+
+
+Package frenchb.ldf Warning: Please load the "listings" package
+(frenchb.ldf)                AFTER babel/frenchb; reported on input line 967.
+
+\listindentFB=\skip46
+\labelwidthFB=\skip47
+\leftmarginFB=\skip48
+\parindentFFN=\dimen109
+>>>>>>> origin/master
 \FBfnindent=\skip49
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
+<<<<<<< HEAD
 \inpenc@prehook=\toks28
 \inpenc@posthook=\toks29
+=======
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
+>>>>>>> origin/master
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
@@ -391,11 +465,69 @@ Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
 (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
+<<<<<<< HEAD
 \uc@secondtry=\count113
 \uc@combtoks=\toks30
 \uc@combtoksb=\toks31
 \uc@temptokena=\toks32
+=======
+\uc@secondtry=\count101
+\uc@combtoks=\toks21
+\uc@combtoksb=\toks22
+\uc@temptokena=\toks23
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen110
+\captionmargin@=\dimen111
+\captionwidth=\dimen112
+\caption@tempdima=\dimen113
+\caption@indent=\dimen114
+\caption@parindent=\dimen115
+\caption@hangindent=\dimen116
+)
+\c@ContinuedFloat=\count102
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+)
+\c@subfigure=\count103
+\c@subtable=\count104
+>>>>>>> origin/master
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen117
+\WF@size=\dimen118
+\c@WF@wrappedlines=\count105
+\WF@box=\box30
+\WF@everypar=\toks24
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/05/09 v1.1c Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 144.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count106
+))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/03/10 v2.15b AMS math features
 \@mathmargin=\skip50
@@ -406,16 +538,26 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
+<<<<<<< HEAD
 \@emptytoks=\toks33
 \ex@=\dimen154
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen155
+=======
+\@emptytoks=\toks25
+\ex@=\dimen119
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen120
+>>>>>>> origin/master
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
+<<<<<<< HEAD
 \inf@bad=\count114
 LaTeX Info: Redefining \frac on input line 199.
 \uproot@=\count115
@@ -479,6 +621,46 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
+=======
+\inf@bad=\count107
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count108
+\leftroot@=\count109
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count110
+\DOTSCASE@=\count111
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box31
+\strutbox@=\box32
+\big@size=\dimen121
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count112
+\c@MaxMatrixCols=\count113
+\dotsspace@=\muskip10
+\c@parentequation=\count114
+\dspbrk@lvl=\count115
+\tag@help=\toks26
+\row@=\count116
+\column@=\count117
+\maxfields@=\count118
+\andhelp@=\toks27
+\eqnshift@=\dimen122
+\alignsep@=\dimen123
+\tagshift@=\dimen124
+\tagwidth@=\dimen125
+\totwidth@=\dimen126
+\lineht@=\dimen127
+\@envbody=\toks28
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks29
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+)
+>>>>>>> origin/master
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
@@ -491,15 +673,26 @@ Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+<<<<<<< HEAD
 \calc@Acount=\count134
 \calc@Bcount=\count135
 \calc@Adimen=\dimen167
 \calc@Bdimen=\dimen168
+=======
+\calc@Acount=\count119
+\calc@Bcount=\count120
+\calc@Adimen=\dimen128
+\calc@Bdimen=\dimen129
+>>>>>>> origin/master
 \calc@Askip=\skip53
 \calc@Bskip=\skip54
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
+<<<<<<< HEAD
 \calc@Ccount=\count136
+=======
+\calc@Ccount=\count121
+>>>>>>> origin/master
 \calc@Cskip=\skip55
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/mathtools/mhsetup.sty
@@ -509,6 +702,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+<<<<<<< HEAD
 \g_MT_multlinerow_int=\count137
 \l_MT_multwidth_dim=\dimen169
 \origjot=\skip56
@@ -535,6 +729,34 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 )
 \c@ContinuedFloat=\count138
 Package caption Info: listings package is loaded.
+=======
+\g_MT_multlinerow_int=\count122
+\l_MT_multwidth_dim=\dimen130
+\origjot=\skip56
+\l_MT_shortvdotswithinadjustabove_dim=\dimen131
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen132
+\l_MT_above_intertext_sep=\dimen133
+\l_MT_below_intertext_sep=\dimen134
+\l_MT_above_shortintertext_sep=\dimen135
+\l_MT_below_shortintertext_sep=\dimen136
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 96.
+)
+\Gin@req@height=\dimen137
+\Gin@req@width=\dimen138
+>>>>>>> origin/master
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -579,9 +801,16 @@ LaTeX Warning: Label `fig:scatter_correcteur_median' multiply defined.
 
 LaTeX Warning: Label `fig:scatter_correcteur_median' multiply defined.
 
+
+LaTeX Warning: Label `fig:crabs_pca_plot' multiply defined.
+
+
+LaTeX Warning: Label `fig:crabs_pca_biplot' multiply defined.
+
 )
 \openout1 = `report.aux'.
 
+<<<<<<< HEAD
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
@@ -608,6 +837,50 @@ LaTeX Font Info:    ... okay on input line 42.
 \MPnumerator=\count143
 \makeMPintoPDFobject=\count144
 \everyMPtoPDFconversion=\toks40
+=======
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+\c@lstlisting=\count123
+LaTeX Info: Redefining \degres on input line 52.
+LaTeX Info: Redefining \dots on input line 52.
+LaTeX Info: Redefining \up on input line 52.
+
+
+Package frenchb.ldf Warning: OT1 encoding should not be used for French.
+(frenchb.ldf)                Add \usepackage[T1]{fontenc} to the preamble
+(frenchb.ldf)                of your document, on input line 52.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/ucsencs.def
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count124
+\scratchdimen=\dimen139
+\scratchbox=\box33
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen140
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks31
+>>>>>>> origin/master
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -655,6 +928,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+<<<<<<< HEAD
 LaTeX Info: Redefining \degres on input line 42.
 LaTeX Info: Redefining \dots on input line 42.
 LaTeX Info: Redefining \up on input line 42.
@@ -677,10 +951,17 @@ Package caption Info: End \AtBeginDocument code.
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 62.
+=======
+(/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 54.
+>>>>>>> origin/master
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
+<<<<<<< HEAD
 LaTeX Font Info:    Try loading font information for U+msb on input line 62.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -695,6 +976,19 @@ Package pdftex.def Info: Figures/utc.jpg used on input line 72.
 [1 <./Figures/utc.jpg>] [1] (./report.toc
 
 ! LaTeX Error: Something's wrong--perhaps a missing \item.
+=======
+LaTeX Font Info:    Try loading font information for U+msb on input line 54.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (57.15608pt too wide) in paragraph at lines 78--79
+[]\OT1/cmr/bx/n/10 Variables Qua-li-ta-tives No-mi-nales \OT1/cmr/m/n/10 : nom,
+ spe-cia-lite, sta-tus, der-nier.diplome.obtenu
+ []
+>>>>>>> origin/master
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -705,6 +999,7 @@ l.3 ...\numberline {1} Statistique descriptive}{2}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+<<<<<<< HEAD
 )
 \tf@toc=\write4
 \openout4 = `report.toc'.
@@ -713,11 +1008,15 @@ If that doesn't work, type  X <return>  to quit.
 
 ]
 Chapitre 1.
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+>>>>>>> origin/master
 
 Overfull \hbox (206.09412pt too wide) in paragraph at lines 95--100
  [] 
  []
 
+<<<<<<< HEAD
 ! Extra }, or forgotten \endgroup.
 l.105 ...©cialitÃ©:} la branche de l'etudiant: GB}
                                                    \textit{GtitGSM}, GP, t{G...
@@ -768,11 +1067,48 @@ If that doesn't work, type  X <return>  to quit.
 Overfull \hbox (1.3338pt too wide) in paragraph at lines 130--131
 []\OT1/cmr/m/n/10 La fi-gure ci-dessous repr^^Sesente trois dia-grammes a boite
 s des notes de m^^Sedian,
+=======
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 91.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 91.
+ [2]
+<Figures/Notes/corr_notes.jpg, id=20, 481.8pt x 481.8pt>
+File: Figures/Notes/corr_notes.jpg Graphic file (type jpg)
+
+<use Figures/Notes/corr_notes.jpg>
+Package pdftex.def Info: Figures/Notes/corr_notes.jpg used on input line 106.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+Overfull \hbox (1.3338pt too wide) in paragraph at lines 113--114
+[]\OT1/cmr/m/n/10 La fi-gure ci-dessous repr^^Sesente trois dia-grammes a boite
+s des notes de m^^Sedian,
+ []
+
+<Figures/Notes/boxplot_exam.jpg, id=21, 481.8pt x 481.8pt>
+File: Figures/Notes/boxplot_exam.jpg Graphic file (type jpg)
+
+<use Figures/Notes/boxplot_exam.jpg>
+Package pdftex.def Info: Figures/Notes/boxplot_exam.jpg used on input line 116.
+
+(pdftex.def)             Requested size: 156.49014pt x 156.48756pt.
+
+Overfull \hbox (18.49225pt too wide) in paragraph at lines 116--117
+[][] 
+ []
+
+
+Overfull \hbox (27.5718pt too wide) in paragraph at lines 115--130
+[]$[]$  $[]$ 
+>>>>>>> origin/master
  []
 
 <Figures/Notes/boxplot_exam.jpg, id=28, 481.8pt x 481.8pt>
 File: Figures/Notes/boxplot_exam.jpg Graphic file (type jpg)
 
+<<<<<<< HEAD
 <use Figures/Notes/boxplot_exam.jpg>
 Package pdftex.def Info: Figures/Notes/boxplot_exam.jpg used on input line 132.
 
@@ -838,6 +1174,49 @@ If that doesn't work, type  X <return>  to quit.
 LaTeX Warning: File `Figures/Notes/correcteur.jpg' not found on input line 175.
 
 
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
+
+[3 <./Figures/Notes/corr_notes.jpg> <./Figures/Notes/boxplot_exam.jpg>]
+<Figures/Notes/niveau_resultat.png, id=25, 481.8pt x 481.8pt>
+File: Figures/Notes/niveau_resultat.png Graphic file (type png)
+
+<use Figures/Notes/niveau_resultat.png>
+Package pdftex.def Info: Figures/Notes/niveau_resultat.png used on input line 1
+42.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+<Figures/Notes/specialite_resultat.png, id=27, 481.8pt x 481.8pt>
+File: Figures/Notes/specialite_resultat.png Graphic file (type png)
+
+<use Figures/Notes/specialite_resultat.png>
+Package pdftex.def Info: Figures/Notes/specialite_resultat.png used on input li
+ne 148.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+Overfull \hbox (44.82285pt too wide) in paragraph at lines 141--154
+[]$[]$  $[]$
+ []
+
+<Figures/Notes/diplome_resultat.png, id=28, 481.8pt x 481.8pt>
+File: Figures/Notes/diplome_resultat.png Graphic file (type png)
+
+<use Figures/Notes/diplome_resultat.png>
+Package pdftex.def Info: Figures/Notes/diplome_resultat.png used on input line 
+155.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+ [4 <./Figures/Notes/niveau_resultat.png> <./Figures/Notes/specialite_resultat.
+png> <./Figures/Notes/diplome_resultat.png>] <Figures/Notes/correcteur_median.p
+ng, id=35, 481.8pt x 481.8pt>
+File: Figures/Notes/correcteur_median.png Graphic file (type png)
+
+<use Figures/Notes/correcteur_median.png>
+Package pdftex.def Info: Figures/Notes/correcteur_median.png used on input line
+ 168.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+>>>>>>> origin/master
 
 ! Package pdftex.def Error: File `Figures/Notes/correcteur.jpg' not found.
 
@@ -851,11 +1230,31 @@ Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+<<<<<<< HEAD
 [4] <Figures/Crabs/bxp_crabsquant.png, id=39, 481.8pt x 481.8pt>
+=======
+<use Figures/Notes/correcteur_final.png>
+Package pdftex.def Info: Figures/Notes/correcteur_final.png used on input line 
+174.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+Overfull \hbox (7.89253pt too wide) in paragraph at lines 166--178
+[]$   $[]$ 
+ []
+
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 165--180
+[]$[]$
+ []
+
+[5 <./Figures/Notes/correcteur_median.png> <./Figures/Notes/correcteur_final.pn
+g>] <Figures/Crabs/bxp_crabsquant.png, id=42, 481.8pt x 481.8pt>
+>>>>>>> origin/master
 File: Figures/Crabs/bxp_crabsquant.png Graphic file (type png)
 
 <use Figures/Crabs/bxp_crabsquant.png>
 Package pdftex.def Info: Figures/Crabs/bxp_crabsquant.png used on input line 19
+<<<<<<< HEAD
 5.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
  [5]
@@ -869,11 +1268,18 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 206.
 
 Overfull \hbox (90.29195pt too wide) in paragraph at lines 206--207
+=======
+7.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+Overfull \hbox (90.29195pt too wide) in paragraph at lines 208--209
+>>>>>>> origin/master
 []\OT1/cmr/bx/n/10 index : \OT1/cmr/m/n/10 in-dex de 1 a 50 pour cha-cune des 4
  ca-te-go-ries sui-vantes : \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 "B,M","O,M","B,F"
 ,"O,F"\OMS/cmsy/m/n/10 g 
  []
 
+<<<<<<< HEAD
 <Figures/Crabs/bxp_sp_fl.png, id=44, 481.8pt x 481.8pt>
 File: Figures/Crabs/bxp_sp_fl.png Graphic file (type png)
 
@@ -942,12 +1348,89 @@ File: Figures/Crabs/bxp_sex_bd.png Graphic file (type png)
 
 <use Figures/Crabs/bxp_sex_bd.png>
 Package pdftex.def Info: Figures/Crabs/bxp_sex_bd.png used on input line 259.
+=======
+
+Overfull \hbox (6.09258pt too wide) in paragraph at lines 218--218
+[]\OT1/cmr/bx/n/10 Repr^^Sesentation de chaque ca-ract^^Seristique en fonc-tion
+ de l'esp^^Rece 
+ []
+
+<Figures/Crabs/bxp_sp_fl.png, id=43, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sp_fl.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sp_fl.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sp_fl.png used on input line 224.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Crabs/bxp_sp_rw.png, id=44, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sp_rw.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sp_rw.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sp_rw.png used on input line 227.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Crabs/bxp_sp_cl.png, id=45, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sp_cl.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sp_cl.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sp_cl.png used on input line 230.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Crabs/bxp_sp_cw.png, id=46, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sp_cw.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sp_cw.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sp_cw.png used on input line 234.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Crabs/bxp_sp_bd.png, id=47, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sp_bd.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sp_bd.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sp_bd.png used on input line 237.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+ [6 <./Figures/Crabs/bxp_crabsquant.png>]
+<Figures/Crabs/bxp_sex_fl.png, id=52, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sex_fl.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sex_fl.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sex_fl.png used on input line 248.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Crabs/bxp_sex_rw.png, id=53, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sex_rw.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sex_rw.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sex_rw.png used on input line 251.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Crabs/bxp_sex_cl.png, id=54, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sex_cl.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sex_cl.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sex_cl.png used on input line 254.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Crabs/bxp_sex_cw.png, id=55, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sex_cw.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sex_cw.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sex_cw.png used on input line 258.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Crabs/bxp_sex_bd.png, id=56, 481.8pt x 481.8pt>
+File: Figures/Crabs/bxp_sex_bd.png Graphic file (type png)
+
+<use Figures/Crabs/bxp_sex_bd.png>
+Package pdftex.def Info: Figures/Crabs/bxp_sex_bd.png used on input line 261.
+>>>>>>> origin/master
 (pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
  [7 <./Figures/Crabs/bxp_sp_fl.png> <./Figures/Crabs/bxp_sp_rw.png> <./Figures/
 Crabs/bxp_sp_cl.png> <./Figures/Crabs/bxp_sp_cw.png> <./Figures/Crabs/bxp_sp_bd
 .png> <./Figures/Crabs/bxp_sex_fl.png> <./Figures/Crabs/bxp_sex_rw.png> <./Figu
 res/Crabs/bxp_sex_cl.png> <./Figures/Crabs/bxp_sex_cw.png> <./Figures/Crabs/bxp
 _sex_bd.png>]
+<<<<<<< HEAD
 <Figures/Crabs/plot_crabsquant.png, id=71, 481.8pt x 481.8pt>
 File: Figures/Crabs/plot_crabsquant.png Graphic file (type png)
 
@@ -981,10 +1464,38 @@ Overfull \hbox (86.22643pt too wide) in paragraph at lines 275--281
  []
 
 <Figures/Crabs/cor_crabsquant.png, id=74, 290.08376pt x 113.42375pt>
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
+
+ []
+
+<Figures/Crabs/matricial_plot_sp.png, id=71, 481.8pt x 481.8pt>
+File: Figures/Crabs/matricial_plot_sp.png Graphic file (type png)
+
+<use Figures/Crabs/matricial_plot_sp.png>
+Package pdftex.def Info: Figures/Crabs/matricial_plot_sp.png used on input line
+ 278.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+<Figures/Crabs/matricial_plot_sex.png, id=72, 481.8pt x 481.8pt>
+File: Figures/Crabs/matricial_plot_sex.png Graphic file (type png)
+
+<use Figures/Crabs/matricial_plot_sex.png>
+Package pdftex.def Info: Figures/Crabs/matricial_plot_sex.png used on input lin
+e 281.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+Overfull \hbox (86.22643pt too wide) in paragraph at lines 277--283
+[][] [] 
+ []
+
+<Figures/Crabs/cor_crabsquant.png, id=73, 290.08376pt x 113.42375pt>
+>>>>>>> origin/master
 File: Figures/Crabs/cor_crabsquant.png Graphic file (type png)
 
 <use Figures/Crabs/cor_crabsquant.png>
 Package pdftex.def Info: Figures/Crabs/cor_crabsquant.png used on input line 29
+<<<<<<< HEAD
 2.
 (pdftex.def)             Requested size: 142.26378pt x 55.62485pt.
  [8 <./Figures/Crabs/plot_crabsquant.png> <./Figures/Crabs/plot_crabsquant_sp.p
@@ -1053,11 +1564,134 @@ Chapitre 2.
 [11
 
 ] (./report.aux)
+=======
+4.
+(pdftex.def)             Requested size: 142.26378pt x 55.62485pt.
+ [8 <./Figures/Crabs/matricial_plot_sp.png> <./Figures/Crabs/matricial_plot_sex
+.png> <./Figures/Crabs/cor_crabsquant.png>] <Figures/Pima/bxp_Pimaquant.png, id
+=80, 481.8pt x 481.8pt>
+File: Figures/Pima/bxp_Pimaquant.png Graphic file (type png)
+
+<use Figures/Pima/bxp_Pimaquant.png>
+Package pdftex.def Info: Figures/Pima/bxp_Pimaquant.png used on input line 317.
+
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+Overfull \hbox (32.22298pt too wide) in paragraph at lines 324--324
+[]\OT1/cmr/bx/n/10 Repr^^Sesentation de chaque ca-ract^^Seristique en fonc-tion
+ de z (diab^^Setique
+ []
+
+<Figures/Pima/bxp_z_npreg.png, id=81, 481.8pt x 481.8pt>
+File: Figures/Pima/bxp_z_npreg.png Graphic file (type png)
+
+<use Figures/Pima/bxp_z_npreg.png>
+Package pdftex.def Info: Figures/Pima/bxp_z_npreg.png used on input line 328.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Pima/bxp_z_glu.png, id=82, 481.8pt x 481.8pt>
+File: Figures/Pima/bxp_z_glu.png Graphic file (type png)
+
+<use Figures/Pima/bxp_z_glu.png>
+Package pdftex.def Info: Figures/Pima/bxp_z_glu.png used on input line 331.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Pima/bxp_z_bp.png, id=83, 481.8pt x 481.8pt>
+File: Figures/Pima/bxp_z_bp.png Graphic file (type png)
+
+<use Figures/Pima/bxp_z_bp.png>
+Package pdftex.def Info: Figures/Pima/bxp_z_bp.png used on input line 334.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Pima/bxp_z_skin.png, id=84, 481.8pt x 481.8pt>
+File: Figures/Pima/bxp_z_skin.png Graphic file (type png)
+
+<use Figures/Pima/bxp_z_skin.png>
+Package pdftex.def Info: Figures/Pima/bxp_z_skin.png used on input line 338.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Pima/bxp_z_bmi.png, id=85, 481.8pt x 481.8pt>
+File: Figures/Pima/bxp_z_bmi.png Graphic file (type png)
+
+<use Figures/Pima/bxp_z_bmi.png>
+Package pdftex.def Info: Figures/Pima/bxp_z_bmi.png used on input line 341.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Pima/bxp_z_ped.png, id=86, 481.8pt x 481.8pt>
+File: Figures/Pima/bxp_z_ped.png Graphic file (type png)
+
+<use Figures/Pima/bxp_z_ped.png>
+Package pdftex.def Info: Figures/Pima/bxp_z_ped.png used on input line 345.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+
+<Figures/Pima/bxp_z_age.png, id=87, 481.8pt x 481.8pt>
+File: Figures/Pima/bxp_z_age.png Graphic file (type png)
+
+<use Figures/Pima/bxp_z_age.png>
+Package pdftex.def Info: Figures/Pima/bxp_z_age.png used on input line 348.
+(pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
+ [9 <./Figures/Pima/bxp_Pimaquant.png> <./Figures/Pima/bxp_z_npreg.png> <./Figu
+res/Pima/bxp_z_glu.png> <./Figures/Pima/bxp_z_bp.png>] [10 <./Figures/Pima/bxp_
+z_skin.png> <./Figures/Pima/bxp_z_bmi.png> <./Figures/Pima/bxp_z_ped.png> <./Fi
+gures/Pima/bxp_z_age.png>]
+(/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+<Figures/Crabs/pca_plot.png, id=102, 481.8pt x 481.8pt>
+File: Figures/Crabs/pca_plot.png Graphic file (type png)
+
+<use Figures/Crabs/pca_plot.png>
+Package pdftex.def Info: Figures/Crabs/pca_plot.png used on input line 374.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+<Figures/Crabs/pca_biplot.png, id=103, 481.8pt x 481.8pt>
+File: Figures/Crabs/pca_biplot.png Graphic file (type png)
+
+<use Figures/Crabs/pca_biplot.png>
+Package pdftex.def Info: Figures/Crabs/pca_biplot.png used on input line 381.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+Overfull \hbox (29.82285pt too wide) in paragraph at lines 371--386
+[]$  $[]$
+ []
+
+<Figures/Crabs/matricial_plot_decorr.png, id=104, 481.8pt x 481.8pt>
+File: Figures/Crabs/matricial_plot_decorr.png Graphic file (type png)
+
+<use Figures/Crabs/matricial_plot_decorr.png>
+Package pdftex.def Info: Figures/Crabs/matricial_plot_decorr.png used on input 
+line 390.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+ [11 <./Figures/Crabs/pca_plot.png> <./Figures/Crabs/pca_biplot.png>]
+<Figures/Crabs/decorr_pca_plot.png, id=110, 481.8pt x 481.8pt>
+File: Figures/Crabs/decorr_pca_plot.png Graphic file (type png)
+
+<use Figures/Crabs/decorr_pca_plot.png>
+Package pdftex.def Info: Figures/Crabs/decorr_pca_plot.png used on input line 3
+99.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+<Figures/Crabs/decorr_pca_biplot.png, id=111, 481.8pt x 481.8pt>
+File: Figures/Crabs/decorr_pca_biplot.png Graphic file (type png)
+
+<use Figures/Crabs/decorr_pca_biplot.png>
+Package pdftex.def Info: Figures/Crabs/decorr_pca_biplot.png used on input line
+ 406.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+Overfull \hbox (44.82285pt too wide) in paragraph at lines 397--410
+[]$[]$  $[]$ 
+ []
+
+[12 <./Figures/Crabs/matricial_plot_decorr.png> <./Figures/Crabs/decorr_pca_plo
+t.png> <./Figures/Crabs/decorr_pca_biplot.png>] (./report.aux)
+>>>>>>> origin/master
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  17070 strings out of 493014
  320307 string characters out of 6133351
  399642 words of memory out of 5000000
@@ -1065,12 +1699,22 @@ Here is how much of TeX's memory you used:
  9787 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,6n,54p,703b,600s stack positions out of 5000i,500n,10000p,200000b,80000s
+=======
+ 8671 strings out of 493014
+ 125960 string characters out of 6133351
+ 221269 words of memory out of 5000000
+ 12051 multiletter control sequences out of 15000+600000
+ 12915 words of font info for 50 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,9n,40p,846b,1785s stack positions out of 5000i,500n,10000p,200000b,80000s
+>>>>>>> origin/master
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
 sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+<<<<<<< HEAD
 /local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/l
 ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
@@ -1080,4 +1724,17 @@ PDF statistics:
  64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on report.pdf (12 pages, 904470 bytes).
+PDF statistics:
+ 154 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> origin/master
 
