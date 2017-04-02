@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  31 MAR 2017 01:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  2 APR 2017 12:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -292,21 +292,6 @@ File: lstlang2.sty 2015/06/04 1.6 listings language file
 File: lstlang3.sty 2015/06/04 1.6 listings language file
 )
 (./report.aux
-
-LaTeX Warning: Label `fig:Boxplot_notes' multiply defined.
-
-
-LaTeX Warning: Label `fig:niveau_resultat' multiply defined.
-
-
-LaTeX Warning: Label `fig:specialite_resultat' multiply defined.
-
-
-LaTeX Warning: Label `fig:formation_resultat' multiply defined.
-
-
-LaTeX Warning: Label `fig:scatter_correcteur_median' multiply defined.
-
 
 LaTeX Warning: Label `fig:scatter_correcteur_median' multiply defined.
 
@@ -839,7 +824,7 @@ texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on report.pdf (15 pages, 1015163 bytes).
+Output written on report.pdf (15 pages, 1019753 bytes).
 PDF statistics:
  190 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream
