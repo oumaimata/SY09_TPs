@@ -64,11 +64,9 @@ inertie.perc = matrix(nrow= 1, ncol=4, 0)
 result = cumsum(eig.val)/sum(eig.val) * 100
 result
 
-#png('SY09_TPs/TP1/Figures/Notes_PCA/pourcentage_inertie.png')
 bp = barplot(result, main="Pourcentage cumulé de l'inertie expliquée", 
     col = c('chartreuse3', 'darkgoldenrod1', 'cornflowerblue', 'mediumorchid2'))
 text(bp, 0, round(result, 1),cex=1,pos=3) 
-#dev.off()
 
 
 #*********************************************#
@@ -83,14 +81,6 @@ colMeans(C)  #Checked! : it is centred!
 print("Composantes Principales:")
 C
 
-#Verification: Methode 2 obtention des Composantes principales
-WDp =  1/6 *corr.acp.scaled %*% corr.acp.scaled.t
-eig.vect
-eigen(WDp)
-
-test = eigen(WDp)$vectors[,1]*eigen(WDp)$values
-test
-#Remark: C %*% t(eig.vect) = corr.acp.scaled
 
 #***********************************************#
 #                                               #
@@ -104,11 +94,9 @@ print("représentation des quatre individus dans le premier plan factoriel:")
 names=c("corr1","corr3", "corr4", "corr5", "corr6", "corr7")
 col = c('chartreuse3', 'cornflowerblue', 'darkgoldenrod1', 'peachpuff3',
              'mediumorchid2', 'turquoise3')
-#png('SY09_TPs/TP1/Figures/Notes_PCA/individus_comp.png')
 ggplot(C, aes(C[,1],C[,2])) + geom_point( size = 6, colour = col)+ 
 geom_text(aes(label=names)) + xlab("Premiere Compsante") +
 ylab("Deuxieme Composante")
-#dev.off()
 
 
 
@@ -124,13 +112,12 @@ print("Correlation Matrix: ")
 corr.acp = cor(C, X.notes)
 corr.acp 
 
-#png('SY09_TPs/TP1/Figures/Notes_PCA/variables_comp.png')
 col = c('chartreuse3', 'cornflowerblue', 'darkgoldenrod1', 'peachpuff3')
 names = c('moy.median', 'std.median', 'moy.final', 'std.final')
 ggplot(corr.acp, aes(C[1,],C[2,])) + 
 geom_point(size = 6, colour = col) + 
 geom_text(aes(label=names)) + xlab("Premiere Composante") + ylab("Deuxieme Composante")
-#|dev.off() 
+
 
 #*********************************************#
 #                                             #
@@ -140,10 +127,23 @@ geom_text(aes(label=names)) + xlab("Premiere Composante") + ylab("Deuxieme Compo
 
 
 #Calculer l’expression k = sum(cu) pour les valeurs k = 1,2 et 3. 
-#À quoi correspond cette somme lorsque k = 3 ?
-U
-C
-C%*%t(U)
+#À quoi correspond cette somme lorsque k = 4?
+print("k = 1")
+k1 = C[,1]%*%t(U[,1])
+k1
+
+print("k = 2")
+k2 = k1 +C[,2]%*%t(U[,2])
+k2
+
+print("k = 3")
+k3 =  k2 +  C[,3]%*%t(U[,3])
+k3
+
+print("k = 4")
+k4 = k3 + C[,4]%*%t(U[,4])
+k4
+X.notes
 
 
 #*********************************************#
@@ -157,9 +157,35 @@ C%*%t(U)
 #correspondante (imputation par la moyenne), puis représenter ces individus
 #dans les deux premiers plans factoriels.
 
-#Montrer comment on peut retrouver tous les résultats alors obtenus 
-#(valeurs propres, axes principaux, composantes principales, représentations graphiques, ...).
+#imputation par la moyenne
+new = correcteurs
+#Replace NA with 0
+new[is.na(new)] = 0
+new
 
-#On s’intéresse à l’affichage des résultats de la fonction princomp. Qu’affichent les fonctions plot et biplot? Détailler plus particulièrement le fonctionnement de la fonction biplot redéfinie pour la classe princomp (accessible par biplot.princomp)
-#et de ses différentes options.
+#Cor2
+new[2,]$moy.final = mean(new$moy.final)
+new[2,]$std.final = mean(new$std.final)
+
+#Cor3
+new[8,]$moy.median = mean(new$moy.median)
+new[8,]$std.median = mean(new$std.median)
+
+#Scaling
+new = scale(new[-c(1)], center = TRUE)
+new = cbind(correcteurs$correcteur, new)
+
+newdata = new[which(new[,1]=='2' | new[,1]=='8'),]
+newdata = newdata[,c(-1)]
+newdata
+
+C2 = newdata %*% U
+C2
+
+print("représentation des 2 individus dans le premier plan factoriel:")
+names=c("cor2","cor3")
+col = c('chartreuse3', 'cornflowerblue')
+ggplot(C2, aes(C2[,1],C2[,2])) + geom_point( size = 6, colour = col)+ 
+geom_text(aes(label=names)) + xlab("Premiere Compsante") +ylab("Deuxieme Composante")
+
 

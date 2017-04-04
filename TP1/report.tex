@@ -181,7 +181,7 @@
 	\subsubsection{Conclusion}
 	Cette première analyse data nous a permis d'étudier  quels sont les facteurs qui influent sur la réussite d'un étudiant dans l'UV SY02 comme le dernier diplôme obtenu ou le niveau et ceux qui n' influence pas comme le correcteur. Néanmoins ces conclusions sont \underline{propre a la population du P16} et donc  \underline{biaisées}; pour pouvoir généraliser il faut analyser les notes de SY02 sur plusieurs semestres avec des populations différentes.
 	
-	\section{Crabs}
+	\subsection{Crabs}
 	Le dataset \textit{"Crabs"} représente un jeu de données de 200 crabes décrits par huit variables, trois sont qualitatives et cinq sont quantitatives.
 	
 	\subsection{Description des variables}
@@ -199,13 +199,13 @@
 		\label{fig:boxplot_crabs_quantitatives}
 	\end{center}
 	
-	Nous remarquons d'ores et deja que deux categories de variables se distinguent, d'un cote FL, RW et BD et d'un autre, CL et CW.
+	Nous remarquons d'ores et déjà que deux catégories de variables se distinguent, d'un cote FL, RW et BD et d'un autre, CL et CW.
 	
-	Avant de continuer l'analyse de ces donnees, nous pouvons preciser la signification de chacune de ces variables comme suit:
+	Avant de continuer l'analyse de ces données, nous pouvons préciser la signification de chacune de ces variables comme suit:
 	\begin{itemize}
-		\item \textbf{sp:} \textit{(species)}, espece, "B" pour Bleu et "O" pour Orange
-		\item \textbf{sex:} sexe, "F" pour Feminin et "M" pour masculin
-		\item \textbf{index:} index de 1 a 50 pour chacune des 4 categories suivantes : \{"B,M","O,M","B,F","O,F"\}
+		\item \textbf{sp:} \textit{(species)}, espèce, "B" pour Bleu et "O" pour Orange
+		\item \textbf{sex:} sexe, "F" pour Femelle et "M" pour Mâle
+		\item \textbf{index:} index de 1 a 50 pour chacune des 4 catégories suivantes : \{"B,M","O,M","B,F","O,F"\}
 		\item \textbf{FL:} Frontal Lobe size en mm
 		\item \textbf{RW:} Rear Width en mm
 		\item \textbf{CL:} Carapace Length en mm
@@ -238,10 +238,10 @@
 		\end{minipage}
 	\end{center}
 	
-	Il y a des distributions assez differentes en fonction de l'espece. Les intervalles de confiances ne se chevauchent pas . Cependant, la dispersion des donnees reste assez homogene au vue des boxplots.
-	\subsubsection{Representation de chaque caracteristique en fonction du sexe}
+	Il y a des distributions assez différentes en fonction de l'espèce Les intervalles de confiances ne se chevauchent pas . Cependant, la dispersion des données reste assez homogène au vue des boxplots.
+	\subsubsection{Représentation de chaque caractéristique en fonction du sexe}
 	
-	Afin de voir s'il y a une difference de caracteristiques morphologiques en fonction du sexe, nous representons les boites a moustache de chaque variable morphologique en fonction de la variable sex comme suit:
+	Afin de voir s'il y a une différence de caractéristiques morphologiques en fonction du sexe, nous représentons les boites a moustache de chaque variable morphologique en fonction de la variable \textit{sex} comme suit:
 	
 	\begin{center}
 		\begin{minipage}[t]{0.3\textwidth}
@@ -266,12 +266,6 @@
 	
 	Enfin, la nature de l'espèce impacte les caractéristiques morphologiques, a la différence du sexe, qui lui n'influe que peu ces caractéristiques
 	\subsubsection{Lien entre les variables}
-	%\begin{center}
-	%	\includegraphics[width=50mm]{Figures/Crabs/plot_crabsquant.png}
-	%	\captionof{figure}{Plot general}
-	%	\label{fig:multiplot_crabs}
-	%\end{center}
-	
 	Nous pouvons représenter chacune de ces variables quantitatives en fonction de l'espèce puis en fonction du sexe afin de déterminer la possibilité d'identifier l'une ou l'autre a partir des caractéristiques morphologiques. \\
 	
 	\begin{minipage}[t]{0.6\textwidth}
@@ -288,7 +282,7 @@
 	Nous remarquons que ni l'espèce ni le sexe ne peuvent vraiment être identifies a partir d'une ou de plusieurs caractéristiques morphologiques.
 	En effet, dans les cas, l'ensemble des points est représente sur une même droite, on ne peut pas clairement distinguer l'une différence De ce fait, il est difficile de reconnaitre une espèce selon ses caractéristiques morphologiques.
 	
-	\subsection{Analyse de la corrélation}
+	\subsubsection{Analyse de la corrélation}
 	
 	\begin{center}
 		\includegraphics[width=50mm]{Figures/Crabs/cor_crabsquant.png}
@@ -300,80 +294,75 @@
 	Il s'agit de la taille des membres du corps d'un crabe, il semble donc logique et naturel qu'elles soient proportionnelles entre elles.
 	Une des façons pour s'affranchir de ce phénomène est de diviser chaque valeur par la somme totale de toutes celles de l'individu.
 	
-	
-	\section{Pima}
-	Le dataset \textit{"Pima"} représente un jeu de données constitue de 532 individus tous de sexe féminin décrits par huit variables dont une qualitative et sept sont quantitatives.
-	
-	\subsection{Description des variables}
-	
-	
-	\begin{itemize}
-		\item \textbf{Variables Qualitatives Ordinale :}  Pima.z
-		\item \textbf{Variables Quantitatives : } Pima.npreg, Pima.glu, Pima.bp, Pima.skin, Pima.bmi, Pima.ped, Pima.age
-	\end{itemize}
-	
-	Nous pouvons representer les donnees des variables quantitatives a l'aide un boxplot.
-	\begin{center}
-		\includegraphics[width=50mm]{Figures/Pima/bxp_Pimaquant.png}
-		\captionof{figure}{Boxplot des données quantitaves}
-		\label{fig:boxplot_pima_quantitatives}
-	\end{center}
-	
-	\subsection{Analyse descriptive des données}
-	
-	\subsubsection{Représentation de chaque caractéristique en fonction de z (diabétique ou pas)}
-	
-	\begin{center}
-		\begin{minipage}[t]{0.3\textwidth}
-			\includegraphics[width=35mm]{Figures/Pima/bxp_z_npreg.png}
-		\end{minipage}
-		\begin{minipage}[t]{0.3\textwidth}
-			\includegraphics[width=35mm]{Figures/Pima/bxp_z_glu.png}	
-		\end{minipage}
-		\begin{minipage}[t]{0.3\textwidth}
-			\includegraphics[width=35mm]{Figures/Pima/bxp_z_bp.png}
-		\end{minipage}
-		\newline
-		\begin{minipage}[t]{0.3\textwidth}
-			\includegraphics[width=35mm]{Figures/Pima/bxp_z_skin.png}	
-		\end{minipage}
-		\begin{minipage}[t]{0.3\textwidth}
-			\includegraphics[width=35mm]{Figures/Pima/bxp_z_bmi.png}
-		\end{minipage}
-		\newline
-		\begin{minipage}[t]{0.3\textwidth}
-			\includegraphics[width=35mm]{Figures/Pima/bxp_z_ped.png}
-		\end{minipage}
-		\begin{minipage}[t]{0.3\textwidth}
-			\includegraphics[width=35mm]{Figures/Pima/bxp_z_age.png}
-		\end{minipage}
-	\end{center}
-	
-	\subsubsection{Lien entre les variables}
-	
-	
-	\subsection{Crabs}
-	
-	\subsection{Pima}
-	
-	\subsection{Crabs}
-	
-	\subsection{Pima}
-	\pagebreak
+\subsection{Pima}
+Le dataset \textit{"Pima"} représente un jeu de données constitue de 532 individus tous de sexe féminin décrits par huit variables dont une qualitative et sept sont quantitatives.
+
+\subsubsection{Description des variables}
+
+\begin{itemize}
+	\item \textbf{Variables Qualitatives Ordinale :}  Pima.z
+	\item \textbf{Variables Quantitatives : } Pima.npreg, Pima.glu, Pima.bp, Pima.skin, Pima.bmi, Pima.ped, Pima.age
+\end{itemize}
+
+Nous pouvons représenter les données des variables quantitatives a l'aide d'un boxplot normalise de telle sorte qu'on ait toutes les variables avec une moyenne nulle et une déviation égale a 1.
+\begin{center}
+	\includegraphics[width=50mm]{Figures/Pima/boxplot_norm_Pimaquant.png}
+	\captionof{figure}{Boxplot normalisé des données quantitatives}
+	\label{fig:boxplot_norm_pima_quantitatives}
+\end{center}
+D'après les boxplots normalises, il existe plusieurs données aberrantes Les variables \textit{ped} et \textit{age} sont clairement pas symétriques De plus, les distributions des différentes variables sont assez différentes du fait qu'elles ne se chevauchent pas, ainsi que l'existence de plusieurs valeurs extrêmes
+\begin{center}
+	\includegraphics[width=50mm]{Figures/Pima/plot_Pimaquant.png}
+	\captionof{figure}{Plot des données quantitatives}
+	\label{fig:plot_pima_quantitatives}
+\end{center}
+
+Nous remarquons qu'un seul des scartter plots représente une forte association entre l'indice de masse corporelle \textit{bmi} et et l'épaisseur du pli cutané au niveau du triceps \textit{skin}.
+\subsubsection{Représentation de chaque caractéristique en fonction de z (diabétique ou pas)}
+
+\begin{center}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Pima/bxp_z_npreg.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Pima/bxp_z_glu.png}	
+	\end{minipage}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Pima/bxp_z_bp.png}
+	\end{minipage}
+	\newline
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Pima/bxp_z_skin.png}	
+	\end{minipage}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Pima/bxp_z_bmi.png}
+	\end{minipage}
+	\newline
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Pima/bxp_z_ped.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.3\textwidth}
+		\includegraphics[width=35mm]{Figures/Pima/bxp_z_age.png}
+	\end{minipage}
+\end{center}
+
+On remarque une grande différence de distributions en fonction de la catégorie z. Les intervalles de confiances ne se chevauchent pas. La dispersion des données est aussi différentes selon chaque variable. De ce fait, le diabète (variable  qualitative) impacte considérablement chacune des variables quantitatives. 
+Selon les médianes bien différentes entre les tests positifs et négatifs de diabète, nous pouvons dire que l'\textit{age} par exemple, la \textit{fonction de pedigree} ou encore le \textit{nombre de grossesses} peut aider a estimer les résultats des tests.
+Les données dont on dispose affirme que le diabète ne suit pas forcement la génétique, ceux dont les proches ou ancêtres ont soufferts de diabète ne se sont pas forcement exposes a un risque élevé d'être affectes eux même Il est important de noter que cette conclusion ne concerne que le dataset dont on dispose pour cette analyse (elle ne se reflète pas forcement sur les analyses médicale)
 	
 	\section{Analyse Composantes Principales}
-	Dans cette section nous allons nous concentrer sur la technique de l’Analyse en Composantes Principales qui consiste a transformer des variables corrélées en nouvelles variables non corrélées.
+	Dans cette section nous allons nous concentrer sur la technique de l’Analyse en Composantes Principales qui consiste à transformer des variables corrélées en nouvelles variables non corrélées voire aussi à la réduction de dimension.
 	\subsection{Exercice théorique}
-	Nous travaillons a présent sur les données notes mais cette fois ci les correcteurs sont les individus et les variables: \textit{moy.median, std.median, moy.final, std.final.}. On associe les mêmes pondérations a tous les individus,et on munit $R^{p}$ de la métrique euclidienne. Dans la suite la matrice M de pondération des variables est la matrice identité
+	Nous travaillons à présent sur les données \textit{notes} mais cette fois ci les correcteurs sont les individus; et les variables sont : \textit{moy.median, std.median, moy.final, std.final.}. On associe les mêmes pondérations a tous les individus,et on munit $R^{p}$ de la métrique euclidienne. Dans la suite la matrice M de pondération des variables est la matrice identité
 	\subsubsection{Calcul des axes factoriels de l'ACP}
-	Avant de commencer le calcul on commence par centrer notre matrice de données X.notes en soustrayant la moyenne de chaque colonne ce qui permet de mettre le centre de gravite du nuage de points a l'origine. Ceci est possible grâce a la fonction \textit{scale} de R. Tout d'abord on calcule la matrice des variances M par la formule suivante: $V = \frac{1}{6}* X.notes* X.notes^{T}$. Nous obtenons ensuite les valeurs propres $\lambda_{1}, \lambda_{2}, \lambda_{3}, \lambda_{4}$ triées par ordre grâce a la fonction \textit{eigen} ainsi que les vecteurs propres associes. Nous obtenons la matrice U \textit{(ci-dessous)} de vecteurs qui constitue nos axes factoriels de l'ACP.
+	Avant de commencer le calcul on commence par centrer notre matrice de données \textit{X.notes} en soustrayant la moyenne de chaque colonne ce qui permet de mettre le centre de gravite du nuage de points à l'origine. Ceci est possible grâce a la fonction \textit{scale} de R. Tout d'abord on calcule la matrice des variances \textit{V} par la formule suivante: $V = \frac{1}{6}* X.notes* X.notes^{T}$. Nous obtenons ensuite les valeurs propres $\lambda_{1}, \lambda_{2}, \lambda_{3}, \lambda_{4}$ triées par ordre grâce a la fonction \textit{eigen} ainsi que les vecteurs propres associés Nous obtenons la matrice U \textit{(ci-dessous)} de vecteurs qui constituent nos axes factoriels de l'ACP.
 	
 	\begin{center}
 		$\lambda_{1}=	1.52 , \lambda_{2}= 1.03, \lambda_{3}= 0.62 , \lambda_{4}= 0.15$
 		\[
 		U=
 		\begin{bmatrix}
-		u1	& u2	& u3 &	u4\\
+		v1	& v2	& v3 &	v4\\
 		-0.5691089	& 0.3831062	& -0.4770578 &	0.54932742\\
 		-0.6626009	& -0.2607092 &	-0.1954537  &	-0.67438013\\
 		0.2342134 & 	0.8173384	&  -0.1888389 & 	-0.49136735\\
@@ -381,15 +370,16 @@
 		\end{bmatrix}
 		\]
 	\end{center}
-	Nous allons a présenter calculer le pourcentage cumule d'inertie expliquée pour chacun des axes u1, u2, u3 et u4. Pour cela on utilise la formule: $P_{k}= \frac{\sum_{i=1}^{k} \lambda_{k}}{\sum_{i=1}^{p} \lambda_{k}}$. Nous obtenons alors l'histogramme ci dessous. Nous remarquons que les 3 premières composantes ensemble expliquent  95\% , on pourra donc ne garder que les 3 premières axes.
+	Nous allons a présenter calculer le pourcentage cumulé d'inertie expliquée pour chacun des axes v1, v2, v3 et v4. Pour cela on utilise la formule: $P_{k}= \frac{\sum_{i=1}^{k} \lambda_{k}}{\sum_{i=1}^{p} \lambda_{k}}$. Nous obtenons alors l'histogramme ci dessous.
 	\begin{center}
-		\includegraphics[width=50mm]{Figures/Notes_PCA/pourcentage_inertie.png}
+		\includegraphics[width=39mm]{Figures/Notes_PCA/pourcentage_inertie.png}
 		\captionof{figure}{Pourcentage cumulé de l'inertie expliquée}
 		\label{fig:boxplot_crabs_quantitatives}
 	\end{center}	
+Nous remarquons que les 3 premières composantes ensemble expliquent  95\%  des données, on pourra donc garder que les 3 premiers axes
 	
 	\subsubsection{Composantes Principales}
-	Soit C la matrice avec en colonnes les coordonnes de chaque vecteur de composante principale. C s'exprime comme $X.notes.acp = X.notes * U$. Remarquons aussi que la matrice C sera aussi centrée
+	Soit C la matrice  de composantes principale. C s'exprime comme $X.notes.acp = X.notes * U$. Remarquons aussi que la matrice C sera aussi centrée.
 	\[
 	X.notes.acp=
 	\begin{bmatrix}
@@ -404,7 +394,7 @@
 	\]
 	
 	\subsubsection{Représentation des Individus  et variables dans le plan factoriel}
-	Afin de connaitre la contribution de chaque composante dans une variable nous calculons la matrice de corrélation entre l'ancienne matrice des données X.notes et la nouvelle matrice avec les composantes. Ceci se fait grâce a la fonction \textit{corr}. Nous obtenons la matrice de corrélation ci-dessous.\\
+	Afin d'obtenir  la contribution de chaque composante dans une variable nous calculons la matrice de corrélation entre l'ancienne matrice des données X.notes et la nouvelle matrice avec les composantes. Ceci se fait grâce a la fonction \textit{corr}. Nous obtenons la matrice de corrélation ci-dessous.\\
 	\begin{center}
 		\begin{tabular}{c c c c c}
 			&	\textbf{moy.median}	&	 \textbf{std.median} &		\textbf{moy.final}	&	\textbf{ std.final}\\
@@ -414,7 +404,7 @@
 			\textbf{c4}	&	0.23 &		-0.29 &		-0.21	&	0.02
 		\end{tabular}
 	\end{center}
-	On retrouve encore l'un autre argument comme quoi les 3 premières composantes suffisent pour expliquer les donnes. En effet d'après la matrice de corrélation on observe que les variables sont fortement correlles aux 3 premières composantes. La variable \textit{moy.final} par exemple est fortement correlee a la 2nd composante. Ceci veut dire que si la composante \textit{c2} est grande ceci veut dire que la moyenne du final sera aussi importante. Les 2 figures suivantes sont une représentation de 6 correcteurs dans le premier plan factoriel (les composantes 1 et 2), alors que la figure \ref{fig:var_comp} représente la contribution de chaque composante pour chacune des 4 variables.
+	On retrouve ici autre argument comme quoi les 3 premières composantes suffisent pour expliquer les donnes. En effet les variables sont fortement correllées aux 3 premières composantes. Nous avons représenté en gras la corrélation la plus forte de chaque variable avec une composante. On peut déduire que la moyenne et l'écart type du médian sont majoritairement expliqués par la composante 1 alors que le la moyenne du final par la composante 2 et pour finir l'écart type du final par la composante 3. La figure  suivante \ref{fig:individus_comp}	est une représentation des 6 correcteurs dans le premier plan factoriel (les composantes 1 et 2), alors que la figure \ref{fig:var_comp} représente la contribution de chaque composante pour chacune des 4 variables.
 	
 	\begin{minipage}{0.5\textwidth}
 		\includegraphics[width=50mm]{Figures/Notes_PCA/individus_comp.png}
@@ -426,15 +416,96 @@
 		\captionof{figure}{Variables dans le 1er plan}
 		\label{fig:var_comp}	
 	\end{minipage}
+\vspace{0.9mm}
+\\La figure \ref{fig:individus_comp}	est une représentation de la matrice C et la figure \r est une \ref{fig:var_comp} de la matrice de corrélation dans le premier plan factoriel.
 	
-	\subsubsection{ Calculer l’expression}
+	\subsubsection{ Calcul de la matrice X.Notes}
+	Dans cette partie nous allons calculer $\sum_{\alpha = 1}^{k} c_{\alpha}u'$ pour k =1, 2, 3 et 4.   Pour k= 4 on obtient la matrice \textit{X.notes }. \\
+	\begin{minipage}[t]{0.5\textwidth}
+	\[
+	k=1
+	\begin{bmatrix}
+	0.09 &	0.11 &	-0.04	& 0.07\\
+	-1.27	& -1.48 &	0.52	& -0.95\\
+	0.07	& 0.08 &	-0.03	& 0.05\\
+	0.76&	0.89 &	-0.31	& 0.57\\
+	-0.41	& -0.48 &	0.17	& -0.31\\
+	0.760	& 0.88	& -0.31 &	0.57
+	\end{bmatrix}
+	\]
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+	\[
+		k=2
+		\begin{bmatrix}
+		-0.22 &	0.32 &	-0.70 &	-0.21\\
+	-0.91 &	-1.72 &	1.29 &	-0.63\\
+	-0.22 &	0.28 &	-0.65 &	-0.21\\
+	1.47 &	0.41 &	1.18 &	1.20 \\
+	-0.60 &	-0.30 &	-0.40 &	-0.55\\
+	0.57&	1.01 &	-0.71	& 0.40	
+		\end{bmatrix}
+	\]
+	\end{minipage}
+
+
+
+\begin{minipage}[t]{0.5\textwidth}
+	\[
+	k=3
+	\begin{bmatrix}
+	-0.43 &	0.24 &	-0.80 &	0.16\\
+	-0.99 &	-1.75 &	1.26 &	-0.50\\
+	0.56 &	0.60 &	-0.34 &	-1.58\\
+	1.55&	0.45 &	1.22 &	1.05\\
+	-0.90 &	-0.39 &	-0.49 &	-0.18\\
+	0.20 &	0.86  &	-0.86 &	1.05
 	
-	\subsubsection{Représentation des individus initialement écartés de l’ACP}
+	\end{bmatrix}
+	\]
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\[
+	k=4
+	\begin{bmatrix}
+	-0.01	& -0.28& 	-1.16	&  0.20\\
+	-0.95	&  -1.80 & 	1.23 & 	-0.50\\
+	0.53 & 	0.63 & 	-0.31	&  -1.58\\
+	-1.17	& -0.045 &	-0.24	& -0.20\\
+	0.05 &	1.05 &	-0.73 &	1.04
 	
-	
-	\subsection{Utilisation des outils de R: Crabs}
-	\subsubsection{ACP sans traitement préalable}
-	Nous faisons appel a la fonction \textit{princomp }qui calcule les composantes principal de notre dataset. Ensuite nous utilsons le plot dans la figure \ref{fig:crabs_pca_plot} et le biplot dans la figure \ref{fig:crabs_pca_biplot}.\\
+	\end{bmatrix}
+	\]
+\end{minipage}
+
+\subsubsection{Représentation des individus initialement écartés de l’ACP}
+Dans cette sous partie nous allons nous intéresser aux 2 correcteurs qu'on a omis au début de l'étude parce que certaines de leurs variables n'étaient pas définies On a d'abord mis à 0 les NA pour chacun des correcteurs puis nous avons effectué une imputation par la moyenne, en remplaçant chaque valeur non définie par la moyenne de la variable. Nous obtenons ainsi la sous matrice centrée \textit{X.Notes.imput} suivante:\\
+
+\begin{tabular}{c c c c c}
+	Correcteur & moy.median &	std.median	& moy.final	&std.final\\
+	Cor2 & 1.63 &	-0.44 &	-1.28 &	-1.04\\
+	Cor3 & -1.52 &	-0.84 &	0.53 &	-1.46
+\end{tabular}
+\vspace{0.9mm}
+\\Pour obtenir les composantes de ces 2 individus on n'a pas à refaire tous les calculs mais juste à calculer $X.Notes.imput C$ avec avec C notre matrice de composantes calculée précédemment. Nous obtenus les résultats suivants:\\
+
+\begin{minipage}[t]{0.5\textwidth}
+\begin{tabular}{l l l l l}
+	Cor &  c1         &             c2 &          c3               &  c4\\
+	Cor2 & -0.49 &	-0.66&	-1.31 &	1.78\\
+	Cor3 & 2.16	& -0.43  &	-0.43& 	-0.59
+\end{tabular}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+		\includegraphics[width=50mm]{Figures/Notes_PCA/individus_comp_na.png}
+	\captionof{figure}{Cor2 et Cor3 dans le 1er plan}
+	\label{fig:individus_comp_na}	
+\end{minipage}
+On peut déduire de part notre étude préalable que le correcteur 2 "aurait" une moyenne et un écart type de médian faible (car composante 1 faible) alors que le correcteur 3 a une moyenne de final élevée
+
+\subsection{Crabs}
+\subsubsection{ACP sans traitement préalable}
+	Nous faisons appel a la fonction \textit{princomp }qui calcule les composantes principal de notre dataset. Ensuite nous utilisons la commande  \textit{\textbf{crabs.pca\$sd\^2}}   pour obtenir les valeurs propres et représenter le pourcentage d'inertie cumulée dans la figure \ref{fig:crabs_pca_plot}. Le biplot dans la figure \ref{fig:crabs_pca_biplot}.\\
 	\begin{minipage}{.5\textwidth}
 		\centering
 		\includegraphics[width=50mm]{Figures/Crabs/pca_plot.png}
@@ -450,19 +521,10 @@
 	\end{minipage}
 	\vspace{2mm}
 	
-	D'après la figure \ref{fig:crabs_pca_plot} on remarque que la première composante concentre la majorité de l'information, ceci est aussi illustrée dans la figure \ref{fig:crabs_pca_plot} puisqu'on remarque que toutes les variables sont 'encodes' dans la composante 1. D'après notre étude dans la partie analyse des données nous avons remarque que les variables sont fortement corrollees et donc proportionnelles. Or l'une des conditions d'utilisation de l'ACP est que les variables soit decorrelees, ainsi pour de meilleur résultats on essayera dans la question qui suit de decorreler les variables et retenter l'ACP.
+	D'après la figure \ref{fig:crabs_pca_biplot} on remarque que la première composante concentre la majorité de l'information, ceci est aussi illustrée dans la figure \ref{fig:crabs_pca_plot} puisqu'on remarque que toutes les variables sont 'encodes' dans la composante 1. D'après notre étude dans la partie analyse des données nous avons remarque que les variables sont fortement corrollees et donc proportionnelles. Or l'une des conditions d'utilisation de l'ACP est que les variables soit decorrelees, ainsi pour de meilleur résultats on essayera dans la question qui suit de decorreler les variables et retenter l'ACP.
 	
 	\subsubsection{Solution proposée}
-	Afin d'obtenir des variables non correlles nous avons divisé chaque donnée d'une ligne par la somme des valeurs de la ligne. De cette manière:
-	\begin{lstlisting}
-	#nouvelle matrice de donnees avec variables non corollees
-	crabs_decorr = crabs 
-	rowsum = rowSums(crabs[,4:8])
-	for(i in 1:n.crabs){
-	crabs_decorr[i,4:8] = crabs_decorr[i,4:8] / rowsum[i] 
-	}
-	\end{lstlisting}
-	Ensuite comme nous souhaitons étudier l'espèce et le sexe nous avons pense qu'il serait mieux de regrouper ces 2 resultats en un afin d'obtenir une variable 'réponse' qui prend 4 valeurs; par exemple la valeur \textit{BF} signifie crabe d'espece B et de sexe Femelle. Les instructions sont détaillées dans le fichier de code en annexe. Le graphe matriciel  ci-dessous montres les résultats obtenus.
+	Afin d'obtenir des variables non correlles nous avons divisé chaque donnée d'une ligne par la somme des valeurs de la ligne. Ensuite comme nous souhaitons étudier l'espèce et le sexe nous avons pense qu'il serait mieux de regrouper ces 2 résultats en un afin d'obtenir une variable 'réponse' qui prend 4 valeurs; par exemple la valeur \textit{BF} signifie crabe d'espèce B et de sexe Femelle. Les instructions sont détaillées dans le fichier de code en annexe. Le graphe matriciel  ci-dessous montres les résultats obtenus.
 	
 	\begin{center}
 		\includegraphics[width=50mm]{Figures/Crabs/matricial_plot_decorr_classes.png}	
@@ -476,19 +538,40 @@
 		\centering
 		\includegraphics[width=50mm]{Figures/Crabs/decorr_pca_plot.png}
 		\captionof{figure}{Variance expliquee par les composantes apres decorrelation}
-		\label{fig:crabs_pca_plot}
+		\label{fig:crabsd_pca_plot}
 	\end{minipage}%
 	\hspace{0.08\linewidth}
 	\begin{minipage}{.5\textwidth}
 		\centering
 		\includegraphics[width=50mm]{Figures/Crabs/decorr_pca_biplot.png}
 		\captionof{figure}{Individus et Variables sur le 1er plan factoriel apres decorrelation}
-		\label{fig:crabs_pca_biplot}
+		\label{fig:crabsd_pca_biplot}
 	\end{minipage}
 	
 	\vspace{2mm}
-	La figure  \ref{fig:crabs_pca_biplot} nous montre que les variables RW et OL sont contenu principalement dans la composante 1 alors que les variables BO, FL et CW seront plus dans la composante 2. Ce qui est aussi affiche dans la \ref{fig:crabs_pca_plot} vu que les 2 premières composantes ensemble concentre le maximum de variance expliquée Enfin, La même figure nous permet aussi de conclure que la \textbf{l'information sur le sexe se trouve dans la composante 1 tandis que la composante 2 contient l'information sur l'espèce du crabe}. 
-	\subsection{Pima}
+	La figure  \ref{fig:crabsd_pca_biplot} nous montre que les variables RW et OL sont contenu principalement dans la composante 1 alors que les variables BO, FL et CW seront plus dans la composante 2. Ce qui est aussi affiche dans la \ref{fig:crabsd_pca_plot} vu que les 2 premières composantes ensemble concentre le maximum de variance expliquée Enfin, La même figure nous permet aussi de conclure que la \textbf{l'information sur le sexe se trouve dans la composante 1 tandis que la composante 2 contient l'information sur l'espèce du crabe}. 
+\subsection{Pima}
+
+\subsubsection{PCA}
+
+Nous utilisons la fonction princomp pour calculer les composantes principales dans ce dataset après avoir centre en colonne les données Ensuite nous représentons le plot et le biplot.
+\\
+\begin{minipage}{.5\textwidth}
+	\centering
+	\includegraphics[width=50mm]{Figures/Pima/pca_plot.png}
+	\captionof{figure}{Variance expliquee par les composantes}
+	\label{fig:pima_pca_plot}
+\end{minipage}%
+\hspace{0.08\linewidth}
+\begin{minipage}{.5\textwidth}
+	\centering
+	\includegraphics[width=50mm]{Figures/Pima/pca_biplot.png}
+	\captionof{figure}{Individus et Variables projetes sur le premier plan factoriel}
+	\label{fig:pima_pca_biplot}
+\end{minipage}
+\\
+\\
+Pour connaitre le comportement général du dataset, nous pouvons considérer les 80\% des pourcentages cumules. Dans ce cas, nous prenons 4 composantes. Si on s'intéresse aux détails et qu'on va jusqu'à une inertie de 95\%, on remarque qu'il faudra prendre les 6 composantes. En effet, les variables sont très indépendantes et fortement decorellees. Le seul cas ou on peut avoir une représentation simple est le cas général de 80\%, autrement on ne diminue pas énormément la dimension.
 	
 	\section{Conclusion}
 	Ces différents exercices nous ont permis d'abord de manipuler différents données et de se familiariser avec la notion de variable qualitative et quantitative pour mieux représenter les donnes graphiquement. Nous avons passé le plus de temps possible dans la première partie afin de mieux comprendre les fonctionnalités du \textit{R} et surtout de \textit{ggplot}, ce qui a facilité notre analyse. Nous avons ensuite utilisé la méthode de l'\textit{ACP} qui est très utile pour l'obtention d'axes decorrelles. Enfin si nos variables sont corrélés on peut avoir des valeurs propre nulles et donc un nombre petit de composantes. L'\textit{ACP} est aussi fortement utilisée dans la réduction de dimension, ce qui fera sujet de nos prochaines études en SY09. 

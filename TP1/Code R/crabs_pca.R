@@ -19,8 +19,8 @@ library(ggfortify)
 #l’ACP sur crabsquant
 data(crabs)
 crabsquant = crabs[, 4:8]
-n.crabs = nrow(crabs)
-p.crabs = ncol(crabs)
+n.crabs    = nrow(crabs)
+p.crabs   = ncol(crabs)
 summary(crabs)
 
 
@@ -32,18 +32,12 @@ summary(crabs)
 crabs.pca = princomp(crabsquant)
 crabs.pca
 loadings(crabs.pca)
-#png('SY09_TPs/TP1/Figures/Crabs/pca_plot.png')
-plot(crabs.pca)
-#dev.off()
-#png('SY09_TPs/TP1/Figures/Crabs/pca_biplot.png')
+
+#Pourcentage d'inertie cumulee
+eigenval     = crabs.pca$sd^2
+perc.inertie = cumsum(eigenval/sum(eigenval)*100)
+barplot(perc.inertie)
 biplot(crabs.pca)
-#dev.off()
-
-#Composantes portees par l'axe comp1 et 0 sur le deuxieme axe comp2
-load = with(crabs.pca, unclass(loadings))
-aload = abs(load) ## save absolute values
-sweep(aload, 2, colSums(aload), "/")
-
 
 
 #*********************************************#
@@ -79,30 +73,20 @@ for(i in 1:n.crabs)
     if(crabs_decorr$sp[i]=="B" & crabs_decorr$sex[i]=="F")
         crabs_decorr$y[i] = 'BF'
 }
-
-#png('SY09_TPs/TP1/Figures/Crabs/matricial_plot_decorr_classes.png')
 ggpairs(crabs_decorr,aes(color = y), columns = c("FL", "RW", "CL", "CW", "BD"))
-#dev.off()
 
+
+#**************************** PCA ******************************
 crabs_decorr.pca = princomp(crabs_decorr[,4:8])
 crabs_decorr.pca
 loadings(crabs_decorr.pca)
 
-#png('SY09_TPs/TP1/Figures/Crabs/decorr_pca_plot.png')
-plot(crabs_decorr.pca)
-#dev.off()
-#png('SY09_TPs/TP1/Figures/Crabs/decorr_pca_biplot.png')
+eigenval     = crabs_decorr.pca$sd^2
+perc.inertie = cumsum(eigenval/sum(eigenval)*100)
+barplot(perc.inertie)
+
 autoplot(crabs_decorr.pca, data= crabs_decorr, colour= 'y', shape= FALSE,  
          loadings = TRUE, loadings.colour = 'blue',
          loadings.label = TRUE, loadings.label.size = 3, x=1, y=2)
-#dev.off()
-
-#Percentage of contribution
-load = with(crabs_decorr.pca, unclass(loadings))
-aload = abs(load) ## save absolute values
-sweep(aload, 2, colSums(aload), "/")
-colSums(sweep(aload, 2, colSums(aload), "/"))
-
-screeplot(crabs_decorr.pca)
 
 

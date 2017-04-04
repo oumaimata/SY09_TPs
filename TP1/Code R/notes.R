@@ -41,22 +41,16 @@ nrow(dataset)
 any(is.na(dataset$resultat))
 
 # Normal Distribution??
-#jpeg('SY09_TPs/TP1/Figures/Notes/boxplot_exam.jpg')
 data = data.frame(dataset$note.median, dataset$note.final, dataset$note.totale)
 ggplot(melt(data), aes(variable, value, fill=variable)) + geom_boxplot() + scale_fill_discrete(name="Notes")
-#dev.off();
 
-#jpeg('SY09_TPs/TP1/Figures/Notes/multiplot.jpg')
 ggpairs(
     dataset, 
     columns = c("specialite", "niveau", "dernier.diplome.obtenu", "correcteur.median")
 )
-#dev.off();
 
-#jpeg('SY09_TPs/TP1/Figures/Notes/corr_notes.jpg')
 df = data.frame(dataset$note.median, dataset$note.final, dataset$note.totale)
 ggpairs(df)
-#dev.off()
 cov(dataset$note.median, dataset$note.final)
 
 
