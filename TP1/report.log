@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  4 APR 2017 19:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  4 APR 2017 20:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -429,11 +429,6 @@ File: Figures/Notes/corr_notes.jpg Graphic file (type jpg)
 Package pdftex.def Info: Figures/Notes/corr_notes.jpg used on input line 106.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
 
-Overfull \hbox (1.3338pt too wide) in paragraph at lines 113--114
-[]\OT1/cmr/m/n/10 La fi-gure ci-dessous repr^^Sesente trois dia-grammes a boite
-s des notes de m^^Sedian,
- []
-
 <Figures/Notes/boxplot_exam.jpg, id=21, 481.8pt x 481.8pt>
 File: Figures/Notes/boxplot_exam.jpg Graphic file (type jpg)
 
@@ -606,7 +601,7 @@ Crabs/bxp_sp_cl.png> <./Figures/Crabs/bxp_sp_cw.png> <./Figures/Crabs/bxp_sp_bd
 .png> <./Figures/Crabs/bxp_sex_fl.png> <./Figures/Crabs/bxp_sex_rw.png> <./Figu
 res/Crabs/bxp_sex_cl.png> <./Figures/Crabs/bxp_sex_cw.png> <./Figures/Crabs/bxp
 _sex_bd.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 269--270
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
  []
 
@@ -615,7 +610,7 @@ File: Figures/Crabs/matricial_plot_sp.png Graphic file (type png)
 
 <use Figures/Crabs/matricial_plot_sp.png>
 Package pdftex.def Info: Figures/Crabs/matricial_plot_sp.png used on input line
- 272.
+ 273.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
 
 <Figures/Crabs/matricial_plot_sex.png, id=72, 481.8pt x 481.8pt>
@@ -623,10 +618,10 @@ File: Figures/Crabs/matricial_plot_sex.png Graphic file (type png)
 
 <use Figures/Crabs/matricial_plot_sex.png>
 Package pdftex.def Info: Figures/Crabs/matricial_plot_sex.png used on input lin
-e 275.
+e 276.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
 
-Overfull \hbox (86.22643pt too wide) in paragraph at lines 271--277
+Overfull \hbox (86.22643pt too wide) in paragraph at lines 272--278
 [][] [] 
  []
 
@@ -635,7 +630,7 @@ File: Figures/Crabs/cor_crabsquant.png Graphic file (type png)
 
 <use Figures/Crabs/cor_crabsquant.png>
 Package pdftex.def Info: Figures/Crabs/cor_crabsquant.png used on input line 28
-8.
+9.
 (pdftex.def)             Requested size: 142.26378pt x 55.62485pt.
  [8 <./Figures/Crabs/matricial_plot_sp.png> <./Figures/Crabs/matricial_plot_sex
 .png> <./Figures/Crabs/cor_crabsquant.png>] <Figures/Pima/boxplot_norm_Pimaquan
@@ -644,18 +639,18 @@ File: Figures/Pima/boxplot_norm_Pimaquant.png Graphic file (type png)
 
 <use Figures/Pima/boxplot_norm_Pimaquant.png>
 Package pdftex.def Info: Figures/Pima/boxplot_norm_Pimaquant.png used on input 
-line 309.
+line 310.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
 
 <Figures/Pima/plot_Pimaquant.png, id=81, 481.8pt x 481.8pt>
 File: Figures/Pima/plot_Pimaquant.png Graphic file (type png)
 
 <use Figures/Pima/plot_Pimaquant.png>
-Package pdftex.def Info: Figures/Pima/plot_Pimaquant.png used on input line 315
+Package pdftex.def Info: Figures/Pima/plot_Pimaquant.png used on input line 318
 .
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
  [9 <./Figures/Pima/boxplot_norm_Pimaquant.png>]
-Overfull \hbox (32.22298pt too wide) in paragraph at lines 321--321
+Overfull \hbox (32.22298pt too wide) in paragraph at lines 325--325
 []\OT1/cmr/bx/n/10 Repr^^Sesentation de chaque ca-ract^^Seristique en fonc-tion
  de z (diab^^Setique
  []
@@ -664,60 +659,54 @@ Overfull \hbox (32.22298pt too wide) in paragraph at lines 321--321
 File: Figures/Pima/bxp_z_npreg.png Graphic file (type png)
 
 <use Figures/Pima/bxp_z_npreg.png>
-Package pdftex.def Info: Figures/Pima/bxp_z_npreg.png used on input line 325.
+Package pdftex.def Info: Figures/Pima/bxp_z_npreg.png used on input line 329.
 (pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
 
 <Figures/Pima/bxp_z_glu.png, id=87, 481.8pt x 481.8pt>
 File: Figures/Pima/bxp_z_glu.png Graphic file (type png)
 
 <use Figures/Pima/bxp_z_glu.png>
-Package pdftex.def Info: Figures/Pima/bxp_z_glu.png used on input line 328.
+Package pdftex.def Info: Figures/Pima/bxp_z_glu.png used on input line 332.
 (pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
 
 <Figures/Pima/bxp_z_bp.png, id=88, 481.8pt x 481.8pt>
 File: Figures/Pima/bxp_z_bp.png Graphic file (type png)
 
 <use Figures/Pima/bxp_z_bp.png>
-Package pdftex.def Info: Figures/Pima/bxp_z_bp.png used on input line 331.
+Package pdftex.def Info: Figures/Pima/bxp_z_bp.png used on input line 335.
 (pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
 
 <Figures/Pima/bxp_z_skin.png, id=89, 481.8pt x 481.8pt>
 File: Figures/Pima/bxp_z_skin.png Graphic file (type png)
 
 <use Figures/Pima/bxp_z_skin.png>
-Package pdftex.def Info: Figures/Pima/bxp_z_skin.png used on input line 335.
+Package pdftex.def Info: Figures/Pima/bxp_z_skin.png used on input line 339.
 (pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
 
 <Figures/Pima/bxp_z_bmi.png, id=90, 481.8pt x 481.8pt>
 File: Figures/Pima/bxp_z_bmi.png Graphic file (type png)
 
 <use Figures/Pima/bxp_z_bmi.png>
-Package pdftex.def Info: Figures/Pima/bxp_z_bmi.png used on input line 338.
+Package pdftex.def Info: Figures/Pima/bxp_z_bmi.png used on input line 342.
 (pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
 
 <Figures/Pima/bxp_z_ped.png, id=91, 481.8pt x 481.8pt>
 File: Figures/Pima/bxp_z_ped.png Graphic file (type png)
 
 <use Figures/Pima/bxp_z_ped.png>
-Package pdftex.def Info: Figures/Pima/bxp_z_ped.png used on input line 342.
+Package pdftex.def Info: Figures/Pima/bxp_z_ped.png used on input line 346.
 (pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
 
 <Figures/Pima/bxp_z_age.png, id=92, 481.8pt x 481.8pt>
 File: Figures/Pima/bxp_z_age.png Graphic file (type png)
 
 <use Figures/Pima/bxp_z_age.png>
-Package pdftex.def Info: Figures/Pima/bxp_z_age.png used on input line 345.
+Package pdftex.def Info: Figures/Pima/bxp_z_age.png used on input line 349.
 (pdftex.def)             Requested size: 99.58464pt x 99.57831pt.
-
-Overfull \hbox (2.22278pt too wide) in paragraph at lines 349--352
-[]\OT1/cmr/m/n/10 On re-marque une grande diff^^Serence de dis-tri-bu-tions en 
-fonc-tion de la cat^^Segorie
- []
-
-[10 <./Figures/Pima/plot_Pimaquant.png> <./Figures/Pima/bxp_z_npreg.png> <./Fig
-ures/Pima/bxp_z_glu.png> <./Figures/Pima/bxp_z_bp.png> <./Figures/Pima/bxp_z_sk
-in.png> <./Figures/Pima/bxp_z_bmi.png> <./Figures/Pima/bxp_z_ped.png> <./Figure
-s/Pima/bxp_z_age.png>]
+ [10 <./Figures/Pima/plot_Pimaquant.png> <./Figures/Pima/bxp_z_npreg.png> <./Fi
+gures/Pima/bxp_z_glu.png> <./Figures/Pima/bxp_z_bp.png> <./Figures/Pima/bxp_z_s
+kin.png> <./Figures/Pima/bxp_z_bmi.png> <./Figures/Pima/bxp_z_ped.png> <./Figur
+es/Pima/bxp_z_age.png>]
 (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ) [11]
@@ -726,16 +715,16 @@ File: Figures/Notes_PCA/pourcentage_inertie.png Graphic file (type png)
 
 <use Figures/Notes_PCA/pourcentage_inertie.png>
 Package pdftex.def Info: Figures/Notes_PCA/pourcentage_inertie.png used on inpu
-t line 375.
+t line 379.
 (pdftex.def)             Requested size: 110.96574pt x 110.96605pt.
 
-Overfull \hbox (10.27344pt too wide) in paragraph at lines 382--383
+Overfull \hbox (10.27344pt too wide) in paragraph at lines 386--387
 []\OT1/cmr/m/n/10 Soit C la ma-trice de com-po-santes prin-ci-pale. C s'ex-prim
 e comme $\OML/cmm/m/it/10 X:notes:acp \OT1/cmr/m/n/10 =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--398
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
 
  []
 
@@ -745,7 +734,7 @@ File: Figures/Notes_PCA/individus_comp.png Graphic file (type png)
 
 <use Figures/Notes_PCA/individus_comp.png>
 Package pdftex.def Info: Figures/Notes_PCA/individus_comp.png used on input lin
-e 410.
+e 414.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
 
 <Figures/Notes_PCA/variables_comp.png, id=118, 481.8pt x 481.8pt>
@@ -753,36 +742,36 @@ File: Figures/Notes_PCA/variables_comp.png Graphic file (type png)
 
 <use Figures/Notes_PCA/variables_comp.png>
 Package pdftex.def Info: Figures/Notes_PCA/variables_comp.png used on input lin
-e 415.
+e 419.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
 
-Overfull \hbox (17.22221pt too wide) in paragraph at lines 409--421
+Overfull \hbox (17.22221pt too wide) in paragraph at lines 413--425
 []$[]$ $[]$
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 423--450
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 427--454
 [] [] 
  []
 
 
-Overfull \hbox (3.57663pt too wide) detected at line 478
+Overfull \hbox (3.57663pt too wide) detected at line 482
 \OML/cmm/m/it/10 k \OT1/cmr/m/n/10 = 4 []
  []
 
 
-Overfull \hbox (17.22221pt too wide) in paragraph at lines 453--480
+Overfull \hbox (17.22221pt too wide) in paragraph at lines 457--484
 [][] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 482--483
+Underfull \hbox (badness 10000) in paragraph at lines 486--487
 
  []
 
 [13 <./Figures/Notes_PCA/individus_comp.png> <./Figures/Notes_PCA/variables_com
 p.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 484--491
+Underfull \hbox (badness 10000) in paragraph at lines 488--495
 
  []
 
@@ -791,28 +780,28 @@ File: Figures/Notes_PCA/individus_comp_na.png Graphic file (type png)
 
 <use Figures/Notes_PCA/individus_comp_na.png>
 Package pdftex.def Info: Figures/Notes_PCA/individus_comp_na.png used on input 
-line 500.
+line 504.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
 
-Overfull \hbox (17.22221pt too wide) in paragraph at lines 492--505
-[][] []
+Overfull \hbox (17.22221pt too wide) in paragraph at lines 496--508
+[][] [] 
  []
 
 <Figures/Crabs/pca_plot.png, id=127, 481.8pt x 481.8pt>
 File: Figures/Crabs/pca_plot.png Graphic file (type png)
 
 <use Figures/Crabs/pca_plot.png>
-Package pdftex.def Info: Figures/Crabs/pca_plot.png used on input line 511.
+Package pdftex.def Info: Figures/Crabs/pca_plot.png used on input line 516.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
 
 <Figures/Crabs/pca_biplot.png, id=128, 481.8pt x 481.8pt>
 File: Figures/Crabs/pca_biplot.png Graphic file (type png)
 
 <use Figures/Crabs/pca_biplot.png>
-Package pdftex.def Info: Figures/Crabs/pca_biplot.png used on input line 518.
+Package pdftex.def Info: Figures/Crabs/pca_biplot.png used on input line 523.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
 
-Overfull \hbox (29.82285pt too wide) in paragraph at lines 508--523
+Overfull \hbox (29.82285pt too wide) in paragraph at lines 513--528
 []$  $[]$
  []
 
@@ -822,16 +811,20 @@ File: Figures/Crabs/matricial_plot_decorr_classes.png Graphic file (type png)
 
 <use Figures/Crabs/matricial_plot_decorr_classes.png>
 Package pdftex.def Info: Figures/Crabs/matricial_plot_decorr_classes.png used o
-n input line 530.
+n input line 535.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
  [15 <./Figures/Crabs/pca_plot.png> <./Figures/Crabs/pca_biplot.png> <./Figures
 /Crabs/matricial_plot_decorr_classes.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 540--541
+
+ []
+
 <Figures/Crabs/decorr_pca_plot.png, id=142, 481.8pt x 481.8pt>
 File: Figures/Crabs/decorr_pca_plot.png Graphic file (type png)
 
 <use Figures/Crabs/decorr_pca_plot.png>
 Package pdftex.def Info: Figures/Crabs/decorr_pca_plot.png used on input line 5
-39.
+46.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
 
 <Figures/Crabs/decorr_pca_biplot.png, id=143, 481.8pt x 481.8pt>
@@ -839,10 +832,10 @@ File: Figures/Crabs/decorr_pca_biplot.png Graphic file (type png)
 
 <use Figures/Crabs/decorr_pca_biplot.png>
 Package pdftex.def Info: Figures/Crabs/decorr_pca_biplot.png used on input line
- 546.
+ 553.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
 
-Overfull \hbox (44.82285pt too wide) in paragraph at lines 537--550
+Overfull \hbox (44.82285pt too wide) in paragraph at lines 544--557
 []$[]$  $[]$ 
  []
 
@@ -850,22 +843,22 @@ Overfull \hbox (44.82285pt too wide) in paragraph at lines 537--550
 File: Figures/Pima/pca_plot.png Graphic file (type png)
 
 <use Figures/Pima/pca_plot.png>
-Package pdftex.def Info: Figures/Pima/pca_plot.png used on input line 561.
+Package pdftex.def Info: Figures/Pima/pca_plot.png used on input line 568.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
 
 <Figures/Pima/pca_biplot.png, id=145, 481.8pt x 481.8pt>
 File: Figures/Pima/pca_biplot.png Graphic file (type png)
 
 <use Figures/Pima/pca_biplot.png>
-Package pdftex.def Info: Figures/Pima/pca_biplot.png used on input line 568.
+Package pdftex.def Info: Figures/Pima/pca_biplot.png used on input line 575.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
 
-Overfull \hbox (29.82285pt too wide) in paragraph at lines 557--575
+Overfull \hbox (29.82285pt too wide) in paragraph at lines 564--582
 []$  $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 557--575
+Underfull \hbox (badness 10000) in paragraph at lines 564--582
 
  []
 
@@ -877,13 +870,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8718 strings out of 493014
- 127466 string characters out of 6133351
+ 8720 strings out of 493014
+ 127483 string characters out of 6133351
  224269 words of memory out of 5000000
- 12090 multiletter control sequences out of 15000+600000
+ 12092 multiletter control sequences out of 15000+600000
  13633 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,40p,847b,1787s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,9n,40p,852b,1787s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb
@@ -903,7 +896,7 @@ exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on report.pdf (17 pages, 1194942 bytes).
+Output written on report.pdf (17 pages, 1195694 bytes).
 PDF statistics:
  216 PDF objects out of 1000 (max. 8388607)
  97 compressed objects within 1 object stream
