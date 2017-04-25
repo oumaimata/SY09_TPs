@@ -61,22 +61,21 @@
 	\section{ Statistique descriptive}
 	
 	\subsection{Notes SY02}
-	Le dataset \textit{"sy02-p2016"} représente les notes des étudiants de l'UTC en méthodes statistiques durant le printemps 2016. Nos données comptent \textit{N= 296} individus (étudiants) er \textit{p= 11} variables. Nous avons omis  les étudiants qui n'avaient pas de résultats (\textit{NA}) ou qui ont '\textit{ABS}' en résultat de l'UV parce que ce qu'on a pensé que ce sont des étudiants qui s'étaient désinscris ou n'ont pas suivi l'UV et donc ne constituent pas d'information pour notre dataset. Nous gardons néanmoins les étudiants qui ont NA en médian ou en final mais qui ont obtenu un résultat final. 
+	Le dataset \textit{"sy02-p2016"} représente les notes des étudiants de l'UTC en méthodes statistiques (SY02) durant le printemps 2016. Nos données comptent \textit{n= 296} individus (étudiants) er \textit{p= 11} variables. Nous avons omis  les étudiants qui n'avaient pas de résultats (\textit{NA}) ou qui ont '\textit{ABS}' en résultat de l'UV parce que ce qu'on a  jugé que ce sont des étudiants qui s'étaient désinscris ou n'ont pas suivi l'UV et donc ne constituent pas d'information pour notre dataset. Nous gardons néanmoins les étudiants qui ont NA en médian ou en final mais qui ont obtenu un résultat final. 
 	
 	\begin{lstlisting}
 	dataset = dataset[!is.na(dataset$resultat), ]
 	dataset = dataset[dataset$resultat!='ABS', ]
 	\end{lstlisting}
 	
-	Nous gardons donc \textit{N = 284} individus pour notre étude.
+	Nous gardons donc \textit{n = 284} individus pour notre étude.
 	
 	\subsubsection{Description des variables}
 	
-	
 	\begin{itemize}
-		\item \textbf{Variables Quantitatives}: note.median, note.final et  note.totale.
-		\item  \textbf{Variables Qualitatives Nominales}: nom, specialite, status, dernier.diplome.obtenu et correcteur.median, correcteur.final
-		\item  \textbf{Variables Qualitatives Ordinales}: niveau et resultat  \\
+		\item \textbf{Variables Quantitatives}: \textit{note.median, note.final et  note.totale}.
+		\item  \textbf{Variables Qualitatives Nominales}: \textit{nom, specialite, status, dernier.diplome.obtenu et correcteur.median, correcteur.final}
+		\item  \textbf{Variables Qualitatives Ordinales}: \textit{niveau et resulta}t  \\
 	\end{itemize}
 	Nous allons a présent définir  chaque variable en précisant son intervalle ou les valeurs qu'elle peut prendre.
 	
@@ -87,28 +86,24 @@
 		\item \textbf{Statut}: Soit l'étudiant est de l'\textit{UTC} ou en \textit{semestre d'échange}
 		\item \textbf{dernier.diplome.obtenu:}
 		\textit{BAC, DUT, CPGE, ETRANGER SUPERIEUR, LICENCE, OTHER, NA}
-		\item \textbf{Note Médian:} note de l'examen Médian, ensemble de réel de 0 a 20.
-		\item \textbf{Correcteur Médian:} ID du correcteur du médian \{Corr1, Corr2, Corr4., Corr5,..,Corr8\}
-		\item \textbf{Note.final:} Note de l'examen final, ensemble de réel de 0 a 20.
-		\item \textbf{Note.totale:} Note totale obtenue a partir de la note du médian et la note du final
+		\item \textbf{Correcteur Médian:} ID du correcteur du médian \{Corr1, Corr2, Corr4., Corr5,..,Corr8\}	
 		\item \textbf{Correcteur.final}: identifiant  du correcteur du final. \{Corr1..Corr3, Corr4., Corr5,..,Corr8\}
-		\item \textbf{Résultat}: Résultat obtenu en SY02 : \textit{A, B, C, D, E et FX et FX. ABS}. ABS est pour indiquer que l'étudiant était absent pour l'examen en question.
+		\item \textbf{Note Médian},  \textbf{Note.final} et \textbf{Note.totale}:  Note de l'examen final, ensemble de réel de 0 a 20, ou \textit{NA} ou \textit{ABS}
+		\item \textbf{Résultat}: Résultat obtenu en SY02 : \textit{A, B, C, D, E, F et FX , NA ou ABS} pour absent.
 	\end{itemize}
-	
-	Pour les notes de médian et de final, il y a des notes non mentionnées (NA), par contre tous les étudiants ont un résultat final c'est pour cela que nous n'avons pas enlevé les étudiants avec NA en médian ou/et en final.\\
-	Les variables importantes dans ce dataset sont les résultats des étudiants et comment ceux-ci sont influencés par d'autres variables, par exemple le niveau et la spécialité\\
-	Il est évident qu'il existe une relation linéaire entre ces 3 variables: note.median, note.final et note.totale vu que la note totale est exprimée par une relation linéaire entre la note.median et la note.final (par exemple $note.totale = 40\% * note.median + 40\% * note.final + cste$). La variable note.totale et la variable résultat sont des variables fortement corrélées. En effet, le résultat est une "traduction" de la note totale. On pourrait éventuellement se demander sur la relation entre les notes et le niveau, la spécialité, le diplôme ainsi que le correcteur. C'est ce que nous allons essayer d'analyser dans ce qui suit. 
+	\vspace{0.9mm}
+	Pour les notes de médian et de final, il y a des notes non mentionnées (NA), par contre tous les étudiants ont un résultat final c'est pour cela que nous n'avons pas enlevé les étudiants avec NA en médian ou/et en final. Les variables importantes dans ce dataset sont les résultats des étudiants et comment ces derniers sont influencés par les variables
 	
 	\subsubsection{Liens entre les variables}
-	Après avoir représenté la matrice de graphes pour chaque variable nous avons pu observé que les variables : note.median, note.final, et note.totale sont linéaires, ce qui confirme notre hypothèse précédente. Le graphe matriciel ci-dessous présente aussi les coefficients de corrélation entre chacune de ces variables.
-	
+	Le graphe matriciel ci-dessous présente les liens entre les variables qualitatives et les coefficients de corrélation.
 	\begin{center}
-		\includegraphics[width=50mm]{Figures/Notes/corr_notes.jpg}
-		\captionof{figure}{Plot général}
+		\includegraphics[width=47mm]{Figures/Notes/corr_notes.jpg}
+		\captionof{figure}{Graphe matriciel}
 		\label{fig:multiplot_notes}
 	\end{center}
-	
-	
+
+	Nous observons qu'il existe une  relation linéaire entre  note.median et note.totale ainsi que note.finale et note.totale. De plus on remarque qu'il y'a une forte corrélation entre note.totale et note.final. Ceci peut suggérer que la note.final a un coefficient important dans le calcul de la note totale.
+
 	\subsubsection{Homogénéité et Distribution des notes}
 	La figure ci-dessous représente trois diagrammes en boîtes des notes de médian, final et le résultat de l'UV SY02. 
 	
@@ -127,38 +122,33 @@
 			\textbf{3em Quartl}  & 14.0  				& 16.0 		       & 14.8\\
 		\end{tabular}
 	\end{minipage}
+	\vspace{0.2mm}
+	\\On remarque que les boîtes sont petites, ce qui laisse penser que la variance des résultats est relativement petite et donc que le niveau des étudiants en statistiques est homogène  En comparant les diagrammes des notes du final et du médian on remarque que les notes ont augmenté.  Enfin si on analyse le dernier diagramme, on voit que les deux boîtes de part et d'autre de la médiane ont la même taille. Nous pouvons donc émettre l'hypothèse que les résultats sont normalement distribués. 
 	
-	
-	On remarque que les boîtes sont petites, ce qui laisse penser que la variance des résultats est relativement petite et donc aussi que le niveau des étudiants en statistiques l'est aussi.  En comparant les diagrammes du final et du médian on remarque que les notes ont augmenté.  Enfin si on analyse le dernier diagramme, on voit que les deux boîtes de part et d'autre de la médiane ont la même taille. Nous pouvons donc émettre l'hypothèse que les résultats sont normalement distribués. 
-	
-	Il est tout a fait logique que le diagramme en boîtes des notes finales se situe entre les 2 puisque la note finale est une moyenne des deux notes du médian et du final.
-	
-	
-	\subsubsection{Lien entre la réussite, la formation, la branche et le niveau}
-	Comme les étudiants de chaque branche n'ont pas les \textit{même effectifs}, nous avons choisi de représenter les données sous forme de diagrammes à moustaches pour mieux pouvoir les comparer.\\
-	
+	\subsubsection{Lien entre la réussite et la formation, la branche et le niveau}
+	Comme les étudiants de chaque branche n'ont pas les \textit{même effectifs} et que nous avons des variables qualitatives, il nous a semblé judicieux de représenter les données sous forme de diagrammes à moustaches pour mieux pouvoir les comparer.\\
 	
 	\begin{minipage}{.5\textwidth}
 		\includegraphics[width=50mm]{Figures/Notes/niveau_resultat.png}
 		\captionof{figure}{Diagramme en boîtes de lien entre le niveau et le résultat}
 		\label{fig:niveau_resultat}
 	\end{minipage}%
-	\hspace{0.08\linewidth}
+	\hspace{0.02\linewidth}
 	\begin{minipage}{.5\textwidth}
 		\includegraphics[width=50mm]{Figures/Notes/specialite_resultat.png}
 		\captionof{figure}{Diagramme en boîtes de entre la branche et le résultat}
 		\label{fig:specialite_resultat}
 	\end{minipage}
-	D'après la figure \ref{fig:niveau_resultat} on remarque que les étudiants venant durant les premiers semestres sont ceux qui réussissent le mieux leur examens de SY02 , suivi par ceux en GX02. On remarque que les notes des étudiants en GX04 et GX05 ont une grande variance. Les étudiants en GX04 et en GX05 ont . Il faut aussi remarquer que les étudiants en 4eme et 5eme sont peu comme ce sont des semestres de départ en stage. \\
-	En ce qui concerne l'influence de la spécialité sur les notes on remarque qu'il y'a une grande variance dans les notes chez les étudiants en TC, ISS et GSM, contrairement au GI et GP qui ont plutôt un niveau homogène et qui semblent bien réussir l'UV. De plus les TC sont aussi ceux qui réussissent le mieux l'UV.
+\vspace{0.2mm}
+\\D'après la figure \ref{fig:niveau_resultat} on remarque que les étudiants en premier semestre sont ceux qui réussissent le mieux , suivi par ceux en \textit{GX02}. On remarque que les notes des étudiants en \textit{GX04} et GX06 ont une grande variance . Remarquons enfin qu'on a peu d'individus pour les semestres 3 et 5, en effet ce sont des semestres de départ en stage. \\
+	En ce qui concerne l'influence de la spécialité sur les notes on remarque qu'il y'a une grande variance dans les notes chez les étudiants en \textit{TC, ISS et GSM,} contrairement au \textit{GI} et \textit{GP} qui ont plutôt un niveau homogène et qui semblent bien réussir l'UV. Enfin, les \textit{TC} semblent être  ceux qui réussissent le mieux l'UV. Nous allons a présent étudier le l'influence de la formation sur le résultat.
 	\begin{center}
-		\includegraphics[width=50mm]{Figures/Notes/diplome_resultat.png}
+		\includegraphics[width=55mm]{Figures/Notes/diplome_resultat.png}
 		\captionof{figure}{Diagramme à moustaches du lien entre la formation et le résultat}
 		\label{fig:formation_resultat}	
 	\end{center}
 	
-	On remarque qu'il y a une grande variance chez presque tous les diplômes obtenus. Les élèves qui réussissent le mieux et le plus sont ceux provenant de la Licence.  Plus de 75\%  (\textbf{Check}) des etudiants de autre premier  cycle et autres diplômes et du BAC réussissent l'UV SY02. En ce qui concerne les résultats des étudiants pour le reste des diplômes, ils ont une grande variance et ne sont pas normalement distribués. En particulier les étudiants du BTS, CPGE et du DEUG sont ceux qui ont la plus grande variance et le plus grand échec.
-	
+	On remarque qu'il y a une grande variance chez presque tous les diplômes obtenus. Les élèves qui réussissent le mieux et le avec le plus grand pourcentage de réussite sont ceux provenant de la Licence.  Plus de 75\%  des etudiants de autre premier  cycle et autres diplômes et du BAC réussissent l'UV SY02. En ce qui concerne les résultats des étudiants pour le reste des diplômes, ils ont une grande variance et ne sont pas normalement distribués. En particulier les étudiants du BTS, CPGE et du DEUG sont ceux qui ont la plus grande variance et le plus grand pourcentage d'échec.
 	
 	\subsubsection{Influence du correcteur sur la note}
 	
@@ -176,16 +166,16 @@
 			\label{fig:scatter_correcteur_median}
 		\end{minipage}
 	\end{minipage}
-	on considère que les copies sont aléatoirement distribuées pour chaque correcteur et donc il n'y a pas de correcteur qui a que les 'bons' ou les 'mauvais' étudiants. A première vue on remarque qu'en général les notes sont dispersées pour chaque correcteur et donc il n'y a pas vraiment de correcteur en particulier qui semble être plus 'sévère' que les autres. On peut émettre l'hypothèse que le \textit{Corr4} a été plus stricte dans ses corrections de médians, néanmoins son diagramme de notes de final prouve le contraire. Il se peut donc que le correcteur ait eu les copies des 'mauvais' étudiants par fruit de hasard. Finalement, comme il a été cité précédemment les notes ont augmenté au final par rapport au médian, on observe donc bien que ceci est le cas pour tous les correcteurs.
+\vspace{0.1mm}
+\\
+	On considère que les copies sont aléatoirement distribuées pour chaque correcteur et donc il n'y a pas de correcteur qui n' a que les copies des  'bons' ou les 'mauvais' étudiants. A première vue on remarque qu'en général les notes sont dispersées pour chaque correcteur et sont normalement distribues (à l' exception du Cor1 en médian et final et Cor5 et 7 en final).  Ainsi on peut affirmer il n'y a pas vraiment de correcteur en particulier qui semble être plus 'sévère' que les autres. On pourrait émettre l'hypothèse que le \textit{Cor4} a été plus stricte dans ses corrections de médians, néanmoins son diagramme de notes du final prouve le contraire. Il se peut donc que le Cor4 aie eu, par fruit de hasard,  les copies des 'mauvais' étudiants en médian, . Finalement, comme il a été cité précédemment les notes ont augmenté au final par rapport au médian, on observe donc bien que ceci est le cas pour tous les correcteurs.\\
 	
-	\subsubsection{Conclusion}
-	Cette première analyse data nous a permis d'étudier quels sont les facteurs qui influent sur la réussite d'un étudiant dans l'UV SY02 comme le dernier diplôme obtenu ou le niveau et ceux qui n'influencent pas comme le correcteur. Néanmoins ces conclusions sont \underline{propre à la population du P16} et donc  \underline{biaisées}; pour pouvoir généraliser il faut analyser les notes de SY02 sur plusieurs semestres avec des populations différentes.
+	Cette première analyse nous a permis d'étudier quels sont les facteurs qui influencent sur la réussite d'un étudiant dans l'UV SY02 comme le dernier diplôme obtenu ou le niveau et ceux qui n'influencent pas comme le correcteur. Néanmoins ces conclusions sont \underline{propre à la population du P16} et donc  \underline{biaisées}; pour pouvoir généraliser il faut analyser les notes de SY02 sur plusieurs semestres avec des populations différentes.
 	
 	\subsection{Crabs}
 	Le dataset \textit{"Crabs"} représente un jeu de données de 200 crabes décrits par huit variables, trois sont qualitatives et cinq sont quantitatives.
 	
-	\subsection{Description des variables}
-	
+	\subsubsection{Description des variables}
 	
 	\begin{itemize}
 		\item \textbf{Variables Qualitatives Nominales :}  crabs.sp, crabs. sex, crabs.inde
@@ -213,7 +203,7 @@
 		\item \textbf{BD:} Body Depth en mm
 	\end{itemize}
 	
-	\subsection{Analyse descriptive des données}
+	\subsubsection{Analyse descriptive des données}
 	
 	\subsubsection{Représentation de chaque caractéristique en fonction de l'espèce}
 	
@@ -408,13 +398,14 @@ Nous remarquons que les 3 premières composantes ensemble expliquent  95\%  des 
 			\textbf{c4}	&	0.23 &		-0.29 &		-0.21	&	0.02
 		\end{tabular}
 	\end{center}
-	On retrouve ici un autre argument comme quoi les 3 premières composantes suffisent pour expliquer les données. En effet les variables sont fortement corrélées aux 3 premières composantes. Nous avons représenté en gras la corrélation la plus forte de chaque variable avec une composante. On peut déduire que la moyenne et l'écart type du médian sont majoritairement expliqués par la composante 1 alors que le la moyenne du final par la composante 2 et pour finir l'écart type du final par la composante 3. La figure suivante \ref{fig:individus_comp}	est une représentation des 6 correcteurs dans le premier plan factoriel (les composantes 1 et 2), alors que la figure \ref{fig:var_comp} représente la contribution de chaque composante pour chacune des 4 variables.
+	On retrouve ici un autre argument comme quoi les 3 premières composantes suffisent pour expliquer les données. En effet les variables sont fortement corrélées aux 3 premières composantes. Nous avons représenté en gras la corrélation la plus forte de chaque variable avec une composante. On peut déduire que la moyenne et l'écart type du médian sont majoritairement expliqués par la composante 1 alors que le la moyenne du final par la composante 2 et pour finir l'écart type du final par la composante 3. La figure suivante \ref{fig:individus_comp}	est une représentation des 6 correcteurs dans le premier plan factoriel (les composantes 1 et 2), alors que la figure \ref{fig:var_comp} représente la contribution de chaque composante pour chacune des 4 variables.\\
 	
 	\begin{minipage}{0.5\textwidth}
 		\includegraphics[width=50mm]{Figures/Notes_PCA/individus_comp.png}
 		\captionof{figure}{Individus dans le 1er plan}
 		\label{fig:individus_comp}	
 	\end{minipage}
+\hspace{0.2mm}
 	\begin{minipage}{0.5\textwidth}
 		\includegraphics[width=50mm]{Figures/Notes_PCA/variables_comp.png}
 		\captionof{figure}{Variables dans le 1er plan}
@@ -514,7 +505,7 @@ On peut déduire de part notre étude préalable que le correcteur 2 "aurait" un
 	\begin{minipage}{.5\textwidth}
 		\centering
 		\includegraphics[width=50mm]{Figures/Crabs/pca_plot.png}
-		\captionof{figure}{Variance expliquee par les composantes}
+		\captionof{figure}{Pourcentage d'inertie expliquée par les composantes}
 		\label{fig:crabs_pca_plot}
 	\end{minipage}%
 	\hspace{0.08\linewidth}
@@ -532,7 +523,7 @@ On peut déduire de part notre étude préalable que le correcteur 2 "aurait" un
 	Afin d'obtenir des variables non corrélées, nous avons divisé chaque donnée d'une ligne par la somme des valeurs de la ligne. Ensuite comme nous souhaitons étudier l'espèce et le sexe nous avons pensé qu'il serait mieux de regrouper ces 2 résultats en un afin d'obtenir une variable 'réponse' qui prend 4 valeurs; par exemple la valeur \textit{BF} signifie crabe d'espèce B et de sexe Femelle. Les instructions sont détaillées dans le fichier de code en annexe. Le graphe matriciel  ci-dessous montre les résultats obtenus.
 	
 	\begin{center}
-		\includegraphics[width=50mm]{Figures/Crabs/matricial_plot_decorr_classes.png}	
+		\includegraphics[width=45mm]{Figures/Crabs/matricial_plot_decorr_classes.png}	
 		\captionof{figure}{Plot Matriciel des caracteristiques apres decorelation}
 		\label{fig:crabs_matricial_plot_decorr}
 	\end{center}
@@ -544,7 +535,7 @@ On peut déduire de part notre étude préalable que le correcteur 2 "aurait" un
 	\begin{minipage}{.5\textwidth}
 		\centering
 		\includegraphics[width=50mm]{Figures/Crabs/decorr_pca_plot.png}
-		\captionof{figure}{Variance expliquee par les composantes apres decorrelation}
+		\captionof{figure}{Pourcentage d'inertie expliquée par les composantes après decorrelation}
 		\label{fig:crabsd_pca_plot}
 	\end{minipage}%
 	\hspace{0.08\linewidth}
@@ -556,7 +547,7 @@ On peut déduire de part notre étude préalable que le correcteur 2 "aurait" un
 	\end{minipage}
 	
 	\vspace{2mm}
-	La figure  \ref{fig:crabsd_pca_biplot} nous montre que les variables RW et OL sont contenues principalement dans la composante 1 alors que les variables BO, FL et CW seront plus dans la composante 2. Ce qui est aussi affiché dans la \ref{fig:crabsd_pca_plot} vu que les 2 premières composantes ensemble concentrent le maximum de variance expliquée. Enfin, la même figure nous permet aussi de conclure que la \textbf{l'information sur le sexe se trouve dans la composante 1 tandis que la composante 2 contient l'information sur l'espèce du crabe}. 
+	La figure  \ref{fig:crabsd_pca_biplot} nous montre que les variables RW et CL sont contenues principalement dans la composante 1 alors que les variables BD, FL et CW seront plus dans la composante 2. Ce qui est aussi affiché dans la \ref{fig:crabsd_pca_plot} vu que les 2 premières composantes ensemble concentrent le maximum de variance expliquée. Enfin, la même figure nous permet aussi de conclure que la \textbf{l'information sur le sexe se trouve dans la composante 1 tandis que la composante 2 contient l'information sur l'espèce du crabe}. 
 \subsection{Pima}
 
 \subsubsection{ACP}
@@ -565,14 +556,14 @@ Nous utilisons la fonction princomp pour calculer les composantes principales da
 \\
 \begin{minipage}{.5\textwidth}
 	\centering
-	\includegraphics[width=50mm]{Figures/Pima/pca_plot.png}
-	\captionof{figure}{Variance expliquée par les composantes}
+	\includegraphics[width=50mm]{Figures/Pima/barplot_inertie.png}
+	\captionof{figure}{Pourcentage d'inertie cumulée expliquée par les composantes}
 	\label{fig:pima_pca_plot}
 \end{minipage}%
 \hspace{0.08\linewidth}
 \begin{minipage}{.5\textwidth}
 	\centering
-	\includegraphics[width=50mm]{Figures/Pima/pca_biplot.png}
+	\includegraphics[width=50mm]{Figures/Pima/pca_plot.png}
 	\captionof{figure}{Individus et Variables projetées sur le premier plan factoriel}
 	\label{fig:pima_pca_biplot}
 \end{minipage}

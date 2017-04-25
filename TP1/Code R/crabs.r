@@ -16,7 +16,8 @@ crabsquant <- crabs[,4:8]
 #                   Question 1               #
 #                                            #
 #********************************************#
-plot(crabsquant)
+ggpairs(crabs, mapping = aes(color = sp), columns = c("FL", "RW", "CL", "CW", "BD"))
+ggpairs(crabs, mapping = aes(color = sex), columns = c("FL", "RW", "CL", "CW", "BD"))
 
 boxplot(crabsquant, main = "les données de crabsquant", ylab = "nombre de crabes", name = c("FL", "RW", "CL", "CW", "BD"))
 

@@ -36,7 +36,8 @@ loadings(crabs.pca)
 #Pourcentage d'inertie cumulee
 eigenval     = crabs.pca$sd^2
 perc.inertie = cumsum(eigenval/sum(eigenval)*100)
-barplot(perc.inertie)
+bp = barplot(perc.inertie)
+text(bp, 0, round(perc.inertie, 1),cex=1,pos=3) 
 biplot(crabs.pca)
 
 
@@ -83,7 +84,8 @@ loadings(crabs_decorr.pca)
 
 eigenval     = crabs_decorr.pca$sd^2
 perc.inertie = cumsum(eigenval/sum(eigenval)*100)
-barplot(perc.inertie)
+bp = barplot(perc.inertie)
+text(bp, 0, round(perc.inertie, 1),cex=1,pos=3) 
 
 autoplot(crabs_decorr.pca, data= crabs_decorr, colour= 'y', shape= FALSE,  
          loadings = TRUE, loadings.colour = 'blue',
