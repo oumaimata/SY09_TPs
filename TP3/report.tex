@@ -8,6 +8,7 @@
 \usepackage{wrapfig}
 \usepackage{color}
 \usepackage{amsmath}
+\usepackage{dsfont}
 \usepackage{amsfonts}
 \usepackage{mathtools}
 \usepackage{graphicx}
@@ -15,7 +16,15 @@
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage[table]{xcolor}
+\usepackage{adjustbox}
+\usepackage{multirow}
 %opening
+
+
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{2.5}
+
 
 \lstset
 {frame=tb,
@@ -55,6 +64,196 @@
 		
 	
 	\section{Classifieur euclidien, K plus proches voisins}
+		\subsection{ Programmation}
+		\subsubsection{Classifieur Euclidien}
+	\textit{ceuc.app }est une fonction qui retourne les centres d'inertie de chaque classifieur. La fonction \textit{rowsum} sur R nous a été très utile pour sommer les lignes.\\
+	La fonction \textit{ceuc.val}  prédit classe chaque individu des données tests. Nous utilisons ici la fonction \textit{distXY} pour calculer qui sépare chaque individu a chacun des centres d'inertie.
+	
+	\subsubsection{K Plus proches Voisins}
+		Dans cette partie nous avons essaye  de programmer l'algorithme des k plus proches voisins en évitant les boucles.
+	
+		\subsubsection{ Test de fonctions}
+		
+			\subsection{ Évaluation des Performances}
+			
+			\subsubsection{Estimation des paramètres}
+			
+			Les résultats sont affichés dans Le tableau ci-dessous:
+			\begin{center}		
+			\begin{tabular}{ | c | c | c | c | c |}
+			\rowcolor{lightgray} \multicolumn{5}{|c|}{Estimation des Parametres} \\
+			\hline
+			Jeu de données & k & $\mu_{k}$ & $\sum_{k}$ & $\pi_{k} $\\
+			\hline
+			\multirow{2}{*}{Synth1-40}       &   1&                &                    & 					\\\cline{2-5}
+			      									        &   2&                &                    & 					\\
+			\hline
+			\multirow{2}{*}{Synth1-100}      &   1&                &                    & 			   \\\cline{2-5}
+			      											 &   2&                &                    & 					\\
+			\hline
+			\multirow{2}{*}{Synth1-500}        &   1&                &                    & 				\\\cline{2-5}
+			        											&   2&                &                    & 					\\
+			\hline
+			\multirow{2}{*}{Synth1-1000}         &   1&                &                    & 				\\\cline{2-5}
+			         											&   2&                &                    & 					\\
+			\hline
+			\end{tabular}
+		\end{center}
+	
+			\subsubsection{Calcul du taux d'erreur du classifieur Euclidien}
+			Dans cette partie nous allons tester les performances de chacun des algorithmes programmes precedement en utilisan le critère de l'erreur qu'on exprime comme:
+			\begin{center}
+			$Erreur = \frac{1}{N} \sum_{i=1}^{n} {\mathds{1} \hat{z}_{i}  \neq z_{i}}$
+			\end{center}
+		Avec $z_{i}$ la vrai valeur de z et $\hat{z}_{i}$ la valeur calculée a partir de l'algorithme. N est le nombre d'individus. $\mathds{1} \hat{z}_{i}  \neq z_{i}$ = 1 si $\hat{z}_{i}  = z_{i}$, 0 sinon.
+		Après avoir calculé le taux d'erreur on peut utiliser la formule ci-dessous pour calculer l'intervalle de confiance:
+		\begin{center}
+		$Ic = [\mu_\epsilon - t \frac{\sigma_{\epsilon}^2}{\sqrt{N}}, \mu_\epsilon + t \frac{\sigma_{\epsilon}^2}{\sqrt{N}}]$
+		\end{center}
+	
+		On choisit un niveau de confiance t de 95\%. Notons ici que  $\mu$ et $\sigma$ sont ceux calculés pour les différentes valeurs de $\epsilon$ et non ceux du jeu de données. Autre point a remarquer est le N qui est ici le nombre d'individus , or comme on a sépare notre jeu de données entre un ensemble d'application et un ensemble de test, on veillera a mettre le nombre d'individus correspondant en fonction si c'est l'intervalle de confiance  d'application ou test. D'après l'énoncé en utilisant la fonction \textit{separ1} napp =$\frac{2n}{3}$  et ntst=$\frac{n}{3}$ n étant le nombre total d'individus du jeu de donnée.
+			
+			Les résultats obtenus pour les jeux de données sont affichés dans Le tableau qui suit.
+			\begin{center}		
+				\begin{tabular}{ | c  | c | c | c | c |}
+					\rowcolor{lightgray} \multicolumn{5}{|c|}{Performance du Classifier Euclidien} \\
+					\hline
+					Jeu de données &  $\epsilon_{app}$ & $\epsilon_{test}$ & $Ic_{app}$ & $Ic_{test}$\\
+					\hline
+					\multirow{1}{*}{Synth1-40}       &   &                &                    & 					 \\
+																
+					\hline
+					\multirow{1}{*}{Synth1-100}      &   &                &                    & 			   \\
+				
+					\hline
+					\multirow{1}{*}{Synth1-500}        &   &                &                    & 				\\
+				
+					\hline
+					\multirow{1}{*}{Synth1-1000}         &   &                &                    & 				\\
+				
+					\hline
+				\end{tabular}
+			\end{center}
+			
+		\subsubsection{Nombre optimal des k voisins}
+		
+		\subsubsection{Calcul du taux d'erreur du KPP} 
+			De la même manière aussi on traduit les résultats dans le tableau qui suit.
+		\begin{center}		
+			\begin{tabular}{ | c  | c | c | }
+
+				\rowcolor{lightgray} \multicolumn{3}{|c|}{Performance du KPP avec nombre de voisins = } \\
+				\hline
+				Jeu de données & $\epsilon_{test}$  & $Ic_{test}$\\
+				\hline
+				\multirow{1}{*}{Synth1-40}                       &                    				 \\
+				
+				\hline
+				\multirow{1}{*}{Synth1-100}                     &                     			   \\
+				
+				\hline
+				\multirow{1}{*}{Synth1-500}                     &                     				\\
+				
+				\hline
+				\multirow{1}{*}{Synth1-1000}                    &                    				\\
+				
+				\hline
+			\end{tabular}
+		\end{center}
+		
+			
+				\subsubsection{ Jeux de données Synth2-1000}
+				
+					\begin{center}		
+					\begin{tabular}{ | c | c | c | c | c |}
+						\rowcolor{lightgray} \multicolumn{5}{|c|}{Estimation des Paramètres} \\
+						\hline
+						Jeu de données & k & $\mu_{k}$ & $\sum_{k}$ & $\pi_{k} $\\
+						\hline
+						\multirow{2}{*}{Synth2-1000}       &   1&                &                    & 					\\\cline{2-5}
+																			&   2&                &                    & 					\\
+						\hline
+					
+					\end{tabular}
+				\end{center}
+			
+			
+				\begin{center}		
+				\begin{tabular}{ | c  | c | c | c | c |}
+					
+					\rowcolor{lightgray} \multicolumn{5}{|c|}{Performance du KPP avec nombre de voisins = } \\
+					\hline
+					Jeu de données &  $\epsilon_{app}$ & $\epsilon_{test}$ & $Ic_{app}$ & $Ic_{test}$\\
+					\hline
+					\multirow{1}{*}{Synth2-1000}       &   &                &                    & 					 \\
+					
+					\hline
+					
+				\end{tabular}
+			\end{center}
+				
+				\subsubsection{ Jeux de données réelles}
+				
+					\begin{center}		
+					\begin{tabular}{ | c | c | c | c | c |}
+						\rowcolor{lightgray} \multicolumn{5}{|c|}{Estimation des Paramètres} \\
+						\hline
+						Jeu de données & k & $\mu_{k}$ & $\sum_{k}$ & $\pi_{k} $\\
+						\hline
+						\multirow{2}{*}{Pima}       &   1&                &                    & 					\\\cline{2-5}
+						&   2&                &                    & 					\\
+						\hline
+						
+					\end{tabular}
+				\end{center}
+				
+				
+				\begin{center}		
+					\begin{tabular}{ | c | c | c |}
+						
+						\rowcolor{lightgray} \multicolumn{3}{|c|}{Performance du KPP avec nombre de voisins = } \\
+						\hline
+						Jeu de données & $\epsilon_{test}$ &  $Ic_{test}$\\
+						\hline
+						\multirow{1}{*}{Pima}       &                    & 					 \\
+						
+						\hline
+						
+					\end{tabular}
+				\end{center}
+				
+				
+					\begin{center}		
+					\begin{tabular}{ | c | c | c | c | c |}
+						\rowcolor{lightgray} \multicolumn{5}{|c|}{Estimation des Paramètres} \\
+						\hline
+						Jeu de données & k & $\mu_{k}$ & $\sum_{k}$ & $\pi_{k} $\\
+						\hline
+						\multirow{2}{*}{Breast Cancer}       &   1&                &                    & 					\\\cline{2-5}
+						&   2&                &                    & 					\\
+						\hline
+						
+					\end{tabular}
+				\end{center}
+				
+				
+				\begin{center}		
+					\begin{tabular}{ | c | c | c |}
+						
+						\rowcolor{lightgray} \multicolumn{3}{|c|}{Performance du KPP avec nombre de voisins = } \\
+						\hline
+						Jeu de données  & $\epsilon_{test}$  & $Ic_{test}$\\
+						\hline
+						\multirow{1}{*}{Breast Cancer}                     &                    & 					 \\
+						
+						\hline
+						
+					\end{tabular}
+				\end{center}
+				
+				
+				
+		\subsubsection{K plus proches voisins}
 		
 	
 	\section{Règle de Bayes}
