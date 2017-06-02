@@ -20,7 +20,7 @@
 \usepackage{adjustbox}
 \usepackage{multirow}
 %opening
-
+\definecolor{Gray}{gray}{0.85}
 
 \setlength{\tabcolsep}{18pt}
 \renewcommand{\arraystretch}{2.5}
@@ -85,11 +85,14 @@
 			\hline
 			Jeu de données & k & $\mu_{k}$ & $\sum_{k}$ & $\pi_{k} $\\
 			\hline
-			\multirow{2}{*}{Synth1-40}       &   1&                &                    & 					\\\cline{2-5}
-			      									        &   2&                &                    & 					\\
+			\multirow{2}{*}{Synth1-40}       &   1&     $\begin{pmatrix} -0.32\\1.09 \end{pmatrix}$                 &     $\begin{bmatrix} 0.68 & 0.12 \\ 1.09 & 1.012 \end{bmatrix}$      & 	0.45				\\\cline{2-5}
+			
+			      									        &   2&      $\begin{pmatrix} -1.883\\0.105 \end{pmatrix}$          &         $\begin{bmatrix} 1.37 & 0.32 \\ 1.09 & 0.32 \end{bmatrix}$        & 			0.55  		\\  
+			      									         
 			\hline
-			\multirow{2}{*}{Synth1-100}      &   1&                &                    & 			   \\\cline{2-5}
-			      											 &   2&                &                    & 					\\
+			\multirow{2}{*}{Synth1-100}      &   1&    $\begin{pmatrix} -0.32\\1.09 \end{pmatrix}$              &           $\begin{bmatrix} 0.68 & 0.12 \\ 1.09 & 1.012 \end{bmatrix}$      & 			   \\\cline{2-5}
+			      											 &   2&        $\begin{pmatrix} -0.32\\1.09 \end{pmatrix}$          &         $\begin{bmatrix} 0.68 & 0.12 \\ 1.09 & 1.012 \end{bmatrix}$               & 					\\
+			      											
 			\hline
 			\multirow{2}{*}{Synth1-500}        &   1&                &                    & 				\\\cline{2-5}
 			        											&   2&                &                    & 					\\
@@ -100,7 +103,7 @@
 			\end{tabular}
 		\end{center}
 	
-			\subsubsection{Calcul du taux d'erreur du classifieur Euclidien}
+			\subsubsection{Calcul du taux d'erreur du classifieur Euclidien et KPP}
 			Dans cette partie nous allons tester les performances de chacun des algorithmes programmes precedement en utilisan le critère de l'erreur qu'on exprime comme:
 			\begin{center}
 			$Erreur = \frac{1}{N} \sum_{i=1}^{n} {\mathds{1} \hat{z}_{i}  \neq z_{i}}$
@@ -115,52 +118,29 @@
 			
 			Les résultats obtenus pour les jeux de données sont affichés dans Le tableau qui suit.
 			\begin{center}		
-				\begin{tabular}{ | c | c | c |}
-					\rowcolor{lightgray} \multicolumn{3}{|c|}{Performance du Classifier Euclidien} \\
+				\begin{tabular}{ | c | c | c || c | c |}
+						\rowcolor{lightgray} 
+				   	 Performance du &  \multicolumn{2}{c||}{ Classifier Euclidien}  &  \multicolumn{2}{|c|}{du KPP}\\
+					
 					\hline
-					Jeu de données &  $\epsilon_{test}$ &  $Ic_{test}$\\
+					Jeu de données &  $\epsilon_{test}$ &  $Ic_{test}$  & $\epsilon_{test}$ &  $Ic_{test}$\\
 					\hline
-					\multirow{1}{*}{Synth1-40}       &                    & 					 \\
+					\multirow{1}{*}{Synth1-40}       &           & 		& &			 \\
 																
 					\hline
-					\multirow{1}{*}{Synth1-100}      &                   & 			   \\
+					\multirow{1}{*}{Synth1-100}      &                   & 			& &   \\
 				
 					\hline
-					\multirow{1}{*}{Synth1-500}        &                   & 				\\
+					\multirow{1}{*}{Synth1-500}        &                   & 		& &		\\
 				
 					\hline
-					\multirow{1}{*}{Synth1-1000}         &                   & 				\\
+					\multirow{1}{*}{Synth1-1000}         &                   & 		& &		\\
 				
 					\hline
 				\end{tabular}
 			\end{center}
 			
-		\subsubsection{Nombre optimal des k voisins}
-		
-		\subsubsection{Calcul du taux d'erreur du KPP} 
-			De la même manière aussi on traduit les résultats dans le tableau qui suit.
-		\begin{center}		
-			\begin{tabular}{ | c  | c | c |}
-
-				\rowcolor{lightgray} \multicolumn{3}{|c|}{Performance du KPP avec nombre de voisins = } \\
-				\hline
-				Jeu de données & $\epsilon_{test}$  & $Ic_{test}$\\
-				\hline
-				\multirow{1}{*}{Synth1-40}                       &                  &   				 \\
-				
-				\hline
-				\multirow{1}{*}{Synth1-100}                     &                    &  			   \\
-				
-				\hline
-				\multirow{1}{*}{Synth1-500}                     &                  &    				\\
-				
-				\hline
-				\multirow{1}{*}{Synth1-1000}                    &                 &    				\\
-				
-				\hline
-			\end{tabular}
-		\end{center}
-		
+	
 			
 				\subsubsection{ Jeux de données Synth2-1000}
 				
@@ -179,13 +159,13 @@
 			
 			
 				\begin{center}		
-				\begin{tabular}{  | c | c | c |}
-					
-					\rowcolor{lightgray} \multicolumn{3}{|c|}{Performance du KPP avec nombre de voisins = } \\
+				\begin{tabular}{ | c | c | c || c | c |}
+						\rowcolor{lightgray} 
+			 	 Performance du &  \multicolumn{2}{c||}{ Classifier Euclidien}  &  \multicolumn{2}{|c|}{du KPP}\\
 					\hline
-					Jeu de données &   $\epsilon_{test}$ & $Ic_{test}$\\
+					Jeu de données &   $\epsilon_{test}$ & $Ic_{test}$ & $\epsilon_{test}$ & $Ic_{test}$\\
 					\hline
-					\multirow{1}{*}{Synth2-1000}       &                    & 					 \\
+					\multirow{1}{*}{Synth2-1000}       &                    & 		& &			 \\
 					
 					\hline
 					
@@ -209,13 +189,13 @@
 				
 				
 				\begin{center}		
-					\begin{tabular}{ | c | c | c |}
-						
-						\rowcolor{lightgray} \multicolumn{3}{|c|}{Performance du KPP avec nombre de voisins = } \\
+					\begin{tabular}{ | c | c | c || c | c |}
+							\rowcolor{lightgray}
+						Performance du &  \multicolumn{2}{c||}{ Classifier Euclidien}  &  \multicolumn{2}{|c|}{du KPP}\\
 						\hline
-						Jeu de données & $\epsilon_{test}$ &  $Ic_{test}$\\
+						Jeu de données & $\epsilon_{test}$ &  $Ic_{test}$ & $\epsilon_{test}$  & $Ic_{test}$ \\
 						\hline
-						\multirow{1}{*}{Pima}       &                    & 					 \\
+						\multirow{1}{*}{Pima}       &                    & 				& &	 \\
 						
 						\hline
 						
@@ -237,20 +217,19 @@
 				\end{center}
 				
 				
-				\begin{center}		
-					\begin{tabular}{ | c | c | c |}
-						
-						\rowcolor{lightgray} \multicolumn{3}{|c|}{Performance du KPP avec nombre de voisins = } \\
+					\begin{center}		
+					\begin{tabular}{ | c | c | c || c | c |}
+						\rowcolor{lightgray} 
+						 	 	Performance du &  \multicolumn{2}{c||}{ Classifier Euclidien}  &  \multicolumn{2}{|c|}{du KPP}\\
 						\hline
-						Jeu de données  & $\epsilon_{test}$  & $Ic_{test}$\\
+						Jeu de données & $\epsilon_{test}$ &  $Ic_{test}$ & $\epsilon_{test}$  & $Ic_{test}$ \\
 						\hline
-						\multirow{1}{*}{Breast Cancer}                     &                    & 					 \\
+						\multirow{1}{*}{Breast Cancer}       &                    & 				& &	 \\
 						
 						\hline
 						
 					\end{tabular}
 				\end{center}
-				
 
 		
 	
