@@ -81,36 +81,37 @@
 			Les résultats sont affichés dans Le tableau ci-dessous:
 			\begin{center}		
 			\begin{tabular}{ | c | c | c | c | c |}
-			\rowcolor{lightgray} \multicolumn{5}{|c|}{Estimation des Parametres} \\
+				\rowcolor{lightgray}
+			& &  \multicolumn{3}{c|}{Estimation des Parametres} \\
 			\hline
-			Jeu de données & k & $\mu_{k}$ & $\sum_{k}$ & $\pi_{k} $\\
+			Jeu de données Synth1 & k & $\mu_{k}$ & $\sum_{k}$ & $\pi_{k} $\\
 			\hline
-			\multirow{2}{*}{Synth1-40}       &   1&     $\begin{pmatrix} -0.32\\1.09 \end{pmatrix}$                 &     $\begin{bmatrix} 0.68 & 0.12 \\ 0.12 & 1.01 \end{bmatrix}$      & 	0.45				\\\cline{2-5}
+			\multirow{2}{*}{40}       &   1&     $\begin{pmatrix} -0.32\\1.09 \end{pmatrix}$                 &     $\begin{bmatrix} 0.68 & 0.12 \\ 0.12 & 1.01 \end{bmatrix}$      & 	0.45				\\\cline{2-5}
 			
 			      									        &   2&      $\begin{pmatrix} -1.883\\0.105 \end{pmatrix}$          &         $\begin{bmatrix} 1.37 & 0.32 \\ 0.32 &1.44 \end{bmatrix}$        & 			0.55  		\\  
 			      									         
 			\hline
 			\hline
-			\multirow{2}{*}{Synth1-100}      &   1&    $\begin{pmatrix} 0.02\\0.82 \end{pmatrix}$              &           $\begin{bmatrix} 0.88 & -0.13 \\ -0.13 & 1.12 \end{bmatrix}$      & 		0.54	   \\\cline{2-5}
+			\multirow{2}{*}{100}      &   1&    $\begin{pmatrix} 0.02\\0.82 \end{pmatrix}$              &           $\begin{bmatrix} 0.88 & -0.13 \\ -0.13 & 1.12 \end{bmatrix}$      & 		0.54	   \\\cline{2-5}
 			      											
 			      											 &   2&        $\begin{pmatrix} -1.96\\-0.13 \end{pmatrix}$          &         $\begin{bmatrix} 0.76 & -0.04 \\ -0.04 & 0.76 \end{bmatrix}$               & 			0.46		\\
 			      											
 			\hline
 			\hline
-			\multirow{2}{*}{Synth1-500}        &   1&       $\begin{pmatrix} 0.13\\0.88 \end{pmatrix}$            &         	$\begin{bmatrix} 1.05 & 0.052 \\ 0.052 & 0.98 \end{bmatrix}$             & 			0.53		\\\cline{2-5}
+			\multirow{2}{*}{500}        &   1&       $\begin{pmatrix} 0.13\\0.88 \end{pmatrix}$            &         	$\begin{bmatrix} 1.05 & 0.052 \\ 0.052 & 0.98 \end{bmatrix}$             & 			0.53		\\\cline{2-5}
 			        											&   2&         $\begin{pmatrix} -1.88\\-0.08 \end{pmatrix}$         &  
 			        											$\begin{bmatrix} 0.97 & -0.11 \\ -0.11 & 0.98 \end{bmatrix}$                      & 		0.47		\\
 		
 			\hline
 			\hline
-			\multirow{2}{*}{Synth1-1000}         &   1&   $\begin{pmatrix} -0.01\\0.91 \end{pmatrix}$           &        	$\begin{bmatrix} 0.97 & 0.06  \\ 1.08 & 0.06 \end{bmatrix}$          & 		0.50		\\\cline{2-5}
+			\multirow{2}{*}{1000}         &   1&   $\begin{pmatrix} -0.01\\0.91 \end{pmatrix}$           &        	$\begin{bmatrix} 0.97 & 0.06  \\ 1.08 & 0.06 \end{bmatrix}$          & 		0.50		\\\cline{2-5}
 			         										&   2&       $\begin{pmatrix} -1.96\\0.02 \end{pmatrix}$            &    $\begin{bmatrix} 0.99 & 0.02 \\0.02 & 0.94 \end{bmatrix}$                  & 	0.50				\\
 			\hline
 			\hline
 			\end{tabular}
 		\end{center}
 	
-			\subsubsection{Calcul du taux d'erreur du classifieur Euclidien et KPP}
+			\subsubsection{Calcul du taux d'erreur du classifieur Euclidien }
 			Dans cette partie nous allons tester les performances de chacun des algorithmes programmes precedement en utilisan le critère de l'erreur qu'on exprime comme:
 			\begin{center}
 			$Erreur = \frac{1}{N} \sum_{i=1}^{n} {\mathds{1} \hat{z}_{i}  \neq z_{i}}$
@@ -125,28 +126,63 @@
 			
 			Les résultats obtenus pour les jeux de données sont affichés dans Le tableau qui suit.
 			\begin{center}		
-				\begin{tabular}{ | c | c | c || c | c |}
+				\begin{tabular}{ | c | c | c |}
 						\rowcolor{lightgray} 
-				   	 Performance du &  \multicolumn{2}{c||}{ Classifier Euclidien}  &  \multicolumn{2}{|c|}{du KPP}\\
+				   	&  \multicolumn{2}{|c|}{ Performance du  Classifieur Euclidien}\\
 					
 					\hline
-					Jeu de données &  $\epsilon_{test}$ &  $Ic_{test}$  & $\epsilon_{test}$ &  $Ic_{test}$\\
+					Jeu de données Synth1 &  $\epsilon_{test}$ &  $Ic_{test}$  \\
 					\hline
-					\multirow{1}{*}{Synth1-40}       &           & 		& &			 \\
+					\multirow{1}{*}{40}       &     0.195     & 	$[0.192, 0.197 ]$ \\
 																
 					\hline
-					\multirow{1}{*}{Synth1-100}      &                   & 			& &   \\
+					\multirow{1}{*}{100}      &       0.075   & 	$[0.074, 0.075]$  \\
 				
 					\hline
-					\multirow{1}{*}{Synth1-500}        &                   & 		& &		\\
+					\multirow{1}{*}{500}        &      0.131   & 	$[0.131, 0.131]$	\\
 				
 					\hline
-					\multirow{1}{*}{Synth1-1000}         &                   & 		& &		\\
+					\multirow{1}{*}{1000}      &      0.1404  & $[0.1403, 0.1404]$  	\\
 				
 					\hline
 				\end{tabular}
 			\end{center}
+		
+			\subparagraph{Analyse de la performance du Classifieur Euclidien}
+			On remarque que plus le nombre d'individus augmente plus l'erreur diminue ce qui est logique car avec plus de donnees dans le modele d'apprentissage notre modele peut bien apprendre les data et donc mieux classer les ensembles de tests.
+			 
+				\subsubsection{Le nombre Optimal de voisins du KPP }
 			
+				\subsubsection{Calcul du taux d'erreur du KPP }
+		\begin{center}		
+			\begin{tabular}{ | c | c | c |}
+				\rowcolor{lightgray} 
+				  &  \multicolumn{2}{|c|}{Performance du KPP}\\
+				
+				\hline
+				Jeu de données Synth1 &   $\epsilon_{test}$ &  $Ic_{test}$\\
+				\hline
+				\multirow{1}{*}{40}       &0.44  & $[0.439, 0.441]$ 			 \\
+				
+				\hline
+				\multirow{1}{*}{100}      & 0.44	& $[0.44, 0.44]$  \\
+				
+				\hline
+				\multirow{1}{*}{500}      &  0.472 & 	$[0.472, 0.472]$	\\
+				
+				\hline
+				\multirow{1}{*}{1000}      & 0.5028   & 	$[0.502, 0.503 ]$ 		\\
+				
+				\hline
+			\end{tabular}
+		\end{center}
+	
+	\subparagraph{Analyse de la performance du KPP: }
+	
+	
+			
+			\subparagraph{Comparaison des 2 méthodes: } 
+			 En comparant les 2 méthodes on remarque que l'erreur ainsi que les intervalles de confiance du Classifier Euclidien sont bien inférieur a ceux de la méthode des KPP. Il faut cependant ne pas perdre en considération que notre ensemble d'application qu'on a obtenu avec la fonction \textbf{\textit{separ1}} est d'une taille plus importante que la taille de l'ensemble d'application utilise dans le KPP. Pour illustrer 2/3 des données ont ete utilise pour entrainer le Classifieur Euclidien alors que seulement n/4 ont été utilisées dans le KPP.
 	
 			
 				\subsubsection{ Jeux de données Synth2-1000}
