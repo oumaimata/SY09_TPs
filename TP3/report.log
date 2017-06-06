@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  6 JUN 2017 19:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  6 JUN 2017 21:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -604,7 +604,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 62.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Figures/Exo1/front_ceuc.png, id=104, 481.8pt x 481.8pt>
+<Figures/Exo1/front_ceuc.png, id=108, 481.8pt x 481.8pt>
 File: Figures/Exo1/front_ceuc.png Graphic file (type png)
 
 <use Figures/Exo1/front_ceuc.png>
@@ -616,7 +616,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 79.
 See the caption package documentation for explanation.
 
-<Figures/Exo1/front_kppv.png, id=106, 481.8pt x 481.8pt>
+<Figures/Exo1/front_kppv.png, id=110, 481.8pt x 481.8pt>
 File: Figures/Exo1/front_kppv.png Graphic file (type png)
 
 <use Figures/Exo1/front_kppv.png>
@@ -643,13 +643,14 @@ Overfull \hbox (46.51926pt too wide) in paragraph at lines 76--89
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2 <./Figures/Exo1/front_ceuc.png> <./Figures/Exo1/front_kppv.png>]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 137.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 139.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ) [3]
-Overfull \hbox (11.30055pt too wide) detected at line 221
+[4]
+Overfull \hbox (11.30055pt too wide) detected at line 223
 [] \OML/cmm/m/it/10 ^^Y[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ^^Y[] \OT1/cmr/
 m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5 \OML/cmm/m/it/10 ^^V[] \OT1/cmr/m
 /n/10 = (3\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)[] \OML/cmm/m/it/10 ^^V[] \OT1/c
@@ -657,39 +658,34 @@ mr/m/n/10 = (\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m
 /n/10 0)[] ^^F[] = []  ^^F[] = []
  []
 
-[4]
-Overfull \hbox (0.88937pt too wide) in paragraph at lines 291--292
+
+Overfull \hbox (0.88937pt too wide) in paragraph at lines 293--294
 []\OT1/cmr/m/n/10 La premi^^Rere re-marque qu'on peur faire concer-nant les pa-
 ram^^Retres des donn^^Sees
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 310--311
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
 
-Overfull \hbox (5.16132pt too wide) detected at line 340
+Overfull \hbox (5.16132pt too wide) detected at line 342
 [][][]
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 368--369
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 380--381
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--397
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 412--413
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
 
  []
 
@@ -698,7 +694,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 440--441
 
  []
 
-<Figures/Exo2/linear_synth140.png, id=178, 481.8pt x 481.8pt>
+<Figures/Exo2/linear_synth140.png, id=182, 481.8pt x 481.8pt>
 File: Figures/Exo2/linear_synth140.png Graphic file (type png)
 
 <use Figures/Exo2/linear_synth140.png>
@@ -711,7 +707,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 444.
 See the caption package documentation for explanation.
 
-<Figures/Exo2/linear_synth1500.png, id=179, 481.8pt x 481.8pt>
+<Figures/Exo2/linear_synth1500.png, id=183, 481.8pt x 481.8pt>
 File: Figures/Exo2/linear_synth1500.png Graphic file (type png)
 
 <use Figures/Exo2/linear_synth1500.png>
@@ -743,7 +739,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 461--462
 
  []
 
-<Figures/Exo2/curve_synth2.png, id=191, 481.8pt x 481.8pt>
+<Figures/Exo2/curve_synth2.png, id=195, 481.8pt x 481.8pt>
 File: Figures/Exo2/curve_synth2.png Graphic file (type png)
 
 <use Figures/Exo2/curve_synth2.png>
@@ -755,7 +751,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 465.
 See the caption package documentation for explanation.
 
-<Figures/Exo2/linear2_synth2.png, id=192, 481.8pt x 481.8pt>
+<Figures/Exo2/linear2_synth2.png, id=196, 481.8pt x 481.8pt>
 File: Figures/Exo2/linear2_synth2.png Graphic file (type png)
 
 <use Figures/Exo2/linear2_synth2.png>
@@ -774,26 +770,30 @@ Overfull \hbox (24.12369pt too wide) in paragraph at lines 463--474
  []
 
 [9 <./Figures/Exo2/curve_synth2.png> <./Figures/Exo2/linear2_synth2.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 509.
+Underfull \hbox (badness 10000) in paragraph at lines 508--509
+
+ []
 
 [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 509.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 518.
+ [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 518.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 509.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 509.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 518.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 518.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: BC22FFF73DFF12631EC5E6983718E5AE;1891.
+(rerunfilecheck)             Checksum: 1FEA759485354FCB719CF98DC9ED56A5;1951.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 509.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 518.
  ) 
 Here is how much of TeX's memory you used:
- 12113 strings out of 493014
- 181629 string characters out of 6133351
+ 12117 strings out of 493014
+ 181674 string characters out of 6133351
  346148 words of memory out of 5000000
- 15389 multiletter control sequences out of 15000+600000
+ 15391 multiletter control sequences out of 15000+600000
  13703 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,16n,77p,667b,655s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -816,10 +816,10 @@ ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on report.pdf (10 pages, 446481 bytes).
+Output written on report.pdf (11 pages, 449910 bytes).
 PDF statistics:
- 284 PDF objects out of 1000 (max. 8388607)
- 238 compressed objects within 3 object streams
- 55 named destinations out of 1000 (max. 500000)
- 231 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 292 PDF objects out of 1000 (max. 8388607)
+ 245 compressed objects within 3 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 239 words of extra memory for PDF output out of 10000 (max. 10000000)
 

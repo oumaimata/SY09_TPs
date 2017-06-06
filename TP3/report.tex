@@ -125,11 +125,13 @@
 		
 			\hline
 			\hline
-			\multirow{2}{*}{1000}         &   1&   $\begin{pmatrix} -0.01\\0.91 \end{pmatrix}$           &        	$\begin{bmatrix} 0.97 & 0.06  \\ 1.08 & 0.06 \end{bmatrix}$          & 		0.50		\\\cline{2-5}
+			\multirow{2}{*}{1000}         &   1&   $\begin{pmatrix} -0.01\\0.91 \end{pmatrix}$           &        	$\begin{bmatrix} 0.97 & -0.06  \\ -0.06  & 1.08\end{bmatrix}$          & 		0.50		\\\cline{2-5}
 			         										&   2&       $\begin{pmatrix} -1.96\\0.02 \end{pmatrix}$            &    $\begin{bmatrix} 0.99 & 0.02 \\0.02 & 0.94 \end{bmatrix}$                  & 	0.50				\\
 			\hline
 			\end{tabular}
 		\end{center}
+	
+	D'après les résultats du tableau des paramètres de ces jeux de données, nous pouvons remarquer que les matrices $\sum_{k}$ se rapprochent de la forme globale: $\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$ pour les deux classes, ainsi que des proportions $\pi_{k} $ qui sont quasiment toutes à peu près égales à 0,5. Ainsi, nous pouvons en déduire que les nuages de points sont approximativement sphériques et de même volume. Il est donc possible de séparer les classes par un hyperplan avec le classifieur euclidien.
 	
 			\subsubsection{Calcul du taux d'erreur du classifieur Euclidien }
 			Dans cette partie nous allons tester les performances de chacun des algorithmes programmes precedement en utilisant le critère de l'erreur qu'on exprime comme:
@@ -402,14 +404,12 @@ exp(-\frac{1}{10} (x_{1}-\mu_{1})^{2} - \frac{1}{2}(x_{2}-\mu_{2})^{2})  = 10 \p
 \\
 (x_{1} - \mu_{1})^{2} +  5(x_{2}-\mu_{2})^{2}  = -10ln(10 \pi \sigma_{11}^{2} \sigma_{22}^{2} C_{3})
 \\
-(x_{1} - 3)^{2} + 5x_{2}^{2} = -10 ln(50\pi C_{3})
-\\
-(x_{1} + 2)^{2} + x_{2}^{2} = -10ln(50\pi C_{2})
+(x_{1} + 2)^{2} + 5x_{2}^{2} = -10ln(50\pi C_{2})
 \label{10}
 \end{split}
 \end{equation}
 
-On obtient encore une fois l'équation de cercle de centre $\mu_{2} = \begin{pmatrix} -2 \\ 0\end{pmatrix} $ et de rayon $R^{2} = -2 ln(2\pi C_{2})$.\\
+On obtient cette fois ci l'équation d'une ellipse de centre $\mu_{2} = \begin{pmatrix} -2 & 0\end{pmatrix}^{T}$. En effet ceci est du au fait que les variances des 2 variables sont différentes pour les individus de la classe 2.
 
 
 \subsection{Règle de Bayes}
@@ -454,7 +454,7 @@ Ainsi La règle de Bayes attribuera l'individu a la classe 1 si \eqref{10} est v
 \subsubsection{Synth2}
 D'après les densités calculées dans \eqref{4} on obtient: \[\frac{f_{1}(x)}{f_{2}(x)} = 5exp(-\frac{4}{10}x_{1}^{2} + \frac{34}{10} x_{1} - \frac{41}{10})\]
 
-On obtient ainsi l'inéquation: \[-4x_{1}^{2}  - 34x_{1} - 41 > -10log5\]
+On obtient ainsi l'inéquation: \[-4x_{1}^{2}  + 34x_{1} - 41 > -10log5\]
 En résolvant cette inéquation de second degrés par $\Delta = b^{2} - 4ac$ on obtient 2 solutions
 \[k_{1} = \frac{1}{4} (-17 - \sqrt{5 (25 + 8 log5)})= -7.690 \quad k_{2} = \frac{1}{4} (-17 +\sqrt{5 (25 + 8 log5)} ) = -0.809 \]
 
@@ -504,6 +504,15 @@ On obtient alors $\Delta_{B}^{2} = \frac{25}{24} +\frac{1}{2} ln(\frac{3}{\sqrt{
 \[  \epsilon^{*} \leq 0.15\]
 
 Ainsi l'erreur maximale que peut atteindre l'erreur de Bayes est 0.15
+\subsection{Conclusion}
+Maintenant que nous avons une meilleure connaissance de la Regle de Bayes pour chacune des donnees, nous avons implemente 2 fonctions qui calculent l'erreur commise par chacune des fonctions de la Regle de Bayes. On obtient ainsi le tableau ci-dessous (Le code est en annexe sous le nom de "test\_Bayes.r):\\
+
+\begin{tabular}{c | c| c| c|| c|}
+	Synth1-40 & Synth1-100 & Synth1-500 & Synth1-1000 &  Synth1-2\\
+	\hline
+	0.2 & 0.08 & 0.128 & 	0.142 & 0.056
+\end{tabular}
 
 \section{Conclusion}
+Ce TD nous a permis de se familiariser avec 2 méthodes d'apprentissage supervise, le classifieur Euclidien et les K Plus Proches Voisins.  Ce sont 2 méthodes simples a implémenter mais pas très flexible, elles sont utiles quand on a peu de données. La règle de Bayes est une méthode de décision qui est intéressante dans le sens ou on n'a pas besoin de faire un apprentissage de données et donc moins de temps de calcul. On note ainsi l'importance de connaitre les distributions et les portabilités a priori.
 	\end{document}
