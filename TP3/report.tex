@@ -125,11 +125,13 @@
 		
 			\hline
 			\hline
-			\multirow{2}{*}{1000}         &   1&   $\begin{pmatrix} -0.01\\0.91 \end{pmatrix}$           &        	$\begin{bmatrix} 0.97 & 0.06  \\ 1.08 & 0.06 \end{bmatrix}$          & 		0.50		\\\cline{2-5}
+			\multirow{2}{*}{1000}         &   1&   $\begin{pmatrix} -0.01\\0.91 \end{pmatrix}$           &        	$\begin{bmatrix} 0.97 & -0.06  \\ -0.06  & 1.08\end{bmatrix}$          & 		0.50		\\\cline{2-5}
 			         										&   2&       $\begin{pmatrix} -1.96\\0.02 \end{pmatrix}$            &    $\begin{bmatrix} 0.99 & 0.02 \\0.02 & 0.94 \end{bmatrix}$                  & 	0.50				\\
 			\hline
 			\end{tabular}
 		\end{center}
+	
+	D'après les résultats du tableau des paramètres de ces jeux de données, nous pouvons remarquer que les matrices $\sum_{k}$ se rapprochent de la forme globale: $\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$ pour les deux classes, ainsi que des proportions $\pi_{k} $ qui sont quasiment toutes à peu près égales à 0,5. Ainsi, nous pouvons en déduire que les nuages de points sont approximativement sphériques et de même volume. Il est donc possible de séparer les classes par un hyperplan avec le classifieur euclidien.
 	
 			\subsubsection{Calcul du taux d'erreur du classifieur Euclidien }
 			Dans cette partie nous allons tester les performances de chacun des algorithmes programmes precedement en utilisant le critère de l'erreur qu'on exprime comme:
