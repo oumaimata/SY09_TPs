@@ -454,9 +454,9 @@ Ainsi La règle de Bayes attribuera l'individu a la classe 1 si \eqref{10} est v
 \subsubsection{Synth2}
 D'après les densités calculées dans \eqref{4} on obtient: \[\frac{f_{1}(x)}{f_{2}(x)} = 5exp(-\frac{4}{10}x_{1}^{2} + \frac{34}{10} x_{1} - \frac{41}{10})\]
 
-On obtient ainsi l'inéquation: \[-4x_{1}^{2}  - 34x_{1} - 41 > -10ln5\]
+On obtient ainsi l'inéquation: \[-4x_{1}^{2}  - 34x_{1} - 41 > -10log5\]
 En résolvant cette inéquation de second degrés par $\Delta = b^{2} - 4ac$ on obtient 2 solutions
-\[k_{1} = 0,342 \quad k_{2} = -8.842 \]
+\[k_{1} = \frac{1}{4} (-17 - \sqrt{5 (25 + 8 log5)})= -7.690 \quad k_{2} = \frac{1}{4} (-17 +\sqrt{5 (25 + 8 log5)} ) = -0.809 \]
 
 Ainsi lorsqu'on a des matrices de covariances différentes on obtient une frontière de décision quadratique. Cette frontière est représentée  ci-dessous de 2 manières différentes pour les jeux de données Synth2 en utilisant \textbf{ggplot\textit{}} sur R et stat\_function pour dessiner la fonction quadratique.\\
 
@@ -471,8 +471,9 @@ Ainsi lorsqu'on a des matrices de covariances différentes on obtient une fronti
 	\captionof{figure}{Frontière de decision  pour Synth2}
 	\label{fig:front2_synth2}
 \end{minipage}
-\vspace{0.2mm}
-La figure \ref{fig:front1_synth2} montre la frontière de décision entre les 2 classes. Cette frontière qui est en effet une courbe apparait ici comme linéaire car on a restreint l'échelle a celle de nos données.
+
+\vspace{1mm}
+Notons qu'on a restreint l'échelle du graphique a celle des données ce qui fait que la courbe dans la figure \ref{fig:front1_synth2}  n'apparait pas totalement.
 
 \subsection{Erreur de Bayes}
 L'erreur de Bayes  est la plus petite erreur possible que peut atteindre une règle $\delta$ utilisant uniquement X. 
@@ -488,7 +489,7 @@ On obtient alors $\Delta^{2} = 5$, d'ou $\Delta = \sqrt{5} $ Ainsi:
  & = 1 - 0.86\cr
  \epsilon^{*}  & = 0.13
 \end{align}
-On remarque ainsi que cette erreur est relativement proche a l'erreur de test $\epsilon_{test}$ du classifieur Euclidien calculée dans la section \ref{section}
+On remarque  que cette erreur est relativement proche a l'erreur de test $\epsilon_{test}$ du classifieur Euclidien calculée dans la section \ref{section}. 
 
 
 
@@ -499,10 +500,10 @@ Avec $\Delta_{B}^{2}$ la distance de Bhattacharyya entre les 2 classes et qui s'
 \[  \Delta_{B}^{2} = \frac{1}{8} (\mu_{2} - \mu_{1})^{T}  (\frac{\Sigma_{1} + \Sigma_{2}}{2})^{-1} (\mu_{2} - \mu_{1}) + 
 \frac{1}{2} ln\frac{|\frac{\Sigma_{1}+\Sigma_{2}}{2}|}{\sqrt{|\Sigma_{1}| |\Sigma_{2}|}} \]
 
-On obtient alors $\Delta_{B}^{2} = \frac{25}{24} +\frac{1}{2} ln(\frac{3}{5} ) = 0.79$
-\[  \epsilon^{*} \leq 0.45\]
+On obtient alors $\Delta_{B}^{2} = \frac{25}{24} +\frac{1}{2} ln(\frac{3}{\sqrt{5}} ) = 1.886$
+\[  \epsilon^{*} \leq 0.15\]
 
-Ainsi l'erreur maximale que peut atteindre l'erreur de Bayes est 0.45
+Ainsi l'erreur maximale que peut atteindre l'erreur de Bayes est 0.15
 
 \section{Conclusion}
 	\end{document}

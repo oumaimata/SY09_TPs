@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  6 JUN 2017 16:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  6 JUN 2017 19:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -730,6 +730,15 @@ Overfull \hbox (24.12369pt too wide) in paragraph at lines 442--453
  []
 
 [8 <./Figures/Exo2/linear_synth140.png> <./Figures/Exo2/linear_synth1500.png>]
+Overfull \hbox (16.60802pt too wide) detected at line 459
+\OML/cmm/m/it/10 k[] \OT1/cmr/m/n/10 = [](\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 1
+7 \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/1
+0 7\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 690 \OML/cmm/m/it/10 k[] \OT1/cmr/m/n/10 =
+ [](\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 17 + []) = \OMS/cmsy/m/n/10 ^^@\OT1/cmr
+/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 809
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 461--462
 
  []
@@ -760,25 +769,25 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (24.12369pt too wide) in paragraph at lines 463--476
-[]$[]$  $[]$
+Overfull \hbox (24.12369pt too wide) in paragraph at lines 463--474
+[]$[]$  $[]$ 
  []
 
 [9 <./Figures/Exo2/curve_synth2.png> <./Figures/Exo2/linear2_synth2.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 508.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 509.
 
 [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 508.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 509.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 508.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 508.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 509.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 509.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: BC22FFF73DFF12631EC5E6983718E5AE;1891.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 508.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 509.
  ) 
 Here is how much of TeX's memory you used:
  12113 strings out of 493014
@@ -807,7 +816,7 @@ ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on report.pdf (10 pages, 442525 bytes).
+Output written on report.pdf (10 pages, 446481 bytes).
 PDF statistics:
  284 PDF objects out of 1000 (max. 8388607)
  238 compressed objects within 3 object streams
