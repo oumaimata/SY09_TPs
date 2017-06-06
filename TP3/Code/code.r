@@ -1,20 +1,43 @@
+#*********************************************#
+#                                             #
+#                   Libraries                 #
+#                                             #
+#*********************************************#
 
 library(pdist)
 library(dplyr)
+library(ggplot)
 
-#Data
+#*********************************************#
+#                                             #
+#                   Data.                     #
+#                                             #
+#*********************************************#
+
 synth40 = read.csv("data/data/Synth1-40.csv", header=T)
 synth100 = read.csv("data/data/Synth1-100.csv", header=T)
 synth500 = read.csv("data/data/Synth1-500.csv", header=T)
 synth1000 = read.csv("data/data/Synth1-1000.csv", header=T)
 synth21000 = read.csv("data/data/Synth2-1000.csv", header=T)
 
+#*********************************************#
+#                                             #
+#                   Includes                  #
+#                                             #
+#*********************************************#
 
 source("data/fonctions/front.ceuc.R")
 source("data/fonctions/front.kppv.R")
 source("data/fonctions/separ1.R")
 source("data/fonctions/separ2.R")
 source("data/fonctions/distXY.R")
+
+
+#*********************************************#
+#                                             #
+#            Classifieur Euclidien            #
+#                                             #
+#*********************************************#
 
 ceuc.app = function(Xapp, zapp)
 {
@@ -41,15 +64,14 @@ ceuc.val <- function(mu, Xtst)
     
     row.names(shortest) = NULL
     return (shortest)
-
-    #which min returns the indexes
-   # pred = t(dist[0,shortest])
- 
-    #because the classes now are rownames and chars so we have to convert the rownames into a numeric column!
-    #pred = as.matrix(transform(rownames(pred), pred = as.numeric(rownames(pred)))[,1])
-    
 }
 
+
+#*********************************************#
+#                                             #
+#                    KPPV                     #
+#                                             #
+#*********************************************#
 
 kppv.val <- function(Xapp, zapp, K, Xtst)
 {
