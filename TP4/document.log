@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  7 JUN 2017 00:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  10 JUN 2017 16:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**report.tex
-(./report.tex
+**document.tex
+(./document.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
@@ -495,21 +495,8 @@ File: lstlang2.sty 2015/06/04 1.6 listings language file
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2015/06/04 1.6 listings language file
 )
-(./report.aux
-
-LaTeX Warning: Label `9' multiply defined.
-
-
-LaTeX Warning: Label `10' multiply defined.
-
-
-LaTeX Warning: Label `fig:front_ceuc' multiply defined.
-
-
-LaTeX Warning: Label `fig:front_kppv' multiply defined.
-
-)
-\openout1 = `report.aux'.
+(./document.aux)
+\openout1 = `document.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
@@ -571,9 +558,9 @@ LaTeX Info: Redefining \ref on input line 61.
 LaTeX Info: Redefining \pageref on input line 61.
 LaTeX Info: Redefining \nameref on input line 61.
 
-(./report.out) (./report.out)
+(./document.out) (./document.out)
 \@outlinefile=\write3
-\openout3 = `report.out'.
+\openout3 = `document.out'.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -604,197 +591,36 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 62.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Figures/Exo1/front_ceuc.png, id=104, 481.8pt x 481.8pt>
-File: Figures/Exo1/front_ceuc.png Graphic file (type png)
-
-<use Figures/Exo1/front_ceuc.png>
-Package pdftex.def Info: Figures/Exo1/front_ceuc.png used on input line 78.
-(pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 79.
-See the caption package documentation for explanation.
-
-<Figures/Exo1/front_kppv.png, id=106, 481.8pt x 481.8pt>
-File: Figures/Exo1/front_kppv.png Graphic file (type png)
-
-<use Figures/Exo1/front_kppv.png>
-Package pdftex.def Info: Figures/Exo1/front_kppv.png used on input line 84.
-(pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 85.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (0.7384pt too wide) in paragraph at lines 76--89
-\OT1/cmr/m/n/10 de d^^Secision de chaque m^^Sethode en ap-pe-lant les fonc-tion
-s \OT1/cmr/bx/it/10 front.ceuc \OT1/cmr/m/n/10 et \OT1/cmr/bx/it/10 front.val
- []
-
-
-Overfull \hbox (46.51926pt too wide) in paragraph at lines 76--89
-\OT1/cmr/m/n/10 dessous. $[]$  $[]$
- []
-
-[1
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
+ [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2 <./Figures/Exo1/front_ceuc.png> <./Figures/Exo1/front_kppv.png>]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 140.
-
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/doublestroke/Udsrom.fd
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [3]
-[4]
-Overfull \hbox (11.30055pt too wide) detected at line 224
-[] \OML/cmm/m/it/10 ^^Y[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ^^Y[] \OT1/cmr/
-m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5 \OML/cmm/m/it/10 ^^V[] \OT1/cmr/m
-/n/10 = (3\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0)[] \OML/cmm/m/it/10 ^^V[] \OT1/c
-mr/m/n/10 = (\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m
-/n/10 0)[] ^^F[] = []  ^^F[] = []
- []
-
-
-Overfull \hbox (0.8616pt too wide) in paragraph at lines 294--295
-[]\OT1/cmr/m/n/10 La premi^^Rere re-marque qu'on peut faire concer-nant les pa-
-ram^^Retres des donn^^Sees
- []
-
-[5]
-
-LaTeX Warning: Reference `2' on page 6 undefined on input line 309.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
-
- []
-
-
-Overfull \hbox (5.16132pt too wide) detected at line 339
-[][][]
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 367--368
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 379--380
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 395--396
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 436--437
-
- []
-
-<Figures/Exo2/linear_synth140.png, id=176, 481.8pt x 481.8pt>
-File: Figures/Exo2/linear_synth140.png Graphic file (type png)
-
-<use Figures/Exo2/linear_synth140.png>
-Package pdftex.def Info: Figures/Exo2/linear_synth140.png used on input line 43
-9.
-(pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 440.
-See the caption package documentation for explanation.
-
-<Figures/Exo2/linear_synth1500.png, id=177, 481.8pt x 481.8pt>
-File: Figures/Exo2/linear_synth1500.png Graphic file (type png)
-
-<use Figures/Exo2/linear_synth1500.png>
-Package pdftex.def Info: Figures/Exo2/linear_synth1500.png used on input line 4
-45.
-(pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 446.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (24.12369pt too wide) in paragraph at lines 438--449
-[]$[]$  $[]$ 
- []
-
-[8 <./Figures/Exo2/linear_synth140.png> <./Figures/Exo2/linear_synth1500.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 457--458
-
- []
-
-<Figures/Exo2/curve_synth2.png, id=189, 481.8pt x 481.8pt>
-File: Figures/Exo2/curve_synth2.png Graphic file (type png)
-
-<use Figures/Exo2/curve_synth2.png>
-Package pdftex.def Info: Figures/Exo2/curve_synth2.png used on input line 460.
-(pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 461.
-See the caption package documentation for explanation.
-
-[9 <./Figures/Exo2/curve_synth2.png>] [10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 501.
- [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 501.
- (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 501.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 501.
-Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: BBA019ADB761EA09C571C675B5530144;1891.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 501.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
+ (./document.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
+Package rerunfilecheck Info: File `document.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
  ) 
 Here is how much of TeX's memory you used:
- 12108 strings out of 493014
- 181451 string characters out of 6133351
- 346148 words of memory out of 5000000
- 15386 multiletter control sequences out of 15000+600000
- 13703 words of font info for 54 fonts, out of 8000000 for 9000
+ 11942 strings out of 493014
+ 178824 string characters out of 6133351
+ 334148 words of memory out of 5000000
+ 15293 multiletter control sequences out of 15000+600000
+ 9791 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,16n,77p,668b,655s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
-6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on report.pdf (11 pages, 386131 bytes).
+ 42i,7n,72p,331b,655s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+Output written on document.pdf (1 page, 62919 bytes).
 PDF statistics:
- 281 PDF objects out of 1000 (max. 8388607)
- 236 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
- 226 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 37 PDF objects out of 1000 (max. 8388607)
+ 27 compressed objects within 1 object stream
+ 2 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

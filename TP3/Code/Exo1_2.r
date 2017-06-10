@@ -193,6 +193,7 @@ nppv = 2*(1:6)-1
 #kppv.tune <- function(Xapp, zapp, Xval, zval, nppv)
 bestk = kppv.tune(Xapp, zapp, Xapp, zapp, nppv)
 bestk
+#1
 
 #*********************************************#
 #                                             #
