@@ -70,36 +70,39 @@ adq.app <- function(Xapp, zapp)
 # Analyse Disc Lineaire
 adl.app <- function(Xapp, zapp)
 {
-    n <- dim(Xapp)[1]
-    p <- dim(Xapp)[2]
-    g <- max(unique(zapp))
+adl.app <- function(Xapp, zapp)
+{
+	n <- dim(Xapp)[1]
+	p <- dim(Xapp)[2]
+	g <- max(unique(zapp))
 
-    param <- NULL
-    MCov <- array(0, c(p,p))
-    param$MCov <- array(0, c(p,p,g))
-    param$mean <- array(0, c(g,p))
-    param$prop <- rep(0, g)
+	param <- NULL
+	MCov <- array(0, c(p,p))
+	param$MCov <- array(0, c(p,p,g))
+	param$mean <- array(0, c(g,p))
+	param$prop <- rep(0, g)
 
-    for (k in 1:g)
-    {
-        indk <- which(zapp==k)
+	for (k in 1:g)
+	{
+		indk <- which(zapp==k)
 
-        MCov <- 
-        param$mean[k,] <- 
-        param$prop[k] <- 
-    }
-    MCov <- 
-    for (k in 1:g)
-    {
-        param$MCov[,,k] <- 
-    }
+		MCov <- MCov + (cov(Xapp[indk,])* length(indk))
+		param$mean[k,] <- apply(Xapp[indk,],2,mean)
+		param$prop[k] <- nrow(Xapp[indk,])/nrow(Xapp)
+	}
+	MCov <- MCov / n
+	for (k in 1:g)
+	{
+		param$MCov[,,k] <- MCov
+	}
 
-    param
+	param
+}
 }
 
 
 
-# Navive Bayesian Classfifier
+# Naive Bayesian Classifier
 nba.app <- function(Xapp, zapp)
 {
     n <- dim(Xapp)[1]
@@ -117,7 +120,7 @@ nba.app <- function(Xapp, zapp)
         Xapp_g = Xapp[indk, ]
         diag(param$MCov[,,k])  = abind(diag(cov(Xapp_g)))
         param$mean[k,]         = abind(t(colMeans(Xapp_g))) 
-        param$prop[k]          =  abind(length(indk)/n)
+        param$prop[k]          = abind(length(indk)/n)
     }
 
     param
