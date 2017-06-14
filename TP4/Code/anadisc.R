@@ -107,5 +107,5 @@ ad.val <- function(param, Xtst)
     out$prob <- prob
     out$pred <- pred
 
-    densite.melange
+    out
 }

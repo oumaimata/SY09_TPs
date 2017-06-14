@@ -47,25 +47,26 @@ log.app <- function(Xapp, zapp, intr, epsi)
 
 log.val <- function(beta, Xtst)
 {
-	m <- dim(Xtst)[1]
-	p <- dim(beta)[1]
-	pX <- dim(Xtst)[2]
+    m <- dim(Xtst)[1]
+    p <- dim(beta)[1]
+    pX <- dim(Xtst)[2]
 
-	Xtst <- as.matrix(Xtst)
+    Xtst <- as.matrix(Xtst)
 
-	if (pX == (p-1))
-	{
-		Xtst  <- cbind(rep(1,m),Xtst)
-	}
+    if (pX == (p-1))
+    {
+        Xtst  <- cbind(rep(1,m),Xtst)
+    }
 
-	prob <- 
-	pred <- max.col(prob)
+    prob1 = postprob(beta, Xtst)
+    prob = cbind( prob1, 1-prob1)
+    pred <- max.col(prob)
 
-	out <- NULL
-	out$prob <- prob
-	out$pred <- pred
+    out <- NULL
+    out$prob <- prob
+    out$pred <- pred
 
-	return(out)
+    return(out)
 }
 
 postprob <- function(beta, X)
