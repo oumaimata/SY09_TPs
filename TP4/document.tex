@@ -62,14 +62,14 @@
 	{\let\newpage\relax\maketitle}	
 	
 		\begin{abstract}
-			Dans de TP4 nous allons étudier 5 techniques de discriminante: l'analyse discriminante linéaire, l'analyse discriminante quadratique, le bayésien naive, la régression logistique et la régression logistique quadratique. 
+			Dans de TP4 nous allons étudier 5 techniques de discriminante: l'analyse discriminante linéaire, l'analyse discriminante quadratique, le bayésien naïf, la régression logistique et la régression logistique quadratique. 
 		\end{abstract}
 	
 
 \section{Programmation}
 	\subsection{Analyse discriminante}
 	Pour la programmation des 3 modèles de l'analyse discriminante, il nous est demandé de compléter 4 fonctions pré-implémentées.
-	Les fonctions \texttt{adq.app}, \texttt{adl.app} et \texttt{nba.app} permettent l'apprentissage des 3 modèles, respectivement l'analyse discriminante quadratique, linéaire et enfin le classifieur bayésien naif. Elles doivent retourner les paramètres des modèles : proportions, moyennes et matrices de covariance des deux classes. Pour cela nous nous sommes appuyés sur les formules suivantes pour chacun des paramètres dans le cas de l'ADQ: 
+	Les fonctions \texttt{adq.app}, \texttt{adl.app} et \texttt{nba.app} permettent l'apprentissage des 3 modèles, respectivement l'analyse discriminante quadratique, linéaire et enfin le classifieur bayésien naïf Elles doivent retourner les paramètres des modèles : proportions, moyennes et matrices de covariances des deux classes. Pour cela nous nous sommes appuyés sur les formules suivantes pour chacun des paramètres, dans le cas de l'ADQ: 
 	\begin{equation*}
 	\widehat{\pi_{k}} = \dfrac{n_{k}}{n}
 	\end{equation*}	
@@ -80,23 +80,23 @@
 	\widehat{\Sigma_{k}} = \dfrac{1}{n_{k}}\sum_{i=1}^{n} z_{ik} (x_{i}-\widehat{\mu_{k}})(x_{i}-\widehat{\mu_{k}})^{t}
 	\end{equation*} 
 	
-	En ce qui concerne l'ADL, les proportions et le vecteur des moyennes suivent les mêmes formules. Ce modèle suppose en plus l'hypothèse d'homoscédasticité, donc d'égalité des matrice de variances pour les classes. Celle-ci s'exprime comme suit: 
+	En ce qui concerne l'ADL, les proportions et le vecteur des moyennes suivent les mêmes formules. Ce modèle suppose en plus l'hypothèse d'homoscédasticité, donc d'égalité des matrices de variances pour les classes. Celle-ci s'exprime comme suit: 
 	\begin{equation*}
 	\widehat{\Sigma} = \dfrac{1}{n}\sum_{k=1}^{g} n_{k} \widehat{\Sigma}
 	\end{equation*}	
 	Il suffit de sommer les matrices de covariances obtenues par l'ADQ multipliées par les proportions de leurs classes respectives.
 	
-	Ensuite, pour le modèle du classifieur bayésien naif, nous supposons l'indépendance des variables conditionnellement a la variable a expliquer Zapp. Donc les formules des proportions et le vecteur des moyennes restent les mêmes, les matrices des covariances se résument aux termes diagonaux, d'ou la multiplication des matrices de covariance obtenues par l'ADQ par la matrice identité Ce qui donne la formule:  
+	Ensuite, pour le modèle du classifieur bayésien naïf, nous supposons l'indépendance des variables conditionnellement à la variable à expliquer Zapp. Donc les formules des proportions et le vecteur des moyennes restent les mêmes, les matrices des covariances se résument aux termes diagonaux, d'ou la multiplication des matrices de covariances obtenues par l'ADQ par la matrice identité. Ce qui donne la formule:  
 	 \begin{equation*}
 	 \widehat{\Sigma_{k}} = diag(s_{k1}^{2}, ... ,s_{kj}^{2}, ..., s_{kp}^{2} )
 	 \end{equation*}
 	 
-	 Enfin, la 4ème fonction a compléter concerne le calcul des propriétés a posteriori et effectue un classement en fonction de ces probabilités \texttt{ad.val}. Pour le calcul des probabilités a posteriori, nous récupérons les proportions de chaque classe que nous multiplions par la densité a priori de la classe en question calculée grâce a la fonction donnée mvdnorm ( en lui passant la moyenne et la matrice de la covariance de la classe). Puis nous retournons la probabilité a posteriori finale en divisant le ce produit par la somme de tous les produits effectues représentant la densité de mélange grâce a \texttt{rowSums} sur R. 
+	 Enfin, la 4ème fonction à compléter concerne le calcul des probabilités à posteriori et effectue un classement en fonction de ces probabilités \texttt{ad.val}. Pour le calcul des probabilités à posteriori, nous récupérons les proportions de chaque classe que nous multiplions par la densité à priori de la classe en question calculée grâce à la fonction donnée mvdnorm ( en lui passant la moyenne et la matrice de la covariance de la classe). Puis nous retournons la probabilité à posteriori finale en divisant ce produit par la somme de tous les produits effectués représentant la densité de mélange grâce à \texttt{rowSums} sur R. 
 	 
 	\subsection{Regression logistique}
 	
-	Pour la programmation de la régression logistique, il nous est propose de compléter deux fonctions \texttt{log.app} pour l'apprentissage selon la méthode de Newton-Raphson et \texttt{log.val} pour la validation sur un ensemble de données La fonction d'apprentissage doit retourner la matrice beta correspondant à l'estimateur du maximum de vraisemblance $\widehat{\beta}$ des paramètres, le nombre \texttt{niter} d'itérations effectuées par l'algorithme de Newton-Raphson, et la valeur $\log L$ de la vraisemblance à l'optimum.
-	Pour cela, nous utilisons les formules suivantes respectivement aux paramètres retournes par la fonction a compléter et de manière itérative la formule (\ref{eq:newton-raphson}) a l'aide du calcul des formules détaillées de la matrice hessienne et le gradient de la log-vraissemblance calculés en $w^{(q)}$  jusqu'à convergence (nous rappelons q'un vecteur de poids initial $w^{(0)}$ est choisi avant le boucle) : 
+	Pour la programmation de la régression logistique, il nous est proposé de compléter deux fonctions \texttt{log.app} pour l'apprentissage selon la méthode de Newton-Raphson et \texttt{log.val} pour la validation sur un ensemble de données. La fonction d'apprentissage doit retourner la matrice beta correspondant à l'estimateur du maximum de vraisemblance $\widehat{\beta}$ des paramètres, le nombre \texttt{niter} d'itérations effectuées par l'algorithme de Newton-Raphson, et la valeur $\log L$ de la vraisemblance à l'optimum.
+	Pour cela, nous utilisons les formules suivantes respectivement aux paramètres retournés par la fonction à compléter et de manière itérative la formule (\ref{eq:newton-raphson}) à l'aide du calcul des formules détaillées de la matrice hessienne et le gradient de la log-vraissemblance calculés en $w^{(q)}$  jusqu'à convergence (nous rappelons qu'un vecteur de poids initial $w^{(0)}$ est choisi avant le début de la séquence) : 
 	
 	\begin{equation} \label{eq:newton-raphson}
 	w^{(q+1)} = w^{(q)}-H^{-1}_{(q)}*\dfrac{\partial \log L}{\partial w}(w^{(q)})
@@ -108,9 +108,9 @@
 	\dfrac{\partial \log L}{\partial w}(w^{(q)}) = X^{T}(t-p^{(q)})
 	\end{equation*}
 	
-	Nous arrêtons la séquence d'itérations lorsque la nouvelle estimation $w^{(q+1)}$ et $w^{(q)}$ est inférieur au seuil fixe $\epsilon$ comme variable d'entrée de la fonction \texttt{epsi}. 
+	Nous arrêtons la séquence d'itérations lorsque la nouvelle estimation $w^{(q+1)}$ et $w^{(q)}$ est inférieure au seuil fixé $\epsilon$ comme variable d'entrée de la fonction \texttt{epsi}. 
 	
-	Nous avons aussi complété la fonction \texttt{post.prob} qui calcul les probabilités a posteriori en fonction du paramètre beta retourne par la fonction d'apprentissage. Nous utilisons pour cela les formules suivantes : 
+	Nous avons aussi complété la fonction \texttt{post.prob} qui calcule les probabilités à posteriori en fonction du paramètre beta retourné par la fonction d'apprentissage. Nous utilisons pour cela les formules suivantes : 
 	
 	\begin{equation*}
 	P(w_{1}|x) = p(x,w) = \dfrac{\exp(w^{t}x)}{1+\exp(w^{t}x)}
@@ -119,11 +119,11 @@
 	P(w_{2}|x) = 1-p(x,w)
 	\end{equation*}
 	
-	Cette dernière nous aida dans l'implémentation de la fonction de validation \texttt{log.val}. Nous l'utilisons pour récupérer les fonctions de probabilités et nous utilisons \texttt{cbind} de R afin de retourner la matrice des probabilités a posteriori des deux classes dans le cas binaire de la régression logistique correspondant a \texttt{prob} et \texttt{1-prob} et le vecteur des classements associes.
+	Cette dernière nous aida dans l'implémentation de la fonction de validation \texttt{log.val}. Nous l'utilisons pour récupérer les fonctions de probabilités et nous utilisons \texttt{cbind} de R afin de retourner la matrice des probabilités à posteriori des deux classes dans le cas binaire de la régression logistique correspondant à \texttt{prob} et \texttt{1-prob} et le vecteur des classements associés.
 	\\
 	\\
 	\textbf{Régression logistique quadratique}
-	 Pour pouvoir appliquer ce modèle, il faudra adapter l'ensemble des données d'entrée \texttt{Xapp} a la méthode décrite dans l'énoncé Pour cela nous procédons comme suit: 
+	 Pour pouvoir appliquer ce modèle, il faudra adapter l'ensemble des données d'entrée \texttt{Xapp} à la méthode décrite dans l'énoncé. Pour cela nous procédons comme suit: 
 	\begin{lstlisting}
 	Xapp = as.matrix(Xapp)
 	Xapp = cbind(Xapp, Xapp[,1]*Xapp[,2], Xapp[,1]*Xapp[,1], Xapp[,2]*Xapp[,2])
@@ -149,7 +149,7 @@ Nous avons représenté les résultats de calcul de l'erreur de test dans les do
 		4.62\% & 3.60\% & 4.17\% & 3.75\% & 3.63\%
 	\end{tabular}
 \end{center}
-Nous retrouvons les taux d'erreur les plus bas pour l'ADQ et les régressions logistiques. Nous en déduisons que les données suivent bien des distributions normales et qu'il est fort probable que les classes ont des matrices de covariances différentes (l'hypothèse d'homoscedasticite n'est pas vérifiée). 
+Nous retrouvons les taux d'erreur les plus bas pour l'ADQ et les régressions logistiques. Nous en déduisons que les données suivent bien des distributions normales et qu'il est fort probable que les classes ont des matrices de covariances différentes (l'hypothèse d'homoscédasticité n'est pas vérifiée). 
 
 Les graphes sont représentés ci-dessous avec les frontières de décisions.
 
@@ -195,12 +195,12 @@ Dans ce qui suit nous avons représenté les résultats de calcul de l'erreur de
 \end{minipage}
 
 
-On remarque que l'erreur de test est inférieur a  9\% pour tous les classifieurs. Selon la représentation des points on remarque que les classes ont a peu pres la même distribution et on n'a qu'une dizaine de  points qui sont confondus entre les 2 classes. Par conséquent les classes peuvent être  linéairement séparés, ceci est illustre par l'erreur de test puisqu'on voit que la regression quadratique n'apporte qu'une légère amélioration de l'ordre de 1\%.
-Neanmois il faut remarquer que le classifieur Bayésien Naïve performe aussi bien que les régressions quadratiques. Ceci était prévisible vu que nos classes sont orientes vers les axes du plan et ... Ainsi il est plus intéressant dans ce cas d'utiliser le classifieur Bayésien Naïve vu qu'on n'estime que paramétrés au lieu de avec la régression quadratique ou même la logistique quadratique.
+On remarque que l'erreur de test est inférieure a  9\% pour tous les classifieurs. Selon la représentation des points on remarque que les classes ont à peu près la même distribution et on n'a qu'une dizaine de points qui sont confondus entre les 2 classes. Par conséquent les classes peuvent être  linéairement séparées, ceci est illustré par l'erreur de test puisqu'on voit que la régression quadratique n'apporte qu'une légère amélioration de l'ordre de 1\%.
+Néanmoins il faut remarquer que le classifieur Bayésien Naïf performe aussi bien que les régressions quadratiques. Ceci était prévisible vu que nos classes sont orientées vers les axes du plan. Ainsi il est plus intéressant dans ce cas d'utiliser le classifieur Bayésien Naïf vu qu'on n'estime moins de parametres qu'avec  la régression quadratique ou même la logistique quadratique.
 
 
 \subsubsection{Synth3-1000}
-Nous nous intéressons a présent aux données de Synth3-1000 avec 1000 individus.
+Nous nous intéressons à présent aux données de Synth3-1000 avec 1000 individus.
 
 \begin{minipage}{.5\textwidth}
 	\includegraphics[width=45mm]{Figures/synth3_lda.png}
@@ -221,7 +221,7 @@ Nous nous intéressons a présent aux données de Synth3-1000 avec 1000 individu
 	\includegraphics[width=45mm]{Figures/synth3_logregquad.png}
 \end{minipage}
 
-On remarque en représentant les données que les classes ont les mêmes orientations et distributions, et peuvent êtres linéairement séparés.  Il est donc normal de voir que les erreurs de test du LDA  sont faibles et que celles ci sont approximativement égales a celles du QDA. 
+On remarque en représentant les données que les classes ont les mêmes orientations et distributions, elles peuvent être linéairement séparées.  Il est donc normal de voir que les erreurs de test du LDA sont faibles et que celles ci sont approximativement égales à celles du QDA. 
 
 
 \subsection{Test sur données réelles}
@@ -237,7 +237,7 @@ Ce jeu de données concerne des individus d'une population d’amérindiens et l
 	\end{tabular}
 \end{center}
 
-Nous remarquons que les taux d'erreurs sont considérablement élevés pour ce dataset. Ils tournent autour du 24\% ce qui fait 20\% plus élevés que les données simulées analysées précédemment Nous nous rappelons que les plots des donnees quantitatives de Pima lors de leur analyse au TP1 ne nous permettaient pas de distinguer les classes présentant le critère de présence du diabète ou pas. Il fut difficile de déterminer une si une des variables explicatives permettait de décider de leur différenciation, nous pouvons le voir sur la figure (\ref{fig:plotPima}). 
+Nous remarquons que les taux d'erreurs sont considérablement élevés pour ce dataset. Ils tournent autour du 24\%, ce qui fait 20\% plus élevé que les données simulées analysées précédemment. Nous nous rappelons que les plots des données quantitatives de Pima lors de leur analyse au TP1 ne nous permettaient pas de distinguer les classes présentant le critère de présence du diabète ou pas. Il fut difficile de déterminer si une des variables explicatives permettait de décider de leur différenciation, nous pouvons le voir sur la figure (\ref{fig:plotPima}). 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=9cm]{Figures/plot_Pimaquant.png}%
@@ -249,7 +249,7 @@ Nous remarquons que les taux d'erreurs sont considérablement élevés pour ce d
 \subsubsection{Description des données}
 Avant de se lancer dans l'analyse de données, nous allons essayer de décrire ces données pour mieux analyser les résultats obtenus. Breast Cancer Winsconsin compte 683 individus et 9 variables quantitatives explicatives.
 \subsubsection{Analyse discriminantes et régression logistique}
-Le tableau ci-dessous montrent les résultats obtenus avec les différentes méthodes d'analyses discriminantes.
+Le tableau ci-dessous montrent les résultats obtenus avec les différentes méthodes d'analyses discriminantes et de régression logistique.
 \begin{center}
 	\begin{tabular}{|c | c | c| c| }
 		\hline
@@ -259,15 +259,15 @@ Le tableau ci-dessous montrent les résultats obtenus avec les différentes mét
 	\end{tabular}
 \end{center}
 
-Contrairement aux résultats obtenus dans les données de \textit{Synth} on remarque ici que les performances des classifieurs diffèrent. En effet le classifieur Bayésien Naïf et la régression logistique sont ceux qui classent au mieux nos données suivi par la methode d'analyse discriminante linéaire et quadratique. 
-La methode la plus performante ici est le  classifieur Bayésien Naïf. En effet si on s'intéresse a la matrice de variance  on remarque que les valeurs dans la diagonale sont les plus grandes. La matrice est donc quasi-diagonale. Ce qui vérifie l'hypothèse d'indépendance des données du classifieur Bayésien Naïf. \\
-La methode d'analyse linéaire n'est pas aussi performante bien car si on observe les matrice de variances de chaque classe on remarque que l'hypothèse d'homoscédasticité n'est pas vérifiée.
+Contrairement aux résultats obtenus dans les données de \textit{Synth} on remarque ici que les performances des classifieurs diffèrent. En effet le classifieur Bayésien Naïf et la régression logistique sont ceux qui classent au mieux nos données suivis par la méthode d'analyse discriminante linéaire et quadratique. 
+La méthode la plus performante ici est le classifieur Bayésien Naïf. En effet si on s'intéresse à la matrice de variance, on remarque que les valeurs dans la diagonale sont les plus grandes. La matrice est donc quasi-diagonale. Ce qui vérifie l'hypothèse d'indépendance des données du classifieur Bayésien Naïf. \\
+La méthode d'analyse linéaire n'est pas aussi performante car si on observe les matrices de variances de chaque classe, on remarque que l'hypothèse d'homoscédasticité n'est pas vérifiée.
 
 \subsubsection{Conclusion}
-On remarque que dans les 3 cas la régression logistique fournir le pourcentage d'erreur le plus faible. Néanmoins cette méthode est trop couteuse quant aux nombre de paramètre a estimer. Remarquons qu'appliquer la la méthode de régression logistique quadratique aurait été trop couteux dans ce cas ou on a 8 variables d'une part. 
+On remarque que dans les 3 cas, la régression logistique fournit le pourcentage d'erreur le plus faible. Néanmoins cette méthode est trop couteuse quant au nombre de paramètres à estimer. Remarquons qu'appliquer la méthode de régression logistique quadratique aurait été trop couteux dans ce cas ou on a 8 variables d'une part. 
 
 \subsubsection{Arbres de décisions}
-Pour obtenir l'arbre de décision de l'ensemble d'apprentissage nous utilisons la fonction \textit{tree} du \textit{package tree}. Nous fixons les paramètres\\  \textit{control=tree.control(nobs=dim(Dapp)[1],mindev = 0.0001)}  comme demandé dans ce TP. \textit{nobs} est le nombre d'observations des données d'apprentissage , \textit{mindev} est la deviance entre les noeuds. Si mindev=0 il essaye de fit parfaitement les données. La fixation de ces paramètres influence directement la taille (le nombre de nœuds) de l'arbre.\\
+Pour obtenir l'arbre de décision de l'ensemble d'apprentissage nous utilisons la fonction \textit{tree} du \textit{package tree}. Nous fixons les paramètres\\  \textit{control=tree.control(nobs=dim(Dapp)[1],mindev = 0.0001)}  comme demandé dans ce TP. \textit{nobs} est le nombre d'observations des données d'apprentissage , \textit{mindev} est la déviance entre les nœuds. Si mindev=0 il essaye de placer parfaitement les données. La fixation de ces paramètres influence directement la taille (le nombre de nœuds) de l'arbre.\\
 \begin{minipage}{.5\textwidth}
 	\includegraphics[width=50mm]{Figures/bcw_apptree.png}
 \end{minipage}%
@@ -277,7 +277,7 @@ Pour obtenir l'arbre de décision de l'ensemble d'apprentissage nous utilisons l
 \end{minipage}
 
 Ainsi sur l'ensemble d'apprentissage on a une erreur de mal classement de 1.76\%. On remarque ici V3, V8, V7, V8, V9, V5 et V2. La  complexité d'un arbre est évaluée avec le nombre de feuilles qu'il a puisque se sont les différentes classes. Ainsi la fonction \textbf{tree} nous retourne un arbre avec 13 nœuds et donc 13 partitions.\\
-Nous allons a présent utiliser la méthode de cross validation pour trouver l'hauteur optimale de l'arbre. On utilise la fonction R \textbf{tree.cv} avec k=10 pour faire une \textit{10-fold cross validation}, qui consiste a diviser l'ensemble d'apprentissage en 10 ensembles et utiliser un a chaque fois comme ensemble de validation.  Les résultats sont représentés ci-dessous sous forme du graphe de l'évolution du nombre d'individus mal classes en fonction de la 
+Nous allons à présent utiliser la méthode de cross validation pour trouver la hauteur optimale de l'arbre. On utilise la fonction R \textbf{tree.cv} avec k=10 pour faire une \textit{10-fold cross validation}, qui consiste à diviser l'ensemble d'apprentissage en 10 ensembles et utiliser un à chaque fois comme ensemble de validation.  Les résultats sont représentés ci-dessous sous forme du graphe de l'évolution du nombre d'individus mal classés en fonction de la taille de l'arbre qui est égale au nombre de feuilles.
 
 \begin{minipage}{.4\textwidth}
 	\includegraphics[width=45mm]{Figures/bcw_cvplot.png}
@@ -290,7 +290,8 @@ min= which(bcw.cv$dev==min(bcw.cv$dev))
 best.size= bcw.cv$size[min]
  \end{lstlisting}
 \end{minipage}
-On récupère donc la taille de l'arbre qui minimise l'erreur (le nombre d'individus mal classes) qui est 4. Ensuite on utilise la fonction\textbf{prune.misclass}permet d’élaguer l’arbre en mettant 4 comme taille de l'arbre. Grâce a la fonction \textbf{predict} on obtient en sortie le vecteur de prédiction de classes. La matrice ci-dessous est la matrice de confusion des vrais classements et des prédictions.
+
+On récupère donc la taille de l'arbre qui minimise l'erreur (le nombre d'individus mal classes) qui est 4. Ensuite on utilise la fonction\textbf{prune.misclass} permet d’élaguer l’arbre en mettant 4 comme taille de l'arbre. Grâce à la fonction \textbf{predict} on obtient en sortie le vecteur de prédiction de classes. La matrice ci-dessous est la matrice de confusion des vrais classements et des prédictions.
 \begin{minipage}{.5\textwidth}
 	\includegraphics[width=45mm]{Figures/bcw_prunedtree.png}
 \end{minipage}%
