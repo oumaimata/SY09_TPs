@@ -142,11 +142,11 @@ ztst  = z[-train]
 \subsubsection{Synth1-1000}
 Nous avons représenté les résultats de calcul de l'erreur de test dans les données Synth1-1000. 
 \begin{center}
-	\begin{tabular}{|c | c | c| c| c| }
+	\begin{tabular}{|c | c | c| c| c| c|}
 		\hline
-		LDA & QDA & Naive Bayes & Log Reg & Quad Log Reg\\
+		LDA & QDA & Naive Bayes & Log Reg & Quad Log Reg & Tree\\
 		\hline	
-		4.62\% & 3.60\% & 4.17\% & 3.75\% & 3.63\%
+		4.62\% & 3.60\% & 4.17\% & 3.75\% & 3.63\% & 4.88\%
 	\end{tabular}
 \end{center}
 Nous retrouvons les taux d'erreur les plus bas pour l'ADQ et les régressions logistiques. Nous en déduisons que les données suivent bien des distributions normales et qu'il est fort probable que les classes ont des matrices de covariances différentes (l'hypothèse d'homoscédasticité n'est pas vérifiée). 
@@ -173,7 +173,17 @@ Les graphes sont représentés ci-dessous avec les frontières de décisions.
 \end{minipage}
 
 \subsubsection{Synth2-1000}
-Dans ce qui suit nous avons représenté les résultats de calcul de l'erreur de test dans les données Synth2-1000. Les graphes sont représentés ci-dessous avec les frontières de décisions et les erreurs pour chaque classifieur.
+Dans ce qui suit nous avons représenté les résultats de calcul de l'erreur de test dans les données Synth2-1000. 
+Nous avons représenté les résultats de calcul de l'erreur de test dans les données Synth1-1000. 
+\begin{center}
+	\begin{tabular}{|c | c | c| c| c| c|}
+		\hline
+		LDA & QDA & Naive Bayes & Log Reg & Quad Log Reg & Tree\\
+		\hline	
+		8.05\% & 6.30\% & 6.30\% & 7.10\% & 6.38\% & 7.98\%
+	\end{tabular}
+\end{center}
+Les graphes sont représentés ci-dessous avec les frontières de décisions et les erreurs pour chaque classifieur.
 
 \begin{minipage}{.5\textwidth}
 	\includegraphics[width=45mm]{Figures/synth2_lda.png}
@@ -201,6 +211,16 @@ Néanmoins il faut remarquer que le classifieur Bayésien Naïf performe aussi b
 
 \subsubsection{Synth3-1000}
 Nous nous intéressons à présent aux données de Synth3-1000 avec 1000 individus.
+
+Nous avons représenté les résultats de calcul de l'erreur de test dans les données Synth1-1000. 
+\begin{center}
+	\begin{tabular}{|c | c | c| c| c| c|}
+		\hline
+		LDA & QDA & Naive Bayes & Log Reg & Quad Log Reg & Tree\\
+		\hline	
+		7.10\% & 4.7\% & 4.89\% & 4.14\% & 4.16\% &6.55\%
+	\end{tabular}
+\end{center}
 
 \begin{minipage}{.5\textwidth}
 	\includegraphics[width=45mm]{Figures/synth3_lda.png}
@@ -316,17 +336,17 @@ Nous obtenons 6.03\% comme erreur de test.
 
 \section{Spams challenge}
 
-On considère dans ce challenge un dataset traitant de la détection de spams a partir d'indicateurs calcules sur des messages électroniques 
+On considère dans ce challenge un dataset traitant de la détection de spams à partir d'indicateurs calculés sur des messages électroniques 
 
-Ce jeu de données comprend 58 variables explicatives et une variable a expliquer.Nous remarquons que pour certaines variables il y'a un nombre significativement grand d'individus portant des informations nulles. 
-L'existence de matrice creuse peut induire a des  matrices de covariances non inversibles. 
-Lorsque nous avons de tels grande jeux de données, la première chose a faire est de centrer en réduire notre matrice d'apprentissage puis d'appliquer \textbf{cette même transformation} a notre ensemble de test.\\ 
+Ce jeu de données comprend 58 variables explicatives et une variable à expliquer. Nous remarquons que pour certaines variables il y a un nombre significativement grand d'individus portant des informations nulles. 
+L'existence de matrice creuse peut induire à des matrices de covariances non inversibles. 
+Lorsque nous avons de tels grands jeux de données, la première chose à faire est de centrer et réduire notre matrice d'apprentissage puis d'appliquer \textbf{cette même transformation} à notre ensemble de test.\\ 
 
-Nous avons commence notre discrimination par une methode simple qui est le KPPV afin d'obtenir une idée générale de l'erreur. Nous avons utilise la methode de 5-fold cross validation pour déterminer le meilleur k. L'erreur obtenue est très supérieur avec le KNN.\\
+Nous avons commencé notre discrimination par une méthode simple qui est le K-PPV afin d'obtenir une idée générale de l'erreur. Nous avons utilisé la méthode de 5-fold cross validation pour déterminer le meilleur k. L'erreur obtenue est très supérieure avec le K-NN.\\
 
-La méthode de centrage nous a permis d'avoir des résultats concrets pour la régression logistique et le classifieur bayésien naïf Cependant, nous n'avons pas pu obtenir de résultats  pour les analyses discriminantes quadratique et linéaire. Nous pensons que cela est du a la matrice hessienne qui est non semi-positives. Nous pensons aussi que l'instabilité numérique a une influence sur les calculs effectues sur ce dataset.\\
+La méthode de centrage nous a permis d'avoir des résultats concrets pour la régression logistique et le classifieur bayésien naïf Cependant, nous n'avons pas pu obtenir de résultats pour les analyses discriminantes quadratique et linéaire. Nous pensons que cela est du é la matrice hessienne qui est non semi-positives. Nous pensons aussi que l'instabilité numérique a une influence sur les calculs effectués sur ce dataset.\\
 
-Par ailleurs, nous avons eu recours au modèle de l'arbre de décision \texttt{tree} et \texttt{randomForest}. Avec un choix judicieux de la taille de l'arbre (taille = 7), nous avons pu avoir un taux d'erreur faible avec ce modèle. La foret aléatoire (Random Forest) est une methode puissante car elle sélectionne aléatoirement un sous ensemble de variables en  introduisant la diversité dans l'arbre. Ceci n'est pas forcement un critère d'optimalité mais permet de mieux apprendre le modèle.
+Par ailleurs, nous avons eu recours au modèle de l'arbre de décision \texttt{tree} et \texttt{randomForest}. Avec un choix judicieux de la taille de l'arbre (taille = 7), nous avons pu avoir un taux d'erreur faible avec ce modèle. La foret aléatoire (Random Forest) est une méthode puissante car elle sélectionne aléatoirement un sous ensemble de variables en introduisant la diversité dans l'arbre. Ceci n'est pas forcément un critère d'optimalité mais permet de mieux apprendre le modèle.
 
 Le tableau ci-dessous montrent les résultats obtenus avec les différentes méthodes:
 \begin{center}
@@ -338,5 +358,5 @@ Le tableau ci-dessous montrent les résultats obtenus avec les différentes mét
 	\end{tabular}
 \end{center}
 
-Nous pensons qu'une utilisation de l'analyse factoriel discriminante (AFD) aurait donné de meilleures résultats que l'ACP. En effet avec l'AFD on exprime la matrice de variance comme $\Sigma = W + B$ avec B la matrice de variance inter-classes (between classes) et W la matrice de variance intra-classes (Within-classes), puis on essaye de maximiser B. Par conséquent l'AFD vise a séparer le mieux possible les classes en maximisant la variance inter-classes (Between Classes). Nous avons vu que cette methode peut être implémentée par la fonction \textit{lda} sur R mains nous n'avons malheureusement pas  pu la mettre en place par faute de temps. 
+Nous pensons qu'une utilisation de l'analyse factoriel discriminante (AFD) aurait donné de meilleures résultats que l'ACP. En effet avec l'AFD on exprime la matrice de variance comme $\Sigma = W + B$ avec B la matrice de variance inter-classes (between classes) et W la matrice de variance intra-classes (Within-classes), puis on essaye de maximiser B. Par conséquent l'AFD vise à séparer le mieux possible les classes en maximisant la variance inter-classes (Between Classes). Nous avons vu que cette méthode peut être implémentée par la fonction \textit{lda} sur R mais nous n'avons malheureusement pas pu la mettre en place par faute de temps. 
 \end{document}

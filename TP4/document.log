@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 JUN 2017 00:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 JUN 2017 00:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -651,47 +651,47 @@ Overfull \hbox (9.12369pt too wide) in paragraph at lines 167--174
 $[]$  $[]$ 
  []
 
-<Figures/synth2_lda.png, id=115, 481.8pt x 481.8pt>
+[4 <./Figures/synth1_lda.png> <./Figures/synth1_qda.png> <./Figures/synth1_nb.p
+ng> <./Figures/synth1_logreg.png> <./Figures/synth1_logregquad.png>]
+<Figures/synth2_lda.png, id=124, 481.8pt x 481.8pt>
 File: Figures/synth2_lda.png Graphic file (type png)
 
 <use Figures/synth2_lda.png>
-Package pdftex.def Info: Figures/synth2_lda.png used on input line 179.
+Package pdftex.def Info: Figures/synth2_lda.png used on input line 189.
 (pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
 
-<Figures/synth2_qda.png, id=116, 481.8pt x 481.8pt>
+<Figures/synth2_qda.png, id=125, 481.8pt x 481.8pt>
 File: Figures/synth2_qda.png Graphic file (type png)
 
 <use Figures/synth2_qda.png>
-Package pdftex.def Info: Figures/synth2_qda.png used on input line 183.
+Package pdftex.def Info: Figures/synth2_qda.png used on input line 193.
 (pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
 
-Overfull \hbox (24.12369pt too wide) in paragraph at lines 178--185
+Overfull \hbox (24.12369pt too wide) in paragraph at lines 188--195
 []$[]$  $[]$ 
  []
 
-[4 <./Figures/synth1_lda.png> <./Figures/synth1_qda.png> <./Figures/synth1_nb.p
-ng> <./Figures/synth1_logreg.png> <./Figures/synth1_logregquad.png>]
 <Figures/synth2_nb.png, id=126, 481.8pt x 481.8pt>
 File: Figures/synth2_nb.png Graphic file (type png)
  <use Figures/synth2_nb.png>
-Package pdftex.def Info: Figures/synth2_nb.png used on input line 187.
+Package pdftex.def Info: Figures/synth2_nb.png used on input line 197.
 (pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
 
 <Figures/synth2_logreg.png, id=127, 481.8pt x 481.8pt>
 File: Figures/synth2_logreg.png Graphic file (type png)
 
 <use Figures/synth2_logreg.png>
-Package pdftex.def Info: Figures/synth2_logreg.png used on input line 190.
+Package pdftex.def Info: Figures/synth2_logreg.png used on input line 200.
 (pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
 
 <Figures/synth2_logregquad.png, id=128, 481.8pt x 481.8pt>
 File: Figures/synth2_logregquad.png Graphic file (type png)
 
 <use Figures/synth2_logregquad.png>
-Package pdftex.def Info: Figures/synth2_logregquad.png used on input line 194.
+Package pdftex.def Info: Figures/synth2_logregquad.png used on input line 204.
 (pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
 
-Overfull \hbox (9.12369pt too wide) in paragraph at lines 189--196
+Overfull \hbox (9.12369pt too wide) in paragraph at lines 199--206
 $[]$  $[]$ 
  []
 
@@ -701,41 +701,41 @@ ng> <./Figures/synth2_logreg.png> <./Figures/synth2_logregquad.png>]
 File: Figures/synth3_lda.png Graphic file (type png)
 
 <use Figures/synth3_lda.png>
-Package pdftex.def Info: Figures/synth3_lda.png used on input line 206.
+Package pdftex.def Info: Figures/synth3_lda.png used on input line 226.
 (pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
 
 <Figures/synth3_qda.png, id=139, 481.8pt x 481.8pt>
 File: Figures/synth3_qda.png Graphic file (type png)
 
 <use Figures/synth3_qda.png>
-Package pdftex.def Info: Figures/synth3_qda.png used on input line 210.
+Package pdftex.def Info: Figures/synth3_qda.png used on input line 230.
 (pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
 
-Overfull \hbox (24.12369pt too wide) in paragraph at lines 205--212
+Overfull \hbox (24.12369pt too wide) in paragraph at lines 225--232
 []$[]$  $[]$ 
  []
 
 <Figures/synth3_nb.png, id=140, 481.8pt x 481.8pt>
 File: Figures/synth3_nb.png Graphic file (type png)
  <use Figures/synth3_nb.png>
-Package pdftex.def Info: Figures/synth3_nb.png used on input line 214.
+Package pdftex.def Info: Figures/synth3_nb.png used on input line 234.
 (pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
 
 <Figures/synth3_logreg.png, id=141, 481.8pt x 481.8pt>
 File: Figures/synth3_logreg.png Graphic file (type png)
 
 <use Figures/synth3_logreg.png>
-Package pdftex.def Info: Figures/synth3_logreg.png used on input line 217.
+Package pdftex.def Info: Figures/synth3_logreg.png used on input line 237.
 (pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
 
 <Figures/synth3_logregquad.png, id=142, 481.8pt x 481.8pt>
 File: Figures/synth3_logregquad.png Graphic file (type png)
 
 <use Figures/synth3_logregquad.png>
-Package pdftex.def Info: Figures/synth3_logregquad.png used on input line 221.
+Package pdftex.def Info: Figures/synth3_logregquad.png used on input line 241.
 (pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
 
-Overfull \hbox (9.12369pt too wide) in paragraph at lines 216--223
+Overfull \hbox (9.12369pt too wide) in paragraph at lines 236--243
 $[]$  $[]$ 
  []
 
@@ -747,7 +747,7 @@ File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 File: Figures/plot_Pimaquant.png Graphic file (type png)
 
 <use Figures/plot_Pimaquant.png>
-Package pdftex.def Info: Figures/plot_Pimaquant.png used on input line 243.
+Package pdftex.def Info: Figures/plot_Pimaquant.png used on input line 263.
 (pdftex.def)             Requested size: 256.0748pt x 256.0806pt.
  [7 <./Figures/plot_Pimaquant.png>]
 (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-1.def
@@ -757,29 +757,29 @@ File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 File: Figures/bcw_apptree.png Graphic file (type png)
 
 <use Figures/bcw_apptree.png>
-Package pdftex.def Info: Figures/bcw_apptree.png used on input line 272.
+Package pdftex.def Info: Figures/bcw_apptree.png used on input line 292.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
 
 <Figures/bcw_apptree_summary.png, id=162, 476.27937pt x 109.40875pt>
 File: Figures/bcw_apptree_summary.png Graphic file (type png)
 
 <use Figures/bcw_apptree_summary.png>
-Package pdftex.def Info: Figures/bcw_apptree_summary.png used on input line 276
+Package pdftex.def Info: Figures/bcw_apptree_summary.png used on input line 296
 .
 (pdftex.def)             Requested size: 184.9429pt x 42.48392pt.
 
-Overfull \hbox (12.4429pt too wide) in paragraph at lines 276--277
+Overfull \hbox (12.4429pt too wide) in paragraph at lines 296--297
 [][] 
  []
 
 
-Overfull \hbox (6.59016pt too wide) in paragraph at lines 270--278
+Overfull \hbox (6.59016pt too wide) in paragraph at lines 290--298
 \OT1/cmr/m/it/10 control=tree.control(nobs=dim(Dapp)[1],mindev = 0.0001) \OT1/c
 mr/m/n/10 comme de-mand^^Se dans
  []
 
 
-Overfull \hbox (2.56966pt too wide) in paragraph at lines 270--278
+Overfull \hbox (2.56966pt too wide) in paragraph at lines 290--298
 []$  $[]$ 
  []
 
@@ -787,16 +787,16 @@ Overfull \hbox (2.56966pt too wide) in paragraph at lines 270--278
 File: Figures/bcw_cvplot.png Graphic file (type png)
 
 <use Figures/bcw_cvplot.png>
-Package pdftex.def Info: Figures/bcw_cvplot.png used on input line 283.
+Package pdftex.def Info: Figures/bcw_cvplot.png used on input line 303.
 (pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 284.
+(caption)                particular \caption on input line 304.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (37.9161pt too wide) in paragraph at lines 282--293
+Overfull \hbox (37.9161pt too wide) in paragraph at lines 302--313
 []$[]$  $[]$ 
  []
 
@@ -804,69 +804,69 @@ Overfull \hbox (37.9161pt too wide) in paragraph at lines 282--293
 File: Figures/bcw_prunedtree.png Graphic file (type png)
 
 <use Figures/bcw_prunedtree.png>
-Package pdftex.def Info: Figures/bcw_prunedtree.png used on input line 296.
+Package pdftex.def Info: Figures/bcw_prunedtree.png used on input line 316.
 (pdftex.def)             Requested size: 128.0374pt x 128.03662pt.
  [9 <./Figures/bcw_apptree.png> <./Figures/bcw_apptree_summary.png> <./Figures/
 bcw_cvplot.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 309.
+Package xcolor Warning: Incompatible color definition on input line 329.
 
 
-Package xcolor Warning: Incompatible color definition on input line 309.
+Package xcolor Warning: Incompatible color definition on input line 329.
 
 
-Package xcolor Warning: Incompatible color definition on input line 309.
+Package xcolor Warning: Incompatible color definition on input line 329.
 
 
-Package xcolor Warning: Incompatible color definition on input line 312.
+Package xcolor Warning: Incompatible color definition on input line 332.
 
 
-Package xcolor Warning: Incompatible color definition on input line 312.
+Package xcolor Warning: Incompatible color definition on input line 332.
 
 
-Package xcolor Warning: Incompatible color definition on input line 312.
+Package xcolor Warning: Incompatible color definition on input line 332.
 
 
-Package xcolor Warning: Incompatible color definition on input line 312.
+Package xcolor Warning: Incompatible color definition on input line 332.
 
 
-Package xcolor Warning: Incompatible color definition on input line 312.
+Package xcolor Warning: Incompatible color definition on input line 332.
 
 
-Package xcolor Warning: Incompatible color definition on input line 312.
+Package xcolor Warning: Incompatible color definition on input line 332.
 
 
-Package xcolor Warning: Incompatible color definition on input line 312.
+Package xcolor Warning: Incompatible color definition on input line 332.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--324
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 325--326
+Underfull \hbox (badness 10000) in paragraph at lines 341--344
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--328
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
 
  []
 
 [10 <./Figures/bcw_prunedtree.png>]
-Overfull \hbox (4.43939pt too wide) in paragraph at lines 333--339
+Overfull \hbox (4.43939pt too wide) in paragraph at lines 353--359
  [] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 342.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 362.
 [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 342.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 362.
  (./document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 342.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 342.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 362.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 362.
 Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: DBC4E9789648606A3F5E0D55F15E78B4;1119.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 342.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 362.
  ) 
 Here is how much of TeX's memory you used:
  13969 strings out of 493014
@@ -894,7 +894,7 @@ e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on document.pdf (11 pages, 1544360 bytes).
+Output written on document.pdf (11 pages, 1545267 bytes).
 PDF statistics:
  266 PDF objects out of 1000 (max. 8388607)
  193 compressed objects within 2 object streams
