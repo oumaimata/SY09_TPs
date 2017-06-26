@@ -318,23 +318,25 @@ Nous obtenons 6.03\% comme erreur de test.
 
 On considère dans ce challenge un dataset traitant de la détection de spams a partir d'indicateurs calcules sur des messages électroniques 
 
-Ce jeu de donnees comprend 58 variables explicatives et une variable a expliquer. Nous remarquons que certaines variables, un nombre significativement grand d'individus portent des informations nulles. Ceci ne nous permet pas de tester les modèles souhaites directement. Un des exemples que nous pouvont citer pour ce cas de test est l'apparition de certaines matrices de covariances non inversibles. Nous supposons que l'estimation des probabilités a posteriori ne marche pas pour toutes les données, comme pour des données qui engendrent des matrices hessiennes non semi-positives. Nous pensons aussi que l'instabilité numérique a une influence sur les calculs effectues sur ce dataset.
-L'une des methodes que nous avons employe le centrage et réduction Cependant il faut noter que lorsque l'on centre l'ensemble d'apprentissage, on applique le meme centrage sur l'ensemble de test avec les moyennes des variables de l'ensemble d'apprentissage. Nous effectuons pareil pour la reduction avec les ecart-types de l'ensemble d'apprentissage sur les deux ensembles (apprentissage et test). 
+Ce jeu de données comprend 58 variables explicatives et une variable a expliquer.Nous remarquons que pour certaines variables il y'a un nombre significativement grand d'individus portant des informations nulles. 
+L'existence de matrice creuse peut induire a des  matrices de covariances non inversibles. 
+Lorsque nous avons de tels grande jeux de données, la première chose a faire est de centrer en réduire notre matrice d'apprentissage puis d'appliquer \textbf{cette même transformation} a notre ensemble de test.\\ 
 
-Cette méthode nous a permis d'avoir des résultats concrets pour la régression logistique et le classifieur bayésien naïf Cependant, nous ne pouvons pas avoir de résultats pour les analyses discriminantes quadratique et linéaire 
+Nous avons commence notre discrimination par une methode simple qui est le KPPV afin d'obtenir une idée générale de l'erreur. Nous avons utilise la methode de 5-fold cross validation pour déterminer le meilleur k. L'erreur obtenue est très supérieur avec le KNN.\\
 
-Par ailleurs, nous avons eu recours au modèle de l'arbre de décision \texttt{tree} et \texttt{randomForest}. Avec un choix judicieux de la taille de l'arbre, nous avons pu avoir un taux d'erreur faible avec ce modèle 
+La méthode de centrage nous a permis d'avoir des résultats concrets pour la régression logistique et le classifieur bayésien naïf Cependant, nous n'avons pas pu obtenir de résultats  pour les analyses discriminantes quadratique et linéaire. Nous pensons que cela est du a la matrice hessienne qui est non semi-positives. Nous pensons aussi que l'instabilité numérique a une influence sur les calculs effectues sur ce dataset.\\
+
+Par ailleurs, nous avons eu recours au modèle de l'arbre de décision \texttt{tree} et \texttt{randomForest}. Avec un choix judicieux de la taille de l'arbre (taille = 7), nous avons pu avoir un taux d'erreur faible avec ce modèle. La foret aléatoire (Random Forest) est une methode puissante car elle sélectionne aléatoirement un sous ensemble de variables en  introduisant la diversité dans l'arbre. Ceci n'est pas forcement un critère d'optimalité mais permet de mieux apprendre le modèle.
 
 Le tableau ci-dessous montrent les résultats obtenus avec les différentes méthodes:
 \begin{center}
-	\begin{tabular}{|c | c | c| c| c| c|}
+	\begin{tabular}{c |c | c | c| c| c| c|}
 		\hline
-		LDA & QDA & Naive Bayes & Log Reg & Tree & Random Forest\\
+		KNN & LDA & QDA & Naive Bayes & Log Reg & Tree & Random Forest\\
 		\hline	
-		NA & NA & 17.27\% & 6.39\% &  \%& \%
+		40.04\% & NA &  NA &17.27\% & 6.39\% &  0.065\%& 1.24\%
 	\end{tabular}
 \end{center}
 
-Nous pensons qu'une utilisation de l'AFD pourrait aider a la resolution du probleme rencontre pour les analyses discriminantes. 
-
+Nous pensons qu'une utilisation de l'analyse factoriel discriminante (AFD) aurait donné de meilleures résultats que l'ACP. En effet avec l'AFD on exprime la matrice de variance comme $\Sigma = W + B$ avec B la matrice de variance inter-classes (between classes) et W la matrice de variance intra-classes (Within-classes), puis on essaye de maximiser B. Par conséquent l'AFD vise a séparer le mieux possible les classes en maximisant la variance inter-classes (Between Classes). Nous avons vu que cette methode peut être implémentée par la fonction \textit{lda} sur R mains nous n'avons malheureusement pas  pu la mettre en place par faute de temps. 
 \end{document}
