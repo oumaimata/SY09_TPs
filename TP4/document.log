@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  26 JUN 2017 23:35
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  26 JUN 2017 23:33
->>>>>>> origin/master
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 JUN 2017 00:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -848,16 +844,35 @@ Package xcolor Warning: Incompatible color definition on input line 311.
 
 Package xcolor Warning: Incompatible color definition on input line 311.
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--323
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
+
+ []
+
 [10 <./Figures/bcw_prunedtree.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 339.
- [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 339.
+Overfull \hbox (4.43939pt too wide) in paragraph at lines 332--338
+ [] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 341.
+[11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 341.
  (./document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 339.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 339.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 341.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 341.
 Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: DBC4E9789648606A3F5E0D55F15E78B4;1119.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 339.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 341.
  ) 
 Here is how much of TeX's memory you used:
  13969 strings out of 493014
@@ -866,7 +881,7 @@ Here is how much of TeX's memory you used:
  17239 multiletter control sequences out of 15000+600000
  13391 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,77p,732b,1794s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,9n,77p,697b,1794s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
@@ -885,7 +900,7 @@ e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on document.pdf (11 pages, 1542571 bytes).
+Output written on document.pdf (11 pages, 1544006 bytes).
 PDF statistics:
  266 PDF objects out of 1000 (max. 8388607)
  193 compressed objects within 2 object streams
