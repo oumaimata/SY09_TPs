@@ -237,7 +237,13 @@ Ce jeu de données concerne des individus d'une population d’amérindiens et l
 	\end{tabular}
 \end{center}
 
-Nous remarquons que les taux d'erreurs sont considérablement élevés pour ce dataset. Ils tournent autour du 24\% ce qui fait 20\% plus élevés que les données simulées analysées précédemment Nous nous rappelons que les plots des donnees quantitatives de Pima lors de leur analyse au TP1 ne nous permettaient pas de distinguer les classes présentant le critère de présence du diabète ou pas. Il fut difficile de déterminer une si une des variables explicatives permettait de décider de leur différenciation. 
+Nous remarquons que les taux d'erreurs sont considérablement élevés pour ce dataset. Ils tournent autour du 24\% ce qui fait 20\% plus élevés que les données simulées analysées précédemment Nous nous rappelons que les plots des donnees quantitatives de Pima lors de leur analyse au TP1 ne nous permettaient pas de distinguer les classes présentant le critère de présence du diabète ou pas. Il fut difficile de déterminer une si une des variables explicatives permettait de décider de leur différenciation, nous pouvons le voir sur la figure (\ref{fig:plotPima}). 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=9cm]{Figures/plot_Pimaquant.png}%
+	\caption{Plots des données Pima}%
+	\label{fig:plotPima}
+\end{figure}
 
 \subsection{Breast Cancer}
 \subsubsection{Description des données}
@@ -308,4 +314,26 @@ print(paste("Test Error  ",error.test))
 Nous obtenons 6.03\% comme erreur de test.
 
 \section{Spams challenge}
+
+On considère dans ce challenge un dataset traitant de la détection de spams a partir d'indicateurs calcules sur des messages électroniques 
+
+Ce jeu de donnees comprend 58 variables explicatives et une variable a expliquer. Nous remarquons que certaines variables, un nombre significativement grand d'individus portent des informations nulles. Ceci ne nous permet pas de tester les modèles souhaites directement. Un des exemples que nous pouvont citer pour ce cas de test est l'apparition de certaines matrices de covariances non inversibles. Nous supposons que l'estimation des probabilités a posteriori ne marche pas pour toutes les données, comme pour des données qui engendrent des matrices hessiennes non semi-positives. Nous pensons aussi que l'instabilité numérique a une influence sur les calculs effectues sur ce dataset.
+L'une des methodes que nous avons employe le centrage et réduction Cependant il faut noter que lorsque l'on centre l'ensemble d'apprentissage, on applique le meme centrage sur l'ensemble de test avec les moyennes des variables de l'ensemble d'apprentissage. Nous effectuons pareil pour la reduction avec les ecart-types de l'ensemble d'apprentissage sur les deux ensembles (apprentissage et test). 
+
+Cette méthode nous a permis d'avoir des résultats concrets pour la régression logistique et le classifieur bayésien naïf Cependant, nous ne pouvons pas avoir de résultats pour les analyses discriminantes quadratique et linéaire 
+
+Par ailleurs, nous avons eu recours au modèle de l'arbre de décision \texttt{tree} et \texttt{randomForest}. Avec un choix judicieux de la taille de l'arbre, nous avons pu avoir un taux d'erreur faible avec ce modèle 
+
+Le tableau ci-dessous montrent les résultats obtenus avec les différentes méthodes:
+\begin{center}
+	\begin{tabular}{|c | c | c| c| c| c|}
+		\hline
+		LDA & QDA & Naive Bayes & Log Reg & Tree & Random Forest\\
+		\hline	
+		NA & NA & 17.27\% & 6.39\% &  \%& \%
+	\end{tabular}
+\end{center}
+
+Nous pensons qu'une utilisation de l'AFD pourrait aider a la resolution du probleme rencontre pour les analyses discriminantes. 
+
 \end{document}
