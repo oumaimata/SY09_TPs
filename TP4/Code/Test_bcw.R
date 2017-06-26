@@ -82,7 +82,9 @@ test2 <- function(data, Nmax)
          out
 }
 
-test2(bcw, 100)
+# get error for 4 models (no Quad reg log)
+error.bcw <- test2(bcw, 100)
+print(error.bcw)
 
 bcw$z = as.factor(bcw$z)
 ggpairs(bcw, mapping = aes(color = z), columns = 1:4)
@@ -123,11 +125,11 @@ ztst  = z[-train]
         
 bcw.tree = tree(zapp ~ ., data = Xapp,  method = "class", control=tree.control(nobs=dim(Xapp)[1], mindev = 0.0001))
 summary(bcw.tree)
-#png("/Users/zineb/Desktop/Studies/GI05/SY09/TD1/SY09_TPs/TP4/Figures/bcw_apptree.png")
+#bcw_apptree
 plot(bcw.tree)
 text(bcw.tree, cex=.65)
 #control=tree.control(nobs=dim(Dapp)[1],mindev = 0.0001)
-#dev.off()
+
 
 
 set.seed(2)
@@ -135,9 +137,9 @@ set.seed(2)
 bcw.cv = cv.tree(bcw.tree,  FUN=prune.misclass, K = 10)
 #number of missclassed per tree size --> min missclassified is 22 with size 7
 
-#png("/Users/zineb/Desktop/Studies/GI05/SY09/TD1/SY09_TPs/TP4/Figures/bcw_cvplot.png")
+
 plot(bcw.cv, type='o', col = 'blue', pch = 19 )
-#dev.off()
+
 
 print("Best size")
 min.index = which(bcw.cv$dev==min(bcw.cv$dev))
@@ -149,10 +151,10 @@ best.size
 bcw.cv.pruned = prune.misclass(bcw.tree, best=best.size)
 summary(bcw.cv.pruned)
 
-png("/Users/zineb/Desktop/Studies/GI05/SY09/TD1/SY09_TPs/TP4/Figures/bcw_prunedtree.png")
+
 plot(bcw.cv.pruned)
 text(bcw.cv.pruned, cex=.85)
-dev.off()
+
 
 bcw.predict = predict(bcw.cv.pruned, Xtst, type="class")
 table(ztst, bcw.predict)

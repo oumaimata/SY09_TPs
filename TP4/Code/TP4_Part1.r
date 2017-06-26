@@ -70,8 +70,6 @@ adq.app <- function(Xapp, zapp)
 # Analyse Disc Lineaire
 adl.app <- function(Xapp, zapp)
 {
-adl.app <- function(Xapp, zapp)
-{
 	n <- dim(Xapp)[1]
 	p <- dim(Xapp)[2]
 	g <- max(unique(zapp))
@@ -98,9 +96,6 @@ adl.app <- function(Xapp, zapp)
 
 	param
 }
-}
-
-
 
 # Naive Bayesian Classifier
 nba.app <- function(Xapp, zapp)
